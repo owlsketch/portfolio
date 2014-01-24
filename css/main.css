@@ -2,3 +2,28 @@ p {
 	font-family:"Times New Roman";
 	font-size:14px;
 }
+
+article {
+	width: 600px;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+h1 {
+	margin-left: 100px;
+}
+footer {
+	width :600px;
+	margin-left:100px;
+	margin-top: 10px;
+}
+header {
+	height: 100px;
+	background-color: #4F77B7;
+}
+
+body {
+	margin: 0;
+}
+
+
