@@ -2,6 +2,16 @@ p {
 	font-size:14px;
 }
 
+li a {
+	color: #F7F7F7;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
 article {
 	width: 500px;
 	margin-left: 100px;
