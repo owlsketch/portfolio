@@ -1,9 +1,10 @@
 p {
+	font-family:"Times New Roman";
 	font-size:14px;
 }
 
 article {
-	width: 500px;
+	width: 600px;
 	margin-left: 100px;
 	margin-top: 10px;
 }
@@ -11,31 +12,18 @@ article {
 h1 {
 	margin-left: 100px;
 }
-
-ul {
-	margin-left: 50px;
-	list-style: none;
-}
-
-li {
-	display: inline;
-	padding: 10px;
-}
 footer {
-	width :500px;
+	width :600px;
 	margin-left:100px;
 	margin-top: 10px;
 }
 header {
-	height: 46px;
-	padding: 18px;
+	height: 100px;
 	background-color: #4F77B7;
-	color: #F6F6F6;
 }
 
 body {
-	margin: 0px;
-	font-family: Verdana;
+	margin: 0;
 }
 
 
