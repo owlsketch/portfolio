@@ -1,6 +1,8 @@
+body {
+	margin: 0px;
+}
+
 nav {
-	margin-left: -10px;
-	margin-right: -10px;
 	height: 24px;
 	padding: 8px;
 	background-color: #388C83;
