@@ -14,14 +14,14 @@ nav {
 	}
 	
 	li {
+	margin-right: 4px;
 	display: inline;
 	padding: 4px;
 	}
 	
 	li a {
 	color: #F7F7F7;
-	}
-	
+	}	
 	li:hover {
 	background-color: #4db5a9;	
 	}
@@ -32,7 +32,7 @@ nav {
 
 	ul {
 	margin-top: 3px;
-	margin-left: 50px;
+	margin-left: 30px;
 	}
 
 article {
