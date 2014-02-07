@@ -1,4 +1,5 @@
 body {
+	font-family: Trebuchet, Trebuchet MS, Verdana, Arial, sans-serif;
 	margin: 0px;
 }
 
@@ -40,8 +41,13 @@ article {
 }
 
 	p {
-	font:12px Verdana, Helvetica;
+	font:12px Arial, Helvetica, sans-serif;
 	}
+
+.icons {
+	vertical-align: middle;
+	margin-right: 6px;
+}
 
 footer {
 	font-size: 12px;
