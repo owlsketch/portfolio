@@ -3,16 +3,27 @@ body {
 	margin: 0px;
 }
 
-nav {
-	height: 24px;
-	padding: 8px;
-	background-color: #388C83;
+header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background: white;
 }
+	h2 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	}
 	
 	h2 a {
 	margin-left: 80px;
 	color: black;
 	}
+
+nav {
+	height: 24px;
+	padding: 8px;
+	background-color: #388C83;
+}	
 	
 	li {
 	margin-right: 4px;
@@ -37,6 +48,7 @@ nav {
 	}
 
 article {
+	margin-top: 90px;
 	margin-left: 80px;
 }
 
