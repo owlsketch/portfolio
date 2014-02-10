@@ -4,9 +4,9 @@ body {
 }
 
 header {
-	position: fixed;
 	top: 0px;
 	background: white;
+	min-width: 816px;
 	width: 100%;
 }
 	h2 {
@@ -48,7 +48,7 @@ nav {
 	}
 
 article {
-	margin-top: 90px;
+	min-height: 500px;
 	margin-left: 80px;
 	width: 736px;
 }
