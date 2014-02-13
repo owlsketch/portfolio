@@ -4,9 +4,7 @@ body {
 }
 
 header {
-	top: 0px;
 	background: white;
-	min-width: 816px;
 	width: 100%;
 }
 	h2 {
@@ -15,17 +13,19 @@ header {
 	}
 	
 	h2 a {
-	margin-left: 80px;
+	margin-left: 3%;
 	color: Black;
 	}
 
 nav {
 	height: 24px;
-	padding: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	background: #4FA69A;
 }	
 	
 	li {
+	font-size: 14px;
 	margin-right: 4px;
 	display: inline;
 	padding: 4px;
@@ -44,14 +44,20 @@ nav {
 
 	ul {
 	margin-top: 3px;
-	margin-left: 30px;
+	padding-left: 3%;
 	}
 
 article {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 	min-height: 500px;
-	margin-left: 80px;
-	width: 736px;
+	width: 730px;
 }
+
+	.centered {
+		text-align: center;
+	}
 
 	p {
 	font:12px Arial, Helvetica, sans-serif;
@@ -79,10 +85,16 @@ footer {
 	margin-bottom: 0px;
 }
 
-footer p {
-	padding-top: 15px;
-	margin-left:80px;
-}
+	footer p {
+		text-align: center;
+		padding-top: 23px;
+	}
 
-
+	footer a {	
+		color: white;
+		text-decoration: underline;
+	}
+	footer a:hover {
+		color: #E1E1E1;
+	}
 
