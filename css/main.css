@@ -21,7 +21,19 @@ nav {
 	height: 24px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	background: #4FA69A;
+	
+	background-image: -webkit-gradient(
+	linear,
+	right bottom,
+	left bottom,
+	color-stop(0.14, #459186),
+	color-stop(1, #4FA69A)
+	);
+	background-image: -o-linear-gradient(left, #459186 14%, #4FA69A 100%);
+	background-image: -moz-linear-gradient(left, #459186 14%, #4FA69A 100%);
+	background-image: -webkit-linear-gradient(left, #459186 14%, #4FA69A 100%);
+	background-image: -ms-linear-gradient(left, #459186 14%, #4FA69A 100%);
+	background-image: linear-gradient(to left, #459186 14%, #4FA69A 100%);
 }	
 	
 	li {
@@ -76,6 +88,39 @@ article {
 		margin-left: -6px;
 	}
 
+	article h5 {
+		text-align: center;
+	}
+
+	form {
+		text-align: center;
+		border: none;
+	}
+	.textInput input{
+		margin-left: -206px;
+		border: none;
+		width: 210px;
+		background-color: #eaeaea;
+		padding: 3px;
+		border-radius: 2px;
+	}	
+
+	input:focus, textarea:focus {
+		outline: none;	
+	}
+	
+	.body {	
+		font-family: sans-serif;
+		text-align: left;
+		border: none;
+		resize: none;
+		background-color: #eaeaea;
+		padding: 3px;
+		border-radius: 2px;
+
+	}
+
+	
 footer {
 	font-size: 12px;
 	color: #FCFCFC;
