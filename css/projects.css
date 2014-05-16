@@ -1,0 +1,16 @@
+
+#cover {
+	font-size: 60px;
+	font-weight: bold;
+	position: absolute;
+	color: white;
+	margin-left: 28%;
+	margin-top: 145px;
+	z-index: 1;
+}
+
+#backimg {
+	z-index: 0;
+	position: relative;
+	margin-top: 12px;
+}

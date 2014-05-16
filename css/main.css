@@ -75,6 +75,14 @@ article {
 	font:12px Arial, Helvetica, sans-serif;
 	}
 
+	.projects h3 a {
+	color: #909090;
+	}
+
+	.projects h3 a:hover {
+	color: #d6d6d6;
+	}
+
 	.icons {
 		vertical-align: middle;
 		margin-right: 6px;
