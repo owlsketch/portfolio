@@ -1,3 +1,3 @@
 Portfolio
 ==============
-Access at: http://eden.rutgers.edu/~gg478
+Access at: satimidus.github.io or satimid.us
