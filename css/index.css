@@ -1,0 +1,13 @@
+nav, footer {
+	margin: auto;
+	width: 600px;
+}
+
+#projects {
+	margin-top: 20px;
+	float: left;
+}
+
+img {
+	display: inline-block;
+}
