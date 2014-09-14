@@ -1,13 +1,21 @@
-nav, footer {
-	margin: auto;
-	width: 600px;
+.inner_container {
+	margin: 2em 0em 1em 0em;
 }
 
-#projects {
-	margin-top: 20px;
-	float: left;
+article {
+	margin-bottom: 1em;
+	background-color: #ecf0f1;
+}
+
+span {
+	margin-left: 2.5em;
+	display: inline-block;
+	text-align: left;
+	width: 40%;
+	vertical-align: top;
 }
 
 img {
 	display: inline-block;
+	padding: 0px;
 }
