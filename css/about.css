@@ -1,0 +1,22 @@
+
+#portfolio {
+	border-radius: 8px;
+	display: inline;
+	float: left;
+	margin-right: 30px;
+}
+
+article {
+	display: inline-block;
+	padding: 10px;
+	background: url(../img/blue_noise.png);
+	border-radius: 10px;
+	box-shadow: 0 0 4px #888;
+	-moz-box-shadow: 0 0 4px #888;
+	-webkit-box-shadow: 0 0 4px #888;
+
+}
+
+article a:hover {
+	color: #DDD;
+}

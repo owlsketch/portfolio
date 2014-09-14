@@ -1,5 +1,68 @@
-body { margin: 0px;
-	background: url(../img/subtle_dots.png) fixed;
+body { 
+	background: url(../img/light_toast.png) fixed;
 	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	color: #EEEEEE;
+	margin: 0px;
 }
 
+#wrapper {
+	width: 540px;
+	margin: auto;
+
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 0px;
+
+}
+
+nav ul {
+	display: block;
+	float: right;
+	margin-right: 0px;
+	padding-left: 0px;
+	margin-top: 4px;
+	margin-bottom: 6px;
+}
+
+nav ul li, footer ul li {
+	padding-right: 15px;
+	display: inline;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #505050;
+}
+
+a:hover {
+	color: #707070;
+	text-decoration: underline;
+}
+
+article p a {
+	color: #dddddd;
+}
+
+h1 {
+	margin-top: 4px;
+	margin-bottom: 0px;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+footer {
+	float: right;
+	color: #505050;
+	font-size: 14px;
+}
+
+footer ul li {
+	font-size: 12px;
+}
