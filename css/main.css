@@ -7,6 +7,16 @@ body {
 	margin: 0em;
 }
 
+::selection {
+	background: #1080a0;
+	color: white;
+}
+
+::-moz-selection {
+	background: #40bce5;
+	color: white;
+}
+
 #container {
 	padding: 1.25em 2em 1.25em 2em;
 }

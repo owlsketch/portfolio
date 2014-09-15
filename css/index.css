@@ -5,17 +5,19 @@
 article {
 	margin-bottom: 1em;
 	background-color: #ecf0f1;
+	color: #1F1F2F;
 }
 
-span {
+.description {
 	margin-left: 2.5em;
 	display: inline-block;
 	text-align: left;
-	width: 40%;
+	width: 30em;
 	vertical-align: top;
 }
 
 img {
 	display: inline-block;
+	vertical-align: middle;
 	padding: 0px;
 }
