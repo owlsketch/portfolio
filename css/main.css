@@ -18,6 +18,7 @@ body {
 }
 
 #container {
+	clear: both;
 	padding: 1.25em 2em 1.25em 2em;
 }
 
@@ -34,10 +35,12 @@ ul {
 
 }
 
+
 nav {
 	display: inline-block;
 	float: right;
 	text-align: right;
+	clear: both;
 }
 
 		nav ul {
@@ -48,7 +51,7 @@ nav {
 
 		nav ul li, footer ul li {
 			padding-right: 1em;
-			display: inline;
+			display: inline-block;
 			font-size: 1.25em;
 		}
 
@@ -67,6 +70,7 @@ a {
 		}
 
 h1 {
+	display: inline-block;
 	margin-top: .25em;
 	margin-bottom: 0em;
 }
