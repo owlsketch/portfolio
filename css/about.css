@@ -18,11 +18,16 @@ article {
 
 }
 
+
 		#portfolio_pic {
 			border-radius: .5em;
 			display: inline;
 			float: left;
 			margin-right: .625em;
+		}
+		
+		article h1 {
+			color: #FFFFFF;
 		}
 
 		article ul {

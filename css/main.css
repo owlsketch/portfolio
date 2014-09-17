@@ -7,6 +7,10 @@ body {
 	margin: 0em;
 }
 
+h1,h2,h3,h4 {
+	color: #505050;
+}
+
 ::selection {
 	background: #1080a0;
 	color: white;
@@ -20,6 +24,10 @@ body {
 #container {
 	clear: both;
 	padding: 1.25em 2em 1.25em 2em;
+}
+
+.inner_container {
+	margin: 2em 0em 1em 0em;
 }
 
 #title {
@@ -69,7 +77,7 @@ a {
 			color: #dddddd;
 		}
 
-h1 {
+h1{
 	display: inline-block;
 	margin-top: .25em;
 	margin-bottom: 0em;
