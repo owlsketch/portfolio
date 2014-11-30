@@ -1,0 +1,12 @@
+Change black colors to a more saturated and slightly brighter gray-black.
+H2 for name should have background limited to text space.
+
+About
+	Resume
+Projects
+	SketchBeat
+	Cycle
+	Gallery
+	Canvas
+	Photography
+
