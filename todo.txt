@@ -1,5 +1,9 @@
-Change black colors to a more saturated and slightly brighter gray-black.
-H2 for name should have background limited to text space.
+Left-aligned text for paragraphs.
+Append links to project subheaders
+Highlight current selected project
+
+Design about page
+Design Photography Page
 
 About
 	Resume
@@ -8,5 +12,5 @@ Projects
 	Cycle
 	Gallery
 	Canvas
-	Photography
+Photography
 
