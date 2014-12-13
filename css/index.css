@@ -9,8 +9,10 @@ body {
     display:table;
 	clear: both;
 }
-
 article {
+	-webkit-box-shadow: 0 8px 6px -6px #cedbdb;
+	-moz-box-shadow: 0 8px 6px -6px #cedbdb;
+	box-shadow: 0 8px 6px -6px #cedbdb;
 	display: inline-block;
 	margin: auto;
 	width: 46%;
