@@ -10,11 +10,11 @@ article {
 	display: block;
 	color: #EEEEEE;
 	padding: .625em;
-	background: url(../img/blue_noise.png);
+	background: #34495e; 
 	//border-radius: .625em;
-	box-shadow: 0 0 .25em #666;
-	-moz-box-shadow: 0 0 .25em #666;
-	-webkit-box-shadow: 0 0 .25em #666;
+	box-shadow: 0 0 .125em #666;
+	-moz-box-shadow: 0 0 .125em #666;
+	-webkit-box-shadow: 0 0 .125em #666;
 
 }
 

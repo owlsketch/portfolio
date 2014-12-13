@@ -1,3 +1,8 @@
+body {
+	max-width: 1200px;
+	margin: auto;
+}
+
 .inner_container {
 	width: 100%;
 	content:"";
@@ -6,29 +11,40 @@
 }
 
 article {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	content:"";
-    display:table;
+	display: inline-block;
+	margin: auto;
+	width: 46%;
 	clear: both;
-	margin-bottom: 1em;
+	margin-left: 2%;
+	margin-bottom: 2%;
 	background-color: #ecf0f1;
 	color: #1F1F2F;
 }
 
-.description {
-	float: left;
-	margin-left: 2.5em;
+h2 {
+	margin-bottom: 10px;
 	display: inline-block;
+}
+
+.link {
+	margin-left: 2%;
+	color: #c76c5c;
+	text-align: right;
+}
+
+.description {
+	display: block;
 	text-align: left;
-	width: 32em;
+	width: 80%;
 	vertical-align: top;
+	margin: auto;
+	margin-bottom: 16px;
 }
 
 img {
-	float: left;
-	display: inline-block;
+	display: block;
+	text-align: center;
 	vertical-align: middle;
+	margin: auto;
 	padding: 0px;
 }
