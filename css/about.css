@@ -1,0 +1,45 @@
+.inner_container {
+	background-color: #ecf0f1;
+	margin: 2em 6em 2em 6em;
+	padding: 1em;
+}
+
+article {
+	margin: auto;
+	width: 33.75em;
+	display: block;
+	color: #EEEEEE;
+	padding: .625em;
+	background: url(../img/blue_noise.png);
+	//border-radius: .625em;
+	box-shadow: 0 0 .25em #666;
+	-moz-box-shadow: 0 0 .25em #666;
+	-webkit-box-shadow: 0 0 .25em #666;
+
+}
+
+
+		#portfolio_pic {
+			border-radius: .5em;
+			display: inline;
+			float: left;
+			margin-right: .625em;
+		}
+		
+		article h1 {
+			color: #FFFFFF;
+		}
+
+		article ul {
+			margin-left: 1.625em;
+		}
+
+		article ul li {
+			display: inline;
+			margin-right: 6.625em;
+		}
+
+
+		article a:hover {
+			color: #DDD;
+		}
