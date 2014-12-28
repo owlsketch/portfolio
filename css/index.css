@@ -10,6 +10,7 @@ body {
 	clear: both;
 }
 article {
+	vertical-align: top;
 	-webkit-box-shadow: 0 8px 6px -6px #cedbdb;
 	-moz-box-shadow: 0 8px 6px -6px #cedbdb;
 	box-shadow: 0 8px 6px -6px #cedbdb;
@@ -29,9 +30,9 @@ h2 {
 }
 
 .link {
+	font-size: .9em;
 	margin-left: 2%;
 	color: #c76c5c;
-	text-align: right;
 }
 
 .description {

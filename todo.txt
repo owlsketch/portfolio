@@ -1,16 +1,25 @@
-Left-aligned text for paragraphs.
-Append links to project subheaders
-Highlight current selected project
-
-Design about page
-Design Photography Page
-
-About
-	Resume
-Projects
-	SketchBeat
-	Cycle
-	Gallery
-	Canvas
-Photography
-
+TODO:
+1) Parallax scrolling that is mostly vertical movement, slight horizontal mvmnt
+2) //Gibran Garcia. Artsy Programmer. JS scrolling thingy
+3) nav bar will have collapsable menus as so:
+	About:
+		-Contact
+		-Resume
+	Projects:
+		-//img
+		-//img
+		-//img
+	Art
+		-photography
+		-drawings and paintings
+	Work
+		-Websites
+4) Everything will be on one page, in the order presented by nav bar. Need
+	a divider between content.
+5) Since the project preview takes up a lot of space, have a sort of scrollable
+	window, whose topmost project is the one being currently displayed on the
+	right. Have arrows at the top and bottom to scroll through them.
+	**Should have a selected indicator on current project
+	**Play webm video on hover maybe...
+6) Article div should be wider.
+		
