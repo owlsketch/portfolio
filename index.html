@@ -20,42 +20,49 @@
 
 <nav>
 	<h1>Owl Sketch</h1>
-	<h2><i>//Gibran Garcia. Artsy programmer.</i></h2>
+	<h2 id="subtitle"><i>//Gibran Garcia. Artsy programmer.</i></h2>
 
 	<ul>
 	<li><a href="#">&lt;/About&gt;</a></li>
+		<div class="nav_desk">
 		<ul>
 			<li><a href="#">&lt;/Contact&gt;</a></li>
 			<li><a href="#">&lt;/Resume&gt;</a></li>
 		</ul>
+		</div>
 	<li><a href="#">&lt;/Projects&gt;</a></li>
+		<div class="nav_desk">
 		<ul>
 			<li><a href="#">&lt;/The Gallery&gt;</a></li>
 			<li><a href="#">&lt;/Sketches&gt;</a></li>
 			<li><a href="#">&lt;/Photocodegraphy&gt;</a></li>
 			<li><a href="#">&lt;/Sketchbeat&gt;</a></li>
 		</ul>
+		</div>
 	<li><a href="#">&lt;/Art&gt;</a></li>
+		<div class="nav_desk">
 		<ul>
 			<li><a href="#">&lt;/Digital&gt;</a></li>
 			<li><a href="#">&lt;/Traditional&gt;</a></li>
 			<li><a href="#">&lt;/Photographs&gt;</a></li>
 		</ul>
+		</div>
 	</ul>
 </nav>
 
 
-<div>
+<div id="main">
 	<!-- ABOUT -->
 	<article>
 		<p>
 			I am an undergraduate student studying Computer Engineering. 
 			I'm passionate about art and programming and I'm always trying to mix the two.
 		</p>
-		<p> Find me elsewhere on the internet!	
-		<img height="24px"src="./img/icons/github.png"></img>
-		<img height="28px"src="./img/icons/tumblr.png"></img>
-		<img height="24px"src="./img/icons/twitter.png"></img>
+		<p> Find me elsewhere on the internet!</p>
+		<p>
+			<a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/github.png"></img></a>
+			<a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblr.png"></img></a>
+			<a href="https://twitter.com/owlsketch"><img height="24px"src="./img/icons/twitter.png"></img></a>
 		</p>
 	</article>
 	
@@ -82,13 +89,13 @@
 			<source srcset="./img/esfera.png" media="(min-width:1000px)">
 			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
 			<!--[if IE 9]></video><![endif]-->
-			<img srcset="./img/canv_sketch.png" alt="">
+			<img srcset="./img/esfera_small.png" alt="">
 		</picture>
 		<h2> The Gallery </h2>
 		
-		<ul>
-			<li><a href="#">Video</a></li>
-			<li><a href="#">Download</a></li>
+		<ul class="article_nav">
+			<li><a href="#">Video</a></li> |
+			<li><a href="#">Download</a></li> |
 			<li><a href="#">Source Code</a></li>
 		</ul>
 
@@ -108,14 +115,14 @@
 			<source srcset="./img/esfera.png" media="(min-width:1000px)">
 			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
 			<!--[if IE 9]></video><![endif]-->
-			<img srcset="./img/canv_sketch.png" alt="">
+			<img srcset="./img/esfera_small.png" alt="">
 		</picture>
 
 		<h2> Sketches </h2>
 		
-		<ul>
-			<li><a href="#">Video</a></li>
-			<li><a href="#">Download</a></li>
+		<ul class="article_nav">
+			<li><a href="#">Video</a></li> |
+			<li><a href="#">Download</a></li> |
 			<li><a href="#">Source Code</a></li>
 		</ul>
 
@@ -134,13 +141,13 @@
 			<source srcset="./img/esfera.png" media="(min-width:1000px)">
 			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
 			<!--[if IE 9]></video><![endif]-->
-			<img srcset="./img/canv_sketch.png" alt="">
+			<img srcset="./img/esfera_small.png" alt="">
 		</picture>
 		<h2> Photocodegraphy </h2>
 
-		<ul>
-			<li><a href="#">Video</a></li>
-			<li><a href="#">Download</a></li>
+		<ul class="article_nav">
+			<li><a href="#">Video</a></li> |
+			<li><a href="#">Download</a></li> |
 			<li><a href="#">Source Code</a></li>
 		</ul>
 
@@ -160,13 +167,13 @@
 			<source srcset="./img/esfera.png" media="(min-width:1000px)">
 			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
 			<!--[if IE 9]></video><![endif]-->
-			<img srcset="./img/canv_sketch.png" alt="">
+			<img srcset="./img/esfera_small.png" alt="">
 		</picture>
 		<h2> SketchBeat </h2>
 		
-		<ul>
-			<li><a href="#">Video</a></li>
-			<li><a href="#">Download</a></li>
+		<ul class="article_nav">
+			<li><a href="#">Video</a></li> | 
+			<li><a href="#">Download</a></li> |
 			<li><a href="#">Source Code</a></li>
 		</ul>
 
@@ -182,9 +189,9 @@
 </div>
 
 <footer>
-<img height="24px"src="./img/icons/githubw.png"></img>
-<img height="28px"src="./img/icons/tumblrw.png"></img>
-<img height="24px"src="./img/icons/twitterw.png"></img>
+<a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/githubw.png"></img></a>
+<a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblrw.png"></img></a>
+<a href="https://twitter.com/owlsketch"><img height="24px"src="./img/icons/twitterw.png"></img></a>
 </footer>
 
 </body>
