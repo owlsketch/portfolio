@@ -2,6 +2,7 @@ html, body, h1, h2, h3, h4, a {
 	margin: 0em;
 	padding: 0em;
 	text-decoration: none;
+	min-width: 360px;
 	color: #20232c;
 	font-size: 12px;
 	font-family: 'Open Sans', arial;
@@ -19,14 +20,42 @@ h2 {
 		color: #ffffff;
 	}
 
+ul {
+	list-style: none;
+}	
+
 body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
 }
 
-ul {
-	list-style: none;
-}	
+	.article_nav {
+		text-align: center;
+		margin: 0em;
+		margin-left: 3em;
+		padding: 0em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+
+	.article_nav li {
+		display: inline-block;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+
+	.article_nav li a {
+		color: #d95783;
+	}
+
+	.article_nav li a:hover {
+		color: #ed779e;
+	}
+
+	.article_nav li a:visited {
+		color: #982e52;
+	}
+
 
 footer {
 	border-top: .20em solid #2f333f;
@@ -37,7 +66,7 @@ footer img {
 	margin-left: 1em;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 700px) {
 	nav {
 		position: fixed;
 		width: 100%;
@@ -59,7 +88,11 @@ footer img {
 	}
 	nav ul li{
 		display: inline-block;
-		margin-right: 1em;
+		margin-right: 2em;
+	}
+
+	nav ul li a {
+		font-size: 1.2em;
 	}
 	.nav_desk {
 		display: none;
@@ -69,22 +102,22 @@ footer img {
 	padding-top: 10em;
 	}
 
-	.article_nav {
+	#projects h2 {
+		margin: auto;
 		text-align: center;
-		margin: 0em;
-		padding: 0em;
-		padding-top: .5em;
-		padding-bottom: .5em;
+		background-color: #20232c;
+		color: #ffffff;
+		width: 20em;
 	}
 
-	.article_nav li {
-		display: inline-block;
-		margin-left: 1em;
-		margin-right: 1em;
+	#projects img {
+		display: block;
+		margin: auto;
 	}
+
 }
 
-@media all and (min-width: 501px) and (max-width: 700px) {
+@media all and (min-width: 701px)	{
 	body {
 	}
 }
