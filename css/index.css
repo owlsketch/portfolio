@@ -1,8 +1,18 @@
-html, body, a {
+html, body, h1, h2, h3, h4, a {
 	margin: 0em;
 	padding: 0em;
 	text-decoration: none;
 	color: #20232c;
+	font-size: 12px;
+	font-family: 'Open Sans', arial;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 1.5em;
 }
 
 body {
@@ -15,6 +25,6 @@ ul {
 }	
 
 footer {
-	border-top: .3em solid #2f333f;
+	border-top: .20em solid #2f333f;
 	background-color: #20232c;
 }

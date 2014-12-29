@@ -5,12 +5,22 @@
 	<title> Sketchy Owl </title>
 
 	<link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>	
+
+	<script>
+	//asynchronous loading of next script requires this line for old broswers to
+	//recognize picture elements
+	document.createElement( "picture" );
+	</script>
+	<script src="./js/picturefill.js" async></script>
 
 </head>
 <body>
+
+
 <nav>
 	<h1>Owl Sketch</h1>
-	<h2>//Gibran Garcia. Artsy programmer.</h2>
+	<h2><i>//Gibran Garcia. Artsy programmer.</i></h2>
 
 	<ul>
 	<li><a href="#">&lt;/About&gt;</a></li>
@@ -20,11 +30,10 @@
 		</ul>
 	<li><a href="#">&lt;/Projects&gt;</a></li>
 		<ul>
-			<li><a href="#">&lt;/Sketchbeat&gt;</a></li>
-			<li><a href="#">&lt;/AsciiShader&gt;</a></li>
 			<li><a href="#">&lt;/The Gallery&gt;</a></li>
 			<li><a href="#">&lt;/Sketches&gt;</a></li>
-			<li><a href="#">&lt;/Photocodegraph&gt;</a></li>
+			<li><a href="#">&lt;/Photocodegraphy&gt;</a></li>
+			<li><a href="#">&lt;/Sketchbeat&gt;</a></li>
 		</ul>
 	<li><a href="#">&lt;/Art&gt;</a></li>
 		<ul>
@@ -35,12 +44,18 @@
 	</ul>
 </nav>
 
+
 <div>
 	<!-- ABOUT -->
 	<article>
 		<p>
 			I am an undergraduate student studying Computer Engineering. 
 			I'm passionate about art and programming and I'm always trying to mix the two.
+		</p>
+		<p> Find me elsewhere on the internet!	
+		<img height="24px"src="./img/icons/github.png"></img>
+		<img height="28px"src="./img/icons/tumblr.png"></img>
+		<img height="24px"src="./img/icons/twitter.png"></img>
 		</p>
 	</article>
 	
@@ -62,44 +77,115 @@
 	<!-- PROJECTS -->
 	
 	<article>
-		<h2> SketchBeat </h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="./img/esfera.png" media="(min-width:1000px)">
+			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="./img/canv_sketch.png" alt="">
+		</picture>
+		<h2> The Gallery </h2>
+		
+		<ul>
+			<li><a href="#">Video</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">Source Code</a></li>
+		</ul>
+
+		<p>
+		A 3D gallery straight in your browser. 
+		Made with WebGL/ThreeJS for HackNY Fall 2014.
+		It currently obtains its paintings from the Metropolitan Museum of Art Collection
+		Online and these paintings are freely available as they have no copyright. This is 
+		a special thanks to the Metropolitan for giving me the priviledge to see all these
+		wonderful paintings in their museum.
 		</p>
 	</article>
 
 	<article>
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="./img/esfera.png" media="(min-width:1000px)">
+			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="./img/canv_sketch.png" alt="">
+		</picture>
 
-		<h2> SketchBeat </h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<h2> Sketches </h2>
+		
+		<ul>
+			<li><a href="#">Video</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">Source Code</a></li>
+		</ul>
+
+		<p>
+		These are experiments with the purpose of trying to mix art with programming. It's 
+		an effort to create dynamic works that have both artistic properties and random 
+		data driven processes. These sketches may use experimental technology that aren't
+		fully supported in some browsers. They were made with Canvas, HTML5, Javascript and
+		good intentions.
 		</p>
 	</article>
 
 	<article>
-		<h2> SketchBeat </h2>
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="./img/esfera.png" media="(min-width:1000px)">
+			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="./img/canv_sketch.png" alt="">
+		</picture>
+		<h2> Photocodegraphy </h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<ul>
+			<li><a href="#">Video</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">Source Code</a></li>
+		</ul>
+
+		<p>
+		Photocodegraphy is a mixture of photography with code. It is a new medium that 
+		is the result of manipulating imagery with logic based graphics, implemented through
+		a variety of APIs mainly canvas and webGL. It is a motion picture, but is not 
+		pre-rendered, that is, the animation seen in these images are dynamically generated
+		when observed, and have random processes applied so that no two viewers technically
+		see the same composition.
 		</p>
 	</article>
 
 	<article>
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="./img/esfera.png" media="(min-width:1000px)">
+			<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="./img/canv_sketch.png" alt="">
+		</picture>
 		<h2> SketchBeat </h2>
+		
+		<ul>
+			<li><a href="#">Video</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">Source Code</a></li>
+		</ul>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-
-	<article>
-		<h2> SketchBeat </h2>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<p>
+		This was my first visual project after hearing about creative coding through PBS on
+		youtube. I used openFrameworks and C++ and made this in a few hours. It is an audio
+		visualizer program that moves to the beat of the music it is playing. Made in
+		January, 2014, again with good intentions. I plan on re-implementing this in webGL 
+		in order to allow portability and remove the OS specific restriction.
 		</p>
 	</article>
 
 </div>
 
 <footer>
-<img src="./img/icons/githubw.png"></img>
-<img src="./img/icons/tumblrw.png"></img>
-<img src="./img/icons/twitterw.png"></img>
+<img height="24px"src="./img/icons/githubw.png"></img>
+<img height="28px"src="./img/icons/tumblrw.png"></img>
+<img height="24px"src="./img/icons/twitterw.png"></img>
 </footer>
+
 </body>
 <html>
