@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--
+  ________  ___       __   ___                                    
+ |\   __  \|\  \     |\  \|\  \                                   
+ \ \  \|\  \ \  \    \ \  \ \  \                                  
+  \ \  \\\  \ \  \  __\ \  \ \  \                                 
+   \ \  \\\  \ \  \|\__\_\  \ \  \____                            
+    \ \_______\ \____________\ \_______\                          
+	 \|_______|\|____________|\|_______|                          
+		     ________  ___  __    _______  _________  ________  ___  ___     
+			|\   ____\|\  \|\  \ |\  ___ \|\___   ___\\   ____\|\  \|\  \    
+			\ \  \___|\ \  \/  /|\ \   __/\|___ \  \_\ \  \___|\ \  \\\  \   
+			 \ \_____  \ \   ___  \ \  \_|/__  \ \  \ \ \  \    \ \   __  \  
+			  \|____|\  \ \  \\ \  \ \  \_|\ \  \ \  \ \ \  \____\ \  \ \  \ 
+			    ____\_\  \ \__\\ \__\ \_______\  \ \__\ \ \_______\ \__\ \__\
+			   |\_________\|__| \|__|\|_______|   \|__|  \|_______|\|__|\|__|
+			   \|_________|                                                  
+-->
+
 	<meta charset="utf-8"></meta>
 	<title> Sketchy Owl </title>
 
@@ -27,7 +45,7 @@
 		<div class="nav_desk">
 		<ul>
 			<li><a href="#">&lt;/Contact&gt;</a></li>
-			<li><a href="#">&lt;/Resume&gt;</a></li>
+			<li><a href="#">&lt;/Resume.pdf&gt;</a></li>
 		</ul>
 		</div>
 	<li><a href="#projections"><b>&lt;/Projects&gt;</b></a></li>
@@ -56,10 +74,11 @@
 	<article>
 	<h1> About </h1>
 		<p>
-			I am an undergraduate student studying Computer Engineering. 
+			I am currently studying Computer Engineering and Computer Science. 
 			I'm passionate about art and programming and I'm always trying to mix the two.
+			I also enjoy taking photographs, reading, and running in my free time.
 		</p>
-		<p> Find me elsewhere on the internet!</p>
+		<p> Find me elsewhere on the internet:</p>
 		<p>
 			<a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/github.png"></img></a>
 			<a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblr.png"></img></a>
@@ -67,21 +86,20 @@
 		</p>
 	</article>
 	
-	<article>
+	<article class="tab">
 		<h2> Contact </h2>	
-		<p>
+		<p class="tab">
 		Send me a message:
 		satimidus@gmail.com
 		</p>
-		<p>
+		<p class="tab">
 		Or on Twitter:
 		@owlsketch
 		</p>
 	</article>
 	
-	<article>
-		<h2> Resume </h2>
-			<p> IMG_link </p>
+	<article id="resume" class="tab">
+		<p class="tab"><a href="#">Resume.pdf</a></p>
 	</article>
 
 	<!-- PROJECTS -->
@@ -93,15 +111,14 @@
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
 				<source srcset="./img/esfera.png" media="(min-width:1000px)">
-				<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+				<source srcset="./img/theGallery_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/theGallery_small.png" alt="">
 			</picture>
 			<h2>The Gallery</h2>
 			
 			<ul class="article_nav">
-				<li><a href="#">Video</a></li> |
-				<li><a href="#">Download</a></li> |
+				<li><a href="#">View in Browser</a></li> |
 				<li><a href="#">Source Code</a></li>
 			</ul>
 		</div>
@@ -121,7 +138,7 @@
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
 				<source srcset="./img/esfera.png" media="(min-width:1000px)">
-				<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+				<source srcset="./img/canv_sketch_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/canv_sketch_small.png" alt="">
 			</picture>
@@ -129,8 +146,7 @@
 			<h2> Sketches </h2>
 			
 			<ul class="article_nav">
-				<li><a href="#">Video</a></li> |
-				<li><a href="#">Download</a></li> |
+				<li><a href="#">View in Browser</a></li> |
 				<li><a href="#">Source Code</a></li>
 			</ul>
 		</div>
@@ -149,7 +165,7 @@
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
 				<source srcset="./img/esfera.png" media="(min-width:1000px)">
-				<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+				<source srcset="./img/totoro_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/totoro_small.png" alt="">
 			</picture>
@@ -176,7 +192,7 @@
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
 				<source srcset="./img/esfera.png" media="(min-width:1000px)">
-				<source srcset="./img/totoro_rendered.png" media="(min-width:800px)">
+				<source srcset="./img/esfera_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/esfera_small.png" alt="">
 			</picture>
@@ -200,11 +216,11 @@
 	</div>
 
 	<!-- ART -->
-	<a class="local" name="ystra">Projects</a>
+	<a class="local" name="ystra">Art</a>
 	<div id="art">
 	<h1>Art</h1>
 	<article>
-	<p> oh look some filler texxt </p>
+	<p> oh look some filler text </p>
 	</article>
 
 	</div>

@@ -2,7 +2,6 @@ html, body, h1, h2, h3, h4, a {
 	margin: 0em;
 	padding: 0em;
 	text-decoration: none;
-	min-width: 360px;
 	color: #20232c;
 	font-size: 12px;
 	font-family: 'Open Sans', arial;
@@ -28,11 +27,13 @@ body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
 }
+	.tab {
+		margin-left: 1em;
+	}
 
 	.article_nav {
 		text-align: center;
 		margin: 0em;
-		margin-left: 3em;
 		padding: 0em;
 		padding-top: .5em;
 		padding-bottom: .5em;
@@ -40,17 +41,20 @@ body {
 
 	.article_nav li {
 		display: inline-block;
-		margin-left: 1em;
-		margin-right: 1em;
 	}
 
 	.article_nav li a {
+		padding: .5em 1em .5em 1em;
 		color: #d95783;
 	}
 
 	.article_nav li a:hover {
 		color: #ed779e;
 	}
+
+#main h1 {
+font-size: 2.5em;
+}
 
 #footnote {
 	margin-left: .2em;
@@ -90,7 +94,7 @@ footer img {
 	margin-right: 1.5em;
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 670px) {
 	#title {
 		font-size: 3em;
 	}
@@ -133,6 +137,10 @@ footer img {
 	margin-left: 5%;
 	margin-right: 5%;
 	}
+	
+	#main article p a img {
+	margin-right: 1.5em;
+	}
 
 	.local {
 	position: relative;
@@ -141,26 +149,50 @@ footer img {
 	top: -7.5em;
 	}
 
-	#main h1 {
-	font-size: 2.5em;
+	#projects h1 {
+		margin-bottom: .5em;
 	}
 
-	#projects h2 {
-		margin: auto;
-		text-align: center;
-		background-color: #20232c;
-		color: #ffffff;
-		width: 20em;
+	.article_nav {
+		margin-top: 1em;
 	}
-
-	#projects img {
-		display: block;
-		margin: auto;
+	
+	#projects article p{
+		margin-bottom: 3em;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 40em;
 	}
 
 }
 
-@media all and (min-width: 701px)	{
-	body {
+@media all and (min-width: 671px)	{
+
+	nav {
+		position: fixed;
+		width: 24em;
+		float: left;
 	}
+	
+	nav #subtitle {
+		display: inline-block;
+		padding: .5em;
+		font-size: 1.25em;
+	}
+
+	#main {
+		margin-left: 24em;
+		display: inline-block;
+		width: 30em;
+		float: left;
+	}
+
+	.local {
+	visibility: hidden;
+	}
+
+	#resume {
+	display: none;
+	}
+
 }
