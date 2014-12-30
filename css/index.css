@@ -8,7 +8,7 @@ html, body, h1, h2, h3, h4, a {
 	font-family: 'Open Sans', arial;
 }
 
-h1 {
+#title {
 	font-size: 4em;
 }
 
@@ -22,7 +22,7 @@ h2 {
 
 ul {
 	list-style: none;
-}	
+}
 
 body {
 	background-image: url(../img/pattern.png);
@@ -52,28 +52,57 @@ body {
 		color: #ed779e;
 	}
 
-	.article_nav li a:visited {
-		color: #982e52;
-	}
+#footnote {
+	margin-left: .2em;
+}
 
+#footnote div {
+	height: .25em;
+	display: inline-block;
+	margin-bottom: -.4em;
+}
+
+#third {
+	background-color: #E9E075;
+	margin-right: -.5em;
+	width: 33%;
+}
+
+#second {
+	background-color: #E55C8A;
+	margin-right: -.5em;
+	width: 33%;
+}
+
+#first {
+	background-color: #3698B2;
+	width: 34%;
+}
 
 footer {
 	border-top: .20em solid #2f333f;
 	background-color: #20232c;
 	text-align: right;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 footer img {
-	margin-left: 1em;
+	margin-right: 1.5em;
 }
 
 @media all and (max-width: 700px) {
+	#title {
+		font-size: 3em;
+	}
+
 	nav {
 		position: fixed;
 		width: 100%;
-		background-color: #ffffff;
+		background-color: rgba(255,255,255,.925);
 		-webkit-box-shadow: 0 4px 6px -6px #20232c;
 	 	-moz-box-shadow: 0 4px 6px -6px #20232c;
 	    box-shadow: 0 4px 6px -6px #20232c;
+
 	}
 	
 	nav h1, nav h2, nav ul {
@@ -93,13 +122,27 @@ footer img {
 
 	nav ul li a {
 		font-size: 1.2em;
+		color: #4798AD;
 	}
 	.nav_desk {
 		display: none;
 	}
 
 	#main {
-	padding-top: 10em;
+	padding-top: 9em;
+	margin-left: 5%;
+	margin-right: 5%;
+	}
+
+	.local {
+	position: relative;
+	width: 0em;
+	visibility: hidden;
+	top: -7.5em;
+	}
+
+	#main h1 {
+	font-size: 2.5em;
 	}
 
 	#projects h2 {
