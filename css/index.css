@@ -27,8 +27,7 @@ ul {
 }
 
 body {
-	background-image: url(../img/pattern.png);
-	background-repeat: repeat;
+	background-color: #ffffff;
 }
 	.tab {
 		margin-left: 1em;
@@ -205,6 +204,10 @@ footer img {
 }
 
 @media all and (min-width: 671px)	{
+	body {
+	background-image: url(../img/pattern.png);
+	background-repeat: repeat;
+	}
 
 	#wrapper {
 	margin: auto;
@@ -213,7 +216,7 @@ footer img {
 
 	nav {
 		position: fixed;
-		display: inline-block;
+		display: block;
 		width: 24em;
 		top: 1em;
 		float: left;
