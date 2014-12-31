@@ -3,8 +3,11 @@ html, body, h1, h2, h3, h4, a {
 	padding: 0em;
 	text-decoration: none;
 	color: #20232c;
-	font-size: 12px;
 	font-family: 'Open Sans', arial;
+}
+
+html {
+	font-size: 12px;
 }
 
 #title {
@@ -86,12 +89,24 @@ font-size: 2.5em;
 footer {
 	border-top: .20em solid #2f333f;
 	background-color: #20232c;
-	text-align: right;
+	color: #ffffff;
 	padding-top: 1em;
+	height: 2em;
 	padding-bottom: 1em;
 }
+
 footer img {
 	margin-right: 1.5em;
+}
+
+#date {
+	position: relative;
+	top: .45em;
+	margin-left: 1em;
+}
+
+#icons {
+	float: right;
 }
 
 @media all and (max-width: 670px) {
@@ -153,6 +168,24 @@ footer img {
 		margin-bottom: .5em;
 	}
 
+	#projects img {
+		display: block;
+		margin: auto;
+	}
+
+	#projects h2 {
+		margin: auto;
+		text-align: center;
+		background-color: #20232c;
+		color: #ffffff;
+		width: 20em;
+	}
+
+	.article_header {
+		margin: auto;
+		width: 30em;
+	}
+
 	.article_nav {
 		margin-top: 1em;
 	}
@@ -168,8 +201,14 @@ footer img {
 
 @media all and (min-width: 671px)	{
 
+	#wrapper {
+	margin: auto;
+	max-width: 1024px;
+	}
+
 	nav {
 		position: fixed;
+		display: inline-block;
 		width: 24em;
 		float: left;
 	}
@@ -181,10 +220,10 @@ footer img {
 	}
 
 	#main {
-		margin-left: 24em;
 		display: inline-block;
-		width: 30em;
+		max-width: 800px;
 		float: left;
+		margin-left: 24em;
 	}
 
 	.local {
@@ -194,5 +233,11 @@ footer img {
 	#resume {
 	display: none;
 	}
+
+	#footnote, footer {
+	clear: both;
+	display: block;
+	}
+
 
 }

@@ -35,7 +35,7 @@
 </head>
 <body>
 
-
+<div id="wrapper">
 <nav>
 	<h1 id="title">Owl Sketch</h1>
 	<h2 id="subtitle"><i>//Gibran Garcia. Artsy programmer.</i></h2>
@@ -44,17 +44,17 @@
 	<li><a href="#top"><b>&lt;/About&gt;</b></a></li>
 		<div class="nav_desk">
 		<ul>
-			<li><a href="#">&lt;/Contact&gt;</a></li>
+			<li><a href="#contact">&lt;/Contact&gt;</a></li>
 			<li><a href="#">&lt;/Resume.pdf&gt;</a></li>
 		</ul>
 		</div>
 	<li><a href="#projections"><b>&lt;/Projects&gt;</b></a></li>
 		<div class="nav_desk">
 		<ul>
-			<li><a href="#">&lt;/The Gallery&gt;</a></li>
-			<li><a href="#">&lt;/Sketches&gt;</a></li>
-			<li><a href="#">&lt;/Photocodegraphy&gt;</a></li>
-			<li><a href="#">&lt;/Sketchbeat&gt;</a></li>
+			<li><a href="#gallery">&lt;/The Gallery&gt;</a></li>
+			<li><a href="#sketches">&lt;/Sketches&gt;</a></li>
+			<li><a href="#photocodegraphy">&lt;/Photocodegraphy&gt;</a></li>
+			<li><a href="#sketchbeat">&lt;/Sketchbeat&gt;</a></li>
 		</ul>
 		</div>
 	<li><a href="#ystra"><b>&lt;/Art&gt;</b></a></li>
@@ -87,7 +87,7 @@
 	</article>
 	
 	<article class="tab">
-		<h2> Contact </h2>	
+		<h2><a name="contact">Contact</a></h2>	
 		<p class="tab">
 		Send me a message:
 		satimidus@gmail.com
@@ -108,9 +108,9 @@
 	<h1>Projects</h1>
 	<article>
 		<div class="article_header">
+		<a name="gallery"></a>
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="./img/esfera.png" media="(min-width:1000px)">
 				<source srcset="./img/theGallery_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/theGallery_small.png" alt="">
@@ -118,8 +118,8 @@
 			<h2>The Gallery</h2>
 			
 			<ul class="article_nav">
-				<li><a href="#">View in Browser</a></li> |
-				<li><a href="#">Source Code</a></li>
+				<li><a href="https://owlsketch.github.io/the-gallery">View in Browser</a></li> |
+				<li><a href="https://github.com/owlsketch/the-gallery">Source Code</a></li>
 			</ul>
 		</div>
 
@@ -135,19 +135,19 @@
 
 	<article>
 		<div class="article_header">
+			<a name="sketches"></a>
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="./img/esfera.png" media="(min-width:1000px)">
 				<source srcset="./img/canv_sketch_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/canv_sketch_small.png" alt="">
 			</picture>
 
-			<h2> Sketches </h2>
+			<h2>Sketches</h2>
 			
 			<ul class="article_nav">
-				<li><a href="#">View in Browser</a></li> |
-				<li><a href="#">Source Code</a></li>
+				<li><a href="./sketches/circles/circles.html">View in Browser</a></li> |
+				<li><a href="https://github.com/owlsketch/sketch-adventures/tree/master/canvas">Source Code</a></li>
 			</ul>
 		</div>
 
@@ -162,14 +162,14 @@
 
 	<article>
 		<div class="article_header">
+			<a name="photocodegraphy"></a>
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="./img/esfera.png" media="(min-width:1000px)">
 				<source srcset="./img/totoro_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/totoro_small.png" alt="">
 			</picture>
-			<h2> Photocodegraphy </h2>
+			<h2>Photocodegraphy</h2>
 
 			<ul class="article_nav">
 				<li><a href="#">Video</a></li> |
@@ -189,14 +189,14 @@
 
 	<article>
 		<div class="article_header">
+			<a name="sketchbeat"></a>
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="./img/esfera.png" media="(min-width:1000px)">
 				<source srcset="./img/esfera_small.png" media="(min-width:801px)">
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="./img/esfera_small.png" alt="">
 			</picture>
-			<h2> SketchBeat </h2>
+			<h2>SketchBeat</h2>
 			
 			<ul class="article_nav">
 				<li><a href="https://www.youtube.com/watch?v=AIplDxpbyRY">Video</a></li> | 
@@ -233,10 +233,18 @@
 	<div id="first"></div>
 </div>
 
+</div> <!-- This ends wrapper -->
+
 <footer>
+<span id="date">
+2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Gibran Garcia.
+</span>
+
+<span id="icons">
 <a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/githubw.png"></img></a>
 <a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblrw.png"></img></a>
 <a href="https://twitter.com/owlsketch"><img height="24px"src="./img/icons/twitterw.png"></img></a>
+</span>
 </footer>
 
 </body>
