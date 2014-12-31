@@ -55,6 +55,12 @@ body {
 		color: #ed779e;
 	}
 
+#projects img {
+	display: block;
+	margin: auto;
+}
+
+
 #main h1 {
 font-size: 2.5em;
 }
@@ -110,6 +116,10 @@ footer img {
 }
 
 @media all and (max-width: 670px) {
+	body {
+		min-width: 400px;
+	}
+
 	#title {
 		font-size: 3em;
 	}
@@ -168,11 +178,6 @@ footer img {
 		margin-bottom: .5em;
 	}
 
-	#projects img {
-		display: block;
-		margin: auto;
-	}
-
 	#projects h2 {
 		margin: auto;
 		text-align: center;
@@ -210,6 +215,7 @@ footer img {
 		position: fixed;
 		display: inline-block;
 		width: 24em;
+		top: 1em;
 		float: left;
 	}
 	
@@ -224,6 +230,9 @@ footer img {
 		max-width: 800px;
 		float: left;
 		margin-left: 24em;
+		position: relative;
+		top: 3em;
+		margin-bottom: 3em;
 	}
 
 	.local {
@@ -239,5 +248,32 @@ footer img {
 	display: block;
 	}
 
+
+}
+
+@media all and (min-width: 800px) {
+	#projects article picture {
+		display: block;
+	}
+
+	#projects article h2 {
+		background-color: #20232c;
+		display: inline-block;
+		color: #ffffff;
+		width: 47%;
+		padding-top: .30em;
+		padding-bottom: .30em;
+	}
+	
+	#projects article p {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.article_nav {
+		display: inline-block;
+		width: 52%;
+	}
 
 }
