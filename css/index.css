@@ -114,11 +114,8 @@ footer img {
 	float: right;
 }
 
-@media all and (max-width: 670px) {
-	body {
-		min-width: 400px;
-	}
 
+@media all and (max-width: 670px) {
 	#title {
 		font-size: 3em;
 	}
@@ -201,6 +198,14 @@ footer img {
 		max-width: 40em;
 	}
 
+}
+
+@media all and (max-width: 404px) {
+	#main {
+	margin-left: 0em;
+	margin-right: 0em;
+	}
+	
 }
 
 @media all and (min-width: 671px)	{
