@@ -26,6 +26,20 @@ ul {
 	list-style: none;
 }
 
+.Horiz_div {
+	height: 1em;
+	width: 80%;
+	background: url(../img/divstripes.gif);
+	background-repeat: repeat;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+.last_div {
+	margin-bottom: 0em;
+}
+
 body {
 	background-color: #ffffff;
 }
@@ -64,6 +78,10 @@ body {
 font-size: 2.5em;
 }
 
+#main article p a img {
+margin-right: 1.5em;
+}
+
 #footnote {
 	margin-left: .2em;
 }
@@ -74,19 +92,19 @@ font-size: 2.5em;
 	margin-bottom: -.4em;
 }
 
-#third {
+.third {
 	background-color: #E9E075;
 	margin-right: -.5em;
 	width: 33%;
 }
 
-#second {
+.second {
 	background-color: #E55C8A;
 	margin-right: -.5em;
 	width: 33%;
 }
 
-#first {
+.first {
 	background-color: #3698B2;
 	width: 34%;
 }
@@ -159,10 +177,6 @@ footer img {
 	margin-right: 5%;
 	}
 	
-	#main article p a img {
-	margin-right: 1.5em;
-	}
-
 	.local {
 	position: relative;
 	width: 0em;
@@ -228,6 +242,7 @@ footer img {
 	body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
+	background-attachment: fixed;
 	}
 
 	#wrapper {
@@ -264,12 +279,22 @@ footer img {
 			margin-left: 26em;
 		}
 	}
+
+	#projects article:first-child ~ article {
+		margin-bottom: 3em;
+		margin-top: 3em;
+	}
 	
 	#projects article h2 {
 		background-color: #20232c;
 		color: #ffffff;
-		padding-top: .30em;
-		padding-bottom: .30em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+
+	#projects article p {
+
+		margin-top: 1.5em;
 	}
 
 	.article_header img {
@@ -304,8 +329,6 @@ footer img {
 		display: inline-block;
 		color: #ffffff;
 		width: 47%;
-		padding-top: .30em;
-		padding-bottom: .30em;
 	}
 	
 	#projects article p {
@@ -319,4 +342,11 @@ footer img {
 		width: 52%;
 	}
 
+}
+
+@media all and (min-width: 1350px) {
+	#footnote, #footer_info {
+		max-width: 1350px;
+		margin: auto;
+	}
 }
