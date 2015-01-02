@@ -223,6 +223,8 @@ footer img {
 }
 
 @media all and (min-width: 671px)	{
+
+
 	body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
@@ -249,12 +251,31 @@ footer img {
 
 	#main {
 		display: inline-block;
-		max-width: 800px;
+		max-width: 600px;
 		float: left;
 		margin-left: 24em;
 		position: relative;
 		top: 3em;
 		margin-bottom: 3em;
+	}
+
+	@-moz-document url-prefix() {
+		#main {
+			margin-left: 26em;
+		}
+	}
+	
+	#projects article h2 {
+		background-color: #20232c;
+		color: #ffffff;
+		padding-top: .30em;
+		padding-bottom: .30em;
+	}
+
+	.article_header img {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.local {
