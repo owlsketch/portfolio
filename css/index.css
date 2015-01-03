@@ -26,6 +26,7 @@ ul {
 	list-style: none;
 }
 
+
 .Horiz_div {
 	height: 1em;
 	width: 80%;
@@ -247,7 +248,7 @@ footer img {
 
 	#wrapper {
 	margin: auto;
-	max-width: 1024px;
+	max-width: 900px;
 	}
 
 	nav {
@@ -264,11 +265,13 @@ footer img {
 		font-size: 1.25em;
 	}
 
+
 	#main {
 		display: inline-block;
 		max-width: 600px;
-		float: left;
+		float: right;
 		margin-left: 24em;
+		margin-right: 1em;
 		position: relative;
 		top: 3em;
 		margin-bottom: 3em;
@@ -319,7 +322,36 @@ footer img {
 
 }
 
-@media all and (min-width: 800px) {
+@media all and (max-width: 942px), all and (max-height: 575px) {
+	#projects_ul img {
+		display: none;
+	}
+}
+
+@media all and (min-width: 943px) {
+	#wrapper {
+		max-width: 930px;
+	}
+
+	nav ul {
+		padding-left: .5em;
+	}
+	
+	#projects_ul{
+		width: 23.3em;
+		overflow: hidden;
+	}
+
+	.nav_text {
+		display: none;
+	}
+
+	#projects_ul img {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 1em;
+	}
+
 	#projects article picture {
 		display: block;
 	}
