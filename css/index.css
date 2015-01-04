@@ -27,20 +27,6 @@ ul {
 }
 
 
-.Horiz_div {
-	height: 1em;
-	width: 80%;
-	background: url(../img/divstripes.gif);
-	background-repeat: repeat;
-	margin: auto;
-	margin-top: 2em;
-	margin-bottom: 4em;
-}
-
-.last_div {
-	margin-bottom: 0em;
-}
-
 body {
 	background-color: #ffffff;
 }
@@ -78,6 +64,17 @@ body {
 #main h1 {
 font-size: 2.5em;
 }
+
+#portfolio_pic {
+	float: left;
+	margin-top: .25em;
+	border-radius: .5em;
+	margin-right: 2em;
+}
+
+#main article p {
+	margin-top: 0em;
+}	
 
 #main article p a img {
 margin-right: 1.5em;
@@ -305,6 +302,21 @@ footer img {
 		height: 100%;
 		overflow: hidden;
 	}
+
+	.Horiz_div {
+		height: 1em;
+		width: 80%;
+		background: url(../img/divstripes.gif);
+		background-repeat: repeat;
+		margin: auto;
+		margin-top: 2em;
+		margin-bottom: 4em;
+	}
+
+	.last_div {
+		margin-bottom: 0em;
+	}
+
 
 	.local {
 	visibility: hidden;
