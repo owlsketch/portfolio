@@ -132,12 +132,15 @@ footer img {
 
 
 @media all and (max-width: 670px) {
-	body {
-		font-size: 16px;
+	#title {
+		font-size: 2em;
 	}
 
-	#title {
-		font-size: 3em;
+	#subtitle {
+		font-size: 1.25em;
+	}
+	body {
+		font-size: 14px;
 	}
 
 	nav {
@@ -166,7 +169,7 @@ footer img {
 	}
 
 	nav ul li a {
-		font-size: 1.2em;
+		font-size: 1em;
 		color: #4798AD;
 	}
 	.nav_desk {
@@ -174,7 +177,7 @@ footer img {
 	}
 
 	#main {
-	padding-top: 9em;
+	padding-top: 7em;
 	margin-left: 5%;
 	margin-right: 5%;
 	}
@@ -183,8 +186,17 @@ footer img {
 	position: relative;
 	width: 0em;
 	visibility: hidden;
-	top: -7.5em;
+	top: -5.5em;
 	}
+	
+	.Horiz_div {
+		margin-bottom: 2em;
+	}
+
+	.last_div{
+		margin-bottom: 0em;
+	}
+
 
 	#projects h1 {
 		margin-bottom: .5em;
@@ -195,7 +207,7 @@ footer img {
 		text-align: center;
 		background-color: #20232c;
 		color: #ffffff;
-		width: 15em;
+		width: 17.125em;
 	}
 
 	.article_header {
@@ -214,20 +226,17 @@ footer img {
 		max-width: 40em;
 	}
 
+	#projects article p {
+		margin-bottom: 2em;
+	}
+
 }
 
-@media all and (max-width: 512px) {
-	#title {
-		font-size: 2em;
-	}
-
-	#subtitle {
-		font-size: 1.25em;
-	}
+@media all and (max-width: 469px) {
 
 	#main {
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
 	}
 	
 	.article_header{
@@ -241,7 +250,15 @@ footer img {
 	}
 
 	#projects .article_header h2 {
-		width: 16em;
+		width: 13.3333em;
+	}
+
+	.article_nav {
+		font-size: .9em;
+	}
+
+	footer {
+		font-size: .9em;
 	}
 
 }
