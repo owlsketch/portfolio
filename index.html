@@ -25,7 +25,7 @@
 	<title> Sketchy Owl </title>
 
 	<link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>	
 
 	<script>
 	//asynchronous loading of next script requires this line for old broswers to
@@ -67,18 +67,15 @@
 			<img width="360px" height="60px"src="./img/theGallery_small.jpg"/></a></li>
 			<li><a href="#sketches"><div class="nav_text">&lt;/Sketches&gt;</div>
 			<img width="360px" height="60px" src="./img/canv_sketch_small.jpg"/></a></li>
-			<li><a href="#photocodegraphy"><div class="nav_text">&lt;/3D Models&gt;</div>
-			<img width="360px" height="60px" src="./img/totoro_small.png"/></a></li>
 			<li><a href="#sketchbeat"><div class="nav_text">&lt;/Sketchbeat&gt;</div>
 			<img width="360px" height="60px" src="./img/esfera_small.png"/></a></li>
 		</ul>
 		</div>
 	<li><a href="#ystra"><b>&lt;/Art&gt;</b></a></li>
 		<div class="nav_desk">
-		<ul>
-			<li><a href="#">&lt;/Digital&gt;</a></li>
-			<li><a href="#">&lt;/Traditional&gt;</a></li>
-			<li><a href="#">&lt;/Photographs&gt;</a></li>
+		<ul id="art_ul">
+			<li><a href="#photocodegraphy"><div class="nav_text">&lt;/3D Models&gt;</div>
+			<img width="360px" height="60px" src="./img/totoro_small.png"/></a></li>
 		</ul>
 		</div>
 	</ul>
@@ -92,17 +89,19 @@
 
 		<img id="portfolio_pic" width="115px" height="115px"src="./img/id.jpg"/>
 		<p>
+			Hello, my name is Gibran Garcia and 
 			I am currently studying Computer Engineering at Rutgers University. 
 			I'm passionate about art and programming and I'm always trying to mix the two.
 		</p>
 		<p>
-			As a result, I'm the kind of programmer intent on making interactive visuals using a variety of sources,
+			I love making interactive visuals using a variety of sources,
 			mainly Javascript with Three.js, WebGL, D3.js, Processing, or &lt;canvas&gt;. Apart from interactive 
 			programming, I have also worked in other languages - C++, Python, and Ruby - and dabble in web development,
 			both front-end and back-end.
+			In my free time I enjoy reading, photography, and running.
 		</p>
 		<p>
-			In my free time I enjoy reading, photography, and running.
+			I am available for freelance work, feel free to contact me.
 		</p>
 		<br/>
 		<p> Find me elsewhere on the internet:</p>
@@ -198,30 +197,6 @@
 		</div>
 	</article>
 
-	<article>
-		<div class="article_header">
-			<a name="photocodegraphy"></a>
-			<a href="https://github.com/owlsketch/blendify_me">
-			<picture>
-				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="./img/totoro.jpg" media="(min-width:671px)">
-				<!--[if IE 9]></video><![endif]-->
-				<img width="360px" height="60px" srcset="./img/totoro_small.png" alt="">
-			</picture>
-			</a>
-			<h2>3D models</h2>
-
-			<ul class="article_nav">
-				<li><a href="https://github.com/owlsketch/blendify_me">View Repository</a></li> |
-				<li><a href="#">Download</a></li>
-			</ul>
-		</div>
-		<p>
-		3D models I've made over the years. You are free to download and use them, they are under a creative commons license which can be found in the repository README.md. They were made in Blender and any printer firendly models are clearly indicated as such. If you do make something out of these, I'd love to see them!
-		</p>
-		<div class="Horiz_div">
-		</div>
-	</article>
 
 	<article>
 		<div class="article_header">
@@ -257,10 +232,31 @@
 
 	<!-- ART -->
 	<a class="local" name="ystra">Art</a>
-	<div id="art">
+	<div id="projects">
 	<h1>Art</h1>
 	<article>
-	<p> oh look some filler text </p>
+		<div class="article_header">
+			<a name="photocodegraphy"></a>
+			<a href="https://github.com/owlsketch/blendify_me">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="./img/totoro.jpg" media="(min-width:671px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img width="360px" height="60px" srcset="./img/totoro_small.png" alt="">
+			</picture>
+			</a>
+			<h2>3D models</h2>
+
+			<ul class="article_nav">
+				<li><a href="https://github.com/owlsketch/blendify_me">View Repository</a></li> |
+				<li><a href="#">Download</a></li>
+			</ul>
+		</div>
+		<p>
+		3D models I've made over the years. You are free to download and use them, they are under a creative commons license which can be found in the repository README.md. They were made in Blender and any printer firendly models are clearly indicated as such. If you do make something out of these, I'd love to see them!
+		</p>
+		<div class="Horiz_div">
+		</div>
 	</article>
 
 	</div>
