@@ -269,7 +269,6 @@ footer img {
 	body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
-	background-attachment: fixed;
 	}
 
 	#wrapper {
@@ -284,6 +283,10 @@ footer img {
 		top: 1em;
 		float: left;
 	}
+
+  nav #title {
+    margin-bottom: -.1em;
+  }
 	
 	nav #subtitle {
 		display: inline-block;
@@ -317,8 +320,9 @@ footer img {
 	#projects article h2 {
 		background-color: #20232c;
 		color: #ffffff;
-		padding-top: .5em;
-		padding-bottom: .5em;
+    font-size: 2em;
+    padding-top: .25em;
+    padding-bottom: .25em;
 	}
 
 	#projects article p {
