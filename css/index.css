@@ -69,7 +69,7 @@ font-size: 2.5em;
 	float: left;
 	margin-top: .25em;
 	border-radius: .5em;
-	margin-right: 2em;
+	margin-right: 1em;
 }
 
 #main article p {
@@ -140,7 +140,7 @@ footer img {
 		font-size: 1.25em;
 	}
 	body {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	nav {
