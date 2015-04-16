@@ -55,13 +55,6 @@ body {
 		color: #ed779e;
 	}
 
-#interactive {
-    position: fixed;
-    margin-left: 68em;
-    display: block;
-    float: right;
-    z-index: -1;
-}
 
 #projects img {
 	display: block;
@@ -389,6 +382,7 @@ footer img {
 	nav ul {
 		padding-left: .5em;
 	}
+    
 	
 	#projects_ul, #art_ul{
 		width: 23.3em;
@@ -426,6 +420,21 @@ footer img {
 		display: inline-block;
 		width: 52%;
 	}
+
+}
+@media all and (max-width: 1119px) {
+    #interactive {
+    display: none;
+    }
+}
+@media all and (min-width: 1120px) {
+    #interactive {
+    position: fixed;
+    margin-left: 68em;
+    display: block;
+    float: right;
+    z-index: -1;
+    }
 
 }
 
