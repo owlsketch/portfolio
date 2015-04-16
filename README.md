@@ -1,7 +1,7 @@
 Portfolio
 ==============
 <a href="https://owlsketch.github.io">
-owlsketch.github.io or owlsketch.com or gibrangarcia.me
+owlsketch.com
 </a>
 
 Current Portfolio:
