@@ -92,40 +92,28 @@
 	<h1> About </h1>
 
 		<img id="portfolio_pic" width="115px" height="115px"src="./img/id.jpg"/>
+        <br/>
 		<p>
 			Hello, my name is Gibran Garcia and 
 			I am currently studying Computer Engineering at Rutgers University. 
 			I'm passionate about art and programming and I'm always trying to mix the two.
 		</p>
 		<p>
-			I love making interactive visuals using a variety of sources,
-			mainly Javascript with Three.js, WebGL, D3.js, Processing, or &lt;canvas&gt;. Apart from interactive 
-			programming, I have also worked in other languages - C++, Python, and Ruby - and dabble in web development,
-			both front-end and back-end.
 			In my free time I enjoy reading, photography, and running.
-		</p>
-		<p>
-			I am available for freelance work, feel free to contact me.
-		</p>
-		<br/>
-		<p> Find me elsewhere on the internet:</p>
-		<p>
-			<a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/github.png"></img></a>
-			<a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblr.png"></img></a>
-			<a href="https://twitter.com/owlsketch"><img height="24px"src="./img/icons/twitter.png"></img></a>
 		</p>
 		<br/>
 	</article>
 	
-	<article class="tab">
+	<article class="tab" style="text-align: center;">
 		<h2><a name="contact">Contact</a></h2>	
 		<p class="tab">
-		Send me a message:
+		Send me a message at
 		satimidus@gmail.com
 		</p>
-		<p class="tab">
-		Or on Twitter:
-		@owlsketch
+		<p >
+			<a href="https://github.com/owlsketch"><img height="24px"src="./img/icons/github.png"></img></a>
+			<a href="http://owlsketch.tumblr.com"><img height="28px"src="./img/icons/tumblr.png"></img></a>
+			<a href="https://twitter.com/owlsketch"><img height="24px"src="./img/icons/twitter.png"></img></a>
 		</p>
 	</article>
 	
@@ -318,5 +306,38 @@
 </span>
 </footer>
 
+<script src="./js/three.min.js"></script>
+<script>
+    var width = 350;
+    var height = 350;
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, width/height, 0.1, 100);
+
+    var renderer = new THREE.WebGLRenderer({alpha:true, antialias: true});
+    renderer.setSize(width, height);
+    var canv = renderer.domElement;
+    canv.id = "interactive";
+    var parentElement = document.getElementById("wrapper");
+    parentElement.appendChild(canv);
+
+    var geometry = new THREE.BoxGeometry( 3, 3, 3 );
+    var material = new THREE.MeshBasicMaterial( { color: 0x20232c, wireframe: true } );
+    var cube = new THREE.Mesh( geometry, material );
+    scene.add( cube );
+    
+    camera.position.z = 5;
+    
+    var render = function () {
+        requestAnimationFrame( render );
+        
+        cube.rotation.x += 0.005;
+        cube.rotation.y += 0.005;
+
+        renderer.render(scene, camera);
+    };
+
+    render();
+
+</script>
 </body>
 <html>

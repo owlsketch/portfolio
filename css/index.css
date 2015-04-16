@@ -55,6 +55,14 @@ body {
 		color: #ed779e;
 	}
 
+#interactive {
+    position: fixed;
+    margin-left: 68em;
+    display: block;
+    float: right;
+    z-index: -1;
+}
+
 #projects img {
 	display: block;
 	margin: auto;
