@@ -176,6 +176,10 @@ footer img {
 	.nav_desk {
 		display: none;
 	}
+	
+    #resume {
+        text-align: center;
+    }
 
 	#main {
 	padding-top: 7em;
