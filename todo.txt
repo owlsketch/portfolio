@@ -1,6 +1,0 @@
-TODO:
-1) Parallax scrolling that is mostly vertical movement, slight horizontal mvmnt
-2) Hover animations for the previews
-3) Glitch animation on profile picture
-4) Sidebar should stick to the side. About section should be by itself.
-    Projects should be by themselves. With more content provided.
