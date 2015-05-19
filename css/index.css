@@ -4,6 +4,7 @@ html, body, h1, h2, h3, h4, a {
 	text-decoration: none;
 	color: #20232c;
 	font-family: 'Open Sans', arial;
+    transition: color .5s;
 }
 
 html {
@@ -55,6 +56,31 @@ body {
 		color: #ed779e;
 	}
 
+.icons_main {
+    font-size: 1.3em;
+    margin-right: 1.25em;
+}
+
+#github_main:hover {
+    color: #E9E075;
+    transition: all .4s;
+}
+
+#tumblr_main:hover {
+    color: #E55C8A;
+    transition: all .4s;
+}
+
+#twitter_main:hover {
+    color: #3698B2;
+    transition: all .4s;
+}
+
+.icons_bottom {
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-right: 1.5em;
+}
 
 #projects img {
 	display: block;
