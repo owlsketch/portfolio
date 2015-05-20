@@ -297,13 +297,7 @@
 <span id="date">
 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Gibran Garcia.
 </span>
-<!---
-		<p>
-			<a href="https://github.com/owlsketch" id="github_main" class="icons_main"><span class="fa fa-github-alt fa-2x"></span></a>
-			<a href="http://owlsketch.tumblr.com" id="tumblr_main" class="icons_main"><span class="fa fa-tumblr fa-2x"></span></a>
-			<a href="https://twitter.com/owlsketch" id="twitter_main" class="icons_main"><span class="fa fa-twitter fa-2x"></span></img></a>
-		</p>
--->
+
 <span id="icons">
 <a href="https://github.com/owlsketch" class="icons_bottom"><span class="fa fa-github-alt fa-2x"></a>
 <a href="http://owlsketch.tumblr.com"  class="icons_bottom"><span class="fa fa-tumblr fa-2x"></span></a>
@@ -312,38 +306,5 @@
 </span>
 </footer>
 
-<script src="./js/three.min.js"></script>
-<script>
-    var width = 350;
-    var height = 350;
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, width/height, 0.1, 100);
-
-    var renderer = new THREE.WebGLRenderer({alpha:true, antialias: false});
-    renderer.setSize(width, height);
-    var canv = renderer.domElement;
-    canv.id = "interactive";
-    var parentElement = document.getElementById("wrapper");
-    parentElement.appendChild(canv);
-
-    var geometry = new THREE.BoxGeometry( 3, 3, 3 );
-    var material = new THREE.MeshBasicMaterial( { color: 0x20232c, wireframe: true } );
-    var cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
-    
-    camera.position.z = 5;
-    
-    var render = function (event) {
-        requestAnimationFrame( render );
-        
-        cube.rotation.x += 0.005;
-        cube.rotation.y += 0.005;
-
-        renderer.render(scene, camera);
-    };
-
-    render();
-
-</script>
 </body>
 <html>

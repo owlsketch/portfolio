@@ -177,7 +177,7 @@ footer img {
 		-webkit-box-shadow: 0 4px 6px -6px #20232c;
 	 	-moz-box-shadow: 0 4px 6px -6px #20232c;
 	    box-shadow: 0 4px 6px -6px #20232c;
-
+        z-index: 1;
 	}
 	
 	nav h1, nav h2, nav ul {
