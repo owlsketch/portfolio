@@ -419,6 +419,7 @@ footer img {
 		overflow: hidden;
 	}
 
+
 	.nav_text {
 		display: none;
 	}
@@ -427,7 +428,18 @@ footer img {
 		width: 100%;
 		height: 100%;
 		margin-bottom: 1em;
-	}
+        }
+
+    #projects_ul li:hover, #art_ul li:hover {
+        opacity: 0.75;
+        transition: all .5s;
+    }
+
+    #projects_ul li, #art_ul li{
+        opacity: 1;
+        transition: .5s;
+    }
+
 
 	#projects article picture {
 		display: block;
