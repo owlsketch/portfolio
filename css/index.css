@@ -176,8 +176,8 @@ footer img {
 		background-color: rgba(255,255,255,.925);
 		-webkit-box-shadow: 0 4px 6px -6px #20232c;
 	 	-moz-box-shadow: 0 4px 6px -6px #20232c;
-	    box-shadow: 0 4px 6px -6px #20232c;
-        z-index: 1;
+	        box-shadow: 0 4px 6px -6px #20232c;
+		z-index: 1;
 	}
 	
 	nav h1, nav h2, nav ul {
@@ -234,11 +234,11 @@ footer img {
 	}
 
 	#projects h2 {
-		margin: auto;
+		margin: 0px;
 		text-align: center;
 		background-color: #20232c;
 		color: #ffffff;
-		width: 17.125em;
+		width: 20em;
 	}
 
 	.article_header {
@@ -351,9 +351,9 @@ footer img {
 	#projects article h2 {
 		background-color: #20232c;
 		color: #ffffff;
-    font-size: 2em;
-    padding-top: .25em;
-    padding-bottom: .25em;
+	        font-size: 2em;
+	        padding-top: .25em;
+	        padding-bottom: .25em;
 	}
 
 	#projects article p {
