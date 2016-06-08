@@ -23,21 +23,21 @@ html, body, h1, h2, h3, h4, a {
 }
 
 #main {
-	font-family: 'Crimson Text';
+	font-family: 'Inconsolata', 'Crimson Text', serif;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 @media all and (max-width: 670px)	{
 	#title {
-		font-size: 3.5em;
+		font-size: 3em;
 		letter-spacing: -.05em;
 		margin-top: -.15em;
 		margin-bottom: -.1em;
 	}
 
 	h2 {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 		#subtitle {
 			padding-left: .125em;
@@ -68,7 +68,7 @@ html, body, h1, h2, h3, h4, a {
 
 	#main {
 		margin-left: .5em;
-		max-width: 18em;
+		max-width: 20em;
 	}
 }
 
