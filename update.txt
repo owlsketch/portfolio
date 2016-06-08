@@ -13,7 +13,14 @@ Updating portfolio site:
 	3. Background graphic, using canvas(?)
 	4. Header
 		Should it remain fixed or not(?)
-	5. Need to create a logo
+	5. logo(?)
 
 		What if we removed the side bar completely.
+		Or, take Owlsketch section and put to top left
+		and then About, Projects, Art with search bar
+		across the top right
+
+		Keep side bar, three sections: About, Projects, Art
+		Each section has two preview images
+		Selection on which current page is about is indicated somehow
 
