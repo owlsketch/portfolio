@@ -1,0 +1,94 @@
+/* all.css is styling that will be applied to all the pages
+*  regardless of mobile or desktop presentation.
+*/
+
+html {
+	font-size: 14px;
+}
+
+html, body, h1, h2, h3, h4, a {
+	color: #20232c;
+	font-family: 'Open Sans', arial;
+	font-weight: 700;
+}
+	
+#lowerLayer {
+	z-index: 1;
+	position: fixed;
+}
+
+#topLayer {
+	z-index: 2;
+	position: static;
+}
+
+#main {
+	font-family: 'Crimson Text';
+	font-weight: 400;
+	font-size: 14px;
+}
+
+@media all and (max-width: 670px)	{
+	#title {
+		font-size: 3.5em;
+		letter-spacing: -.05em;
+		margin-top: -.15em;
+		margin-bottom: -.1em;
+	}
+
+	h2 {
+		font-size: 1.2em;
+	}
+		#subtitle {
+			padding-left: .125em;
+			font-weight: 600;
+			padding-top: .4em;
+			padding-bottom: .4em;
+			background-color: #20232c;
+			color: #ffffff;
+		}
+
+	#mobileMenu {
+		padding: .5em;
+		margin-left: .5em;
+		margin-right: .5em;
+	}
+		
+		#mobileMenu li {
+			background-color: #20232c;
+			padding: .5em;	
+			margin: .25em;
+			border-radius: .125em;
+			border: 1px solid;
+		}
+
+			#mobileMenu li a {
+				color: #fff;
+			}
+
+	#main {
+		margin-left: .5em;
+		max-width: 18em;
+	}
+}
+
+@media all and (min-width: 671px)	{
+	body {
+	background-image: url(../img/pattern.png);
+	background-repeat: repeat;
+	}
+
+	#title {
+		font-size: 4.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+		#subtitle {
+			background-color: #20232c;
+			color: #ffffff;
+		}
+
+}
+
