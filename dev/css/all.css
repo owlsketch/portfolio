@@ -1,0 +1,6 @@
+@media all and (min-width: 671px)	{
+	body {
+	background-image: url(../img/pattern.png);
+	background-repeat: repeat;
+	}
+}

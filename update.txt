@@ -1,0 +1,19 @@
+Updating portfolio site:
+	1. Multi-page format
+		About page, doubles as the home page, include resume and social media links here
+		Projects page, holds all projects, small summary on hover(?), 
+			Search bar for projects or filtering system?
+		Individual project page, one for each project
+			Log format, topmost information is about latest version
+			Reads like blog, older posts -> older versions
+	2. Improve mobile
+		About page should not have resume awkwardly placed at the end
+		Projects page should have a small summary for each project
+		Individual Project page follows same format as for desktop
+	3. Background graphic, using canvas(?)
+	4. Header
+		Should it remain fixed or not(?)
+	5. Need to create a logo
+
+		What if we removed the side bar completely.
+

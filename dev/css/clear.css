@@ -1,0 +1,8 @@
+html, body, h1, h2, h3, h4, a {
+	margin: 0em;
+	padding: 0em;
+	text-decoration: none;
+	color: #20232c;
+	font-family: 'Open Sans', arial;
+}
+
