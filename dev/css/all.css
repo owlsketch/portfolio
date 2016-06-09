@@ -64,7 +64,7 @@ p {
 }
 
 
-@media all and (max-width: 499px)	{
+@media all and (max-width: 599px)	{
 	#title {
 		font-size: 3.25em;
 	}
@@ -94,13 +94,13 @@ p {
 			}
 }
 
-@media all and (min-width: 341px), all and (max-width: 499px) {
+@media all and (min-width: 341px), all and (max-width: 599px) {
 	#sideContent {
 		margin: auto;
 	}
 }
 
-@media all and (min-width: 500px)	{
+@media all and (min-width: 600px)	{
 	body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;

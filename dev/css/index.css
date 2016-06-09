@@ -28,7 +28,7 @@ article {
 }
 
 
-@media all and (min-width: 500px)	{
+@media all and (min-width: 600px)	{
 	#main {
 		float: right;
 		max-width: 400px;
