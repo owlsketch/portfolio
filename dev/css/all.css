@@ -6,10 +6,36 @@ html {
 	font-size: 14px;
 }
 
-html, body, h1, h2, h3, h4, a {
-	color: #20232c;
+h1, h2, h3, h4 {
 	font-family: 'Open Sans', arial;
 	font-weight: 700;
+}
+
+html, body, h1, h2, h3, h4, p {
+	color: #20232c;
+}
+
+a {
+	color: #2ecc71;
+}
+
+p {
+	margin-top: .75em;
+	margin-bottom: .75em;
+	font-family: 'Cutive Mono', 'Inconsolata', serif;
+	font-weight: 400;
+	font-size: 13px;
+	color: #363946;
+}
+
+.horizDiv {
+	height: 1em;
+	width: 80%;
+	background: url(../img/divstripes.gif);
+	background-repeat: repeat;
+	margin: auto;
+	margin-top: 3.5em;
+	margin-bottom: 3.5em;
 }
 	
 #lowerLayer {
@@ -22,53 +48,39 @@ html, body, h1, h2, h3, h4, a {
 	position: static;
 }
 
-#main {
-	font-family: 'Inconsolata', 'Crimson Text', serif;
-	font-weight: 400;
-	font-size: 12px;
+#title {
+	letter-spacing: -.05em;
+	margin-top: -.15em;
+	margin-bottom: -.1em;
 }
+
+#subtitle {
+	padding-left: .125em;
+	font-weight: 600;
+	padding-top: .4em;
+	padding-bottom: .4em;
+	background-color: #20232c;
+	color: #ffffff;
+}
+
 
 @media all and (max-width: 670px)	{
 	#title {
-		font-size: 3em;
-		letter-spacing: -.05em;
-		margin-top: -.15em;
-		margin-bottom: -.1em;
+		font-size: 3.25em;
 	}
 
 	h2 {
-		font-size: 1em;
+		font-size: 1.125em;
 	}
-		#subtitle {
-			padding-left: .125em;
-			font-weight: 600;
-			padding-top: .4em;
-			padding-bottom: .4em;
-			background-color: #20232c;
-			color: #ffffff;
-		}
 
-	#mobileMenu {
-		padding: .5em;
-		margin-left: .5em;
-		margin-right: .5em;
-	}
-		
-		#mobileMenu li {
-			background-color: #20232c;
-			padding: .5em;	
-			margin: .25em;
-			border-radius: .125em;
-			border: 1px solid;
-		}
-
-			#mobileMenu li a {
-				color: #fff;
-			}
-
-	#main {
+	#sideContent {
 		margin-left: .5em;
 		max-width: 20em;
+	}
+
+	.right {
+		float: right;
+		text-align: right;
 	}
 }
 
@@ -85,10 +97,28 @@ html, body, h1, h2, h3, h4, a {
 	h2 {
 		font-size: 1.5em;
 	}
+
 		#subtitle {
-			background-color: #20232c;
-			color: #ffffff;
+			display: inline-block;
+			padding: .25em;
 		}
 
+	#sideContent {
+		margin-left: 2em;
+		margin-top: 2em;
+		max-width: 20em;
+	}
+	
+	nav {
+		position: fixed;
+	}
+
+	#main {
+		float: right;
+		max-width: 900px;
+		margin-top: 3em;
+		margin-left: 380px;
+		margin-right: 50px;
+	}
 }
 
