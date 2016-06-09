@@ -20,8 +20,8 @@ a {
 }
 
 p {
-	margin-top: .75em;
-	margin-bottom: .75em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	font-family: 'Cutive Mono', 'Inconsolata', serif;
 	font-weight: 400;
 	font-size: 13px;
@@ -64,7 +64,7 @@ p {
 }
 
 
-@media all and (max-width: 670px)	{
+@media all and (max-width: 339px)	{
 	#title {
 		font-size: 3.25em;
 	}
@@ -75,16 +75,26 @@ p {
 
 	#sideContent {
 		margin-left: .5em;
-		max-width: 20em;
+		margin-right: .5em;
+		max-width: 40em;
 	}
 
-	.right {
-		float: right;
-		text-align: right;
-	}
+		.text-holder {
+			display: block;
+		}
+
+		.text-holder p {
+			max-width: 22em;
+		}
+
+			.right {
+				text-align: right;
+				margin-left: auto;
+				margin-right: 0px;
+			}
 }
 
-@media all and (min-width: 671px)	{
+@media all and (min-width: 340px)	{
 	body {
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
