@@ -107,11 +107,11 @@ p {
 	}
 
 	#title {
-		font-size: 4.5em;
+		font-size: 3.25em;
 	}
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 1.125em;
 	}
 
 		#subtitle {
@@ -120,21 +120,12 @@ p {
 		}
 
 	#sideContent {
-		margin-left: 2em;
-		margin-top: 2em;
+		margin-left: .5em;
 		max-width: 20em;
 	}
 	
 	nav {
 		position: fixed;
-	}
-
-	#main {
-		float: right;
-		max-width: 900px;
-		margin-top: 3em;
-		margin-left: 380px;
-		margin-right: 50px;
 	}
 }
 

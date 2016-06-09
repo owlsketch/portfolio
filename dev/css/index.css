@@ -31,9 +31,12 @@ article {
 @media all and (min-width: 600px)	{
 	#main {
 		float: right;
-		max-width: 400px;
+		max-width: 576px;
 		margin-top: 3em;
-		margin-left: 380px;
-		margin-right: 50px;
+		margin-left: 296px;
+		margin-right: 10px;
 	}
+}
+
+@media all and (min-width: 900px) {
 }
