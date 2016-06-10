@@ -27,6 +27,10 @@ article {
 	text-align: center;
 }
 
+.projectSummary {
+	margin: auto;
+	max-width: 22em;
+}
 
 @media all and (min-width: 600px)	{
 	#main {
@@ -36,7 +40,4 @@ article {
 		margin-left: 296px;
 		margin-right: 10px;
 	}
-}
-
-@media all and (min-width: 900px) {
 }

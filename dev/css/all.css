@@ -1,5 +1,6 @@
 /* all.css is styling that will be applied to all the pages
 *  regardless of mobile or desktop presentation.
+			<div class="bottomInfo">
 */
 
 html {
@@ -69,21 +70,16 @@ p {
 		font-size: 3.25em;
 	}
 
-	h2 {
+	#subtitle {
 		font-size: 1.125em;
 	}
 
 	#sideContent {
-		margin-left: .5em;
-		margin-right: .5em;
-		max-width: 22em;
+		margin: auto;
+		max-width: 26em;
 	}
 
-		.text-holder {
-			display: block;
-		}
-
-		.text-holder p {
+		#sideContent p {
 			max-width: 22em;
 		}
 
@@ -94,38 +90,29 @@ p {
 			}
 }
 
-@media all and (min-width: 341px), all and (max-width: 599px) {
-	#sideContent {
-		margin: auto;
-	}
-}
-
 @media all and (min-width: 600px)	{
 	body {
-	background-image: url(../img/pattern.png);
-	background-repeat: repeat;
+		background-image: url(../img/pattern.png);
+		background-repeat: repeat;
+	}
+
+	nav {
+		position: fixed;
 	}
 
 	#title {
 		font-size: 3.25em;
 	}
 
-	h2 {
+	#subtitle {
 		font-size: 1.125em;
+		display: inline-block;
+		padding: .25em;
 	}
-
-		#subtitle {
-			display: inline-block;
-			padding: .25em;
-		}
 
 	#sideContent {
 		margin-left: .5em;
 		max-width: 20em;
-	}
-	
-	nav {
-		position: fixed;
 	}
 }
 
