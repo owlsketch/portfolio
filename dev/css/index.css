@@ -16,17 +16,24 @@ article {
 	padding: .25em;
 	font-size: 1.5em;
 	display: inline-block;
-	width: 50%;
+	min-width: 50%;
 	text-align: center;
-}
-
-.projectLink {
 }
 
 .projectSummary {
 	margin: auto;
+	margin-top: 2em;
 	max-width: 22em;
 }
+
+.projectLink {
+	margin-top: 2.25em;
+}
+
+	.projectLink a {
+		border: 1px solid;
+		padding: .75em;
+	}
 
 @media all and (min-width: 600px)	{
 	#main {
