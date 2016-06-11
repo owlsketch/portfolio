@@ -30,9 +30,21 @@ article {
 	margin-top: 2.25em;
 }
 
-	.projectLink a {
-		border: 1px solid;
+	.projectLink a:link {
+		border: 1px solid #2ecc71;
 		padding: .75em;
+	}
+
+	.projectLink a:visited {
+		border: 1px solid #1cb35b;
+	}
+
+	.projectLink a:hover {
+		border: 1px solid #2ecc71;
+	}
+
+	.projectLink a:active {
+		border: 1px solid #2cc36b;
 	}
 
 @media all and (min-width: 600px)	{
