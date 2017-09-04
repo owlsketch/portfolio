@@ -1,0 +1,72 @@
+Should just do minimum. Then add and add parts of the whole.
+Can't seem to work any other way tbh.
+The basic structure is set it seems.
+
+Need to clarify what the portfolio is about.
+
+Portfolio should be simple af.
+Just programming based work and blog as main components.
+This is the 'front-page' content.
+
+'hidden' or more nested content is skateboarding/photography/art/etc.
+
+Need to have an easily adaptable design.
+Hate feeling as if I'm stuck to one design.
+
+OverHeadMenu
+  -> About
+  -> Contact
+  -> Etc.
+    -> Photography
+    -> Skateboarding
+    -> Sketchdump (failed projects)
+Main Page
+  -> HI
+  -> Latest Work
+  -> Feed
+
+
+===== OVER HEAD STYLE MENU =====
+
+
+ABOUT
+
+owlsketch
+Gibran García
+creative programmer
+
+Just some guy skating around Manhattan, raising more questions
+than answers, and set on making the world just a little
+more intriguing/terrifying; one project at a time.
+
+Let's make something great together!
+I’m passionate about making ideas into reality, and do so
+through web-centric programming and design, while also unafraid
+to add hardware to the mix. If you’re interested or have a project
+in mind send me a message or check out my resume.
+
+CONTACT
+
+ETC
+
+
+====================================
+
+OWL SKETCH //fan of the white text on black logo
+The works. The blog.
+
+Creating the unknown.
+
+WORKS
+  -PXL WALL
+    Pixel wall controlled from anywhere in the world (universe???)
+    August 2017
+  -GALLERY
+    Classics renovated for the web
+    July 2015
+
+FEED
+  Blog.
+
+FOOTER
+  github. behance. instagram.
