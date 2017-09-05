@@ -16,7 +16,8 @@ Hate feeling as if I'm stuck to one design.
 OverHeadMenu
   -> About
   -> Contact
-  -> Etc.
+  -> Resume (image with option to dl pdf)
+  -> Etc. (leading to different websites possibly? Esp. for Photo)
     -> Photography
     -> Skateboarding
     -> Sketchdump (failed projects)
@@ -46,6 +47,8 @@ to add hardware to the mix. If you’re interested or have a project
 in mind send me a message or check out my resume.
 
 CONTACT
+
+RESUME
 
 ETC
 
