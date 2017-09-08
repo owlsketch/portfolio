@@ -1,0 +1,21 @@
+#overhead {
+}
+
+article {
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo {
+  display: inline-block;
+  background-color: #232933;
+  padding: .3em .5em;
+}
+
+#logo__text {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  color: #ffffff;
+}

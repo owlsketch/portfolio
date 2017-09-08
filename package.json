@@ -1,0 +1,33 @@
+{
+  "name": "owlsketch-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website and server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owlsketch/owlsketch.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "site",
+    "website",
+    "design",
+    "programming",
+    "owlsketch"
+  ],
+  "author": "Gibran Garcia <satimidus@gmail.com> (http://owlsketch.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/owlsketch/owlsketch.github.io/issues"
+  },
+  "homepage": "https://github.com/owlsketch/owlsketch.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
