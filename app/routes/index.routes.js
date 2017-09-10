@@ -7,4 +7,8 @@ module.exports = function(app) {
   app.get('/about', function(req, res) {
     res.render('pages/about.ejs');
   })
+
+  app.get('/projects', function(req, res) {
+    res.render('pages/projects.ejs');
+  })
 };
