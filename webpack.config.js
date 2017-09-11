@@ -1,9 +1,13 @@
 let path = require('path');
+//extract bundled css into separate bundle css file
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let extractPlugin = new ExtractTextPlugin({
-  filename: 'main.css'
+  filename: 'main.bundle.css'
 });
+
+//remove dist folder if it exists before creating new bundle
+let CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -30,5 +34,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [ extractPlugin ]
+  plugins: [
+    extractPlugin,
+    new CleanWebpackPlugin(['dist'])
+  ]
 };
