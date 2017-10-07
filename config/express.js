@@ -11,6 +11,7 @@ module.exports = function() {
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
+  //should remove dependency on public to solely dist
   app.use(express.static('./public'));
   app.use(express.static('./dist'));
 
