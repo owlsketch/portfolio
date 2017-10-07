@@ -1,0 +1,24 @@
+body {
+  margin: 15px 15px;
+}
+
+#cover__content {
+  position: absolute;
+  z-index: 1;
+}
+
+#cover__title {
+  color: #ffffff;
+}
+
+#cover-holder {
+  background-color: #15151B;
+  /* want canvas to cover entire width of window */
+  width: 100%;
+  /* however, want to maintain a ratio between width and height */
+  height: 54.05vw; /* height:width ratio = 1/1.85  */
+  /* only want to maintain ratio until height reaches this max point */
+  max-height: 714px;
+  /* possibly want the same condition for a minimum height? */
+  min-height: 250px; /* Also depends on how mobile sizing will go */
+}
