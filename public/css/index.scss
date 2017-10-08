@@ -1,6 +1,4 @@
-body {
-  margin: 15px 15px;
-}
+@import "colors";
 
 #cover__content {
   position: absolute;
@@ -8,11 +6,11 @@ body {
 }
 
 #cover__title {
-  color: #ffffff;
+  color: $white;
 }
 
 #cover-holder {
-  background-color: #15151B;
+  background-color: $bg-black;
   /* want canvas to cover entire width of window */
   width: 100%;
   /* however, want to maintain a ratio between width and height */
@@ -21,4 +19,35 @@ body {
   max-height: 714px;
   /* possibly want the same condition for a minimum height? */
   min-height: 250px; /* Also depends on how mobile sizing will go */
+}
+
+#main-section {
+}
+
+.project {
+	width: 50%;
+	float: left;
+}
+
+.project__title {
+	margin-top: 0px;
+}
+
+#project__pixel {
+	background-color: $bg-blue;
+	height: 400px;
+	color: $white;
+	p {
+		color: $white;
+	}
+}
+
+
+#project__wall {
+	background-color: $bg-red;
+	height: 400px;
+	color: #FFFFFF;
+	p {
+		color: $white;
+	}
 }

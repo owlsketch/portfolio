@@ -19,7 +19,7 @@
 -->
 <head>
 	<% include ../partials/head %>
-	<link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="/index.bundle.css" media="screen"/>
 </head>
 <body>
 	<% include ../partials/menu %>
@@ -33,34 +33,30 @@
 	</div>
 	<div id="cover-holder">
 	</div>
-	<article>
-		<div>
-			<h2> Projects </h2>
-			<div>
-				<h3> PXL WALL </h3>
+	<section id="main-section">
+		<section class="project">
+			<article id="project__pixel">
+				<h3 class="project__title"> PXL WALL </h3>
 				<img src="/img/pixelWallLogo.png"></img>
 				<p> August 2017 </p>
 				<p> A pixel wall for the internet</p>
 				<!-- subset of /projects/ solely for this project -->
 				<a href="#">More</a>
-			</div>
-			<div>
-				<h3> GALLERIE </h3>
+			</article>
+		</section>
+		<section class="project">
+			<article id="project__wall">
+				<h3 class="project__title"> GALLERIE </h3>
 				<img src="/img/theGallery.jpg" width="360"></img>
 				<p> August 2015 </p>
 				<p> Turning classics into web classics</p>
 				<a href="#">More</a>
-			</div>
-			<a href="/projects"> View All Projects </a>
-		</div>
-		<div>
-			<h2> FEED </h2>
-			<p> Blog goes here </p>
-			<br>
-		</div>
-	</article>
+			</article>
+		</section>
+		<a href="/projects"> View All Projects </a>
+	</section>
 	<% include ../partials/footer %>
-	<script src="/setup.bundle.js"></script>
+	<script src="/index.bundle.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
 	<script src="/js/cover.js"></script>
 </body>

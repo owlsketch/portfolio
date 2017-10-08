@@ -1,17 +1,23 @@
+let webpack = require('webpack');
 let path = require('path');
 //extract bundled css into separate bundle css file
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-let extractPlugin = new ExtractTextPlugin({
-  filename: 'main.bundle.css'
-});
-
 //remove dist folder if it exists before creating new bundle
 let CleanWebpackPlugin = require('clean-webpack-plugin');
 
+let extractPlugin = new ExtractTextPlugin({
+	filename: '[name].bundle.css'
+})
+
 module.exports = {
+  watch: true,
+  watchOptions: {
+	ignored: /node_modules/
+  },
   entry: {
-    setup: './public/js/setup.js'
+	vendor: ["jquery"],
+    main: './public/js/main.js',
+	index: './public/js/index.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -29,13 +35,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.scss$/, //possibly include css as well?
         use: extractPlugin.extract({ use: ['css-loader', 'sass-loader']})
       }
     ]
   },
   plugins: [
-    extractPlugin,
+  	new webpack.ProvidePlugin({
+		//map variables to functions
+		$: 'jquery',
+		jQuery: 'jquery'
+	}),
+	new webpack.optimize.CommonsChunkPlugin({
+		name: 'vendor',
+		filename: 'vendor.bundle.js',
+		minChunks: Infinity //ensure no other modules put in here, just vendor modules
+	}),
+	extractPlugin,
     new CleanWebpackPlugin(['dist'])
   ]
 };
