@@ -3,51 +3,69 @@
 #cover__content {
   position: absolute;
   z-index: 1;
-}
-
-#cover__title {
-  color: $white;
+	#cover__title {
+	  color: $white;
+	}
 }
 
 #cover-holder {
   background-color: $bg-black;
-  /* want canvas to cover entire width of window */
+  // want canvas to cover entire width of window
   width: 100%;
-  /* however, want to maintain a ratio between width and height */
-  height: 54.05vw; /* height:width ratio = 1/1.85  */
-  /* only want to maintain ratio until height reaches this max point */
+  // however, want to maintain a ratio between width and height
+  height: 54.05vw; // height:width ratio = 1/1.85
+  // only want to maintain ratio until height reaches this max point
   max-height: 714px;
-  /* possibly want the same condition for a minimum height? */
-  min-height: 250px; /* Also depends on how mobile sizing will go */
+  // possibly want the same condition for a minimum height?
+  min-height: 250px; // depends on how mobile sizing will go
 }
 
+//block element
 #main-section {
+	//subsections each fill half of width
+	.project {
+		width: 50%;
+		float: left;
+		//sub subsection has max/min width they fill up of subsection
+		article {
+			max-width: 888px;
+			min-width: 462.5px;
+			.project__title {
+				margin-top: 0px;
+			}
+		}
+	}
 }
 
-.project {
-	width: 50%;
-	float: left;
-}
-
-.project__title {
-	margin-top: 0px;
-}
-
-#project__pixel {
+#project__pixel-wrapper {
 	background-color: $bg-blue;
-	height: 400px;
-	color: $white;
-	p {
+	#project__pixel {
+		//if max-width reached, align right
+		margin-right: 0px;
+		margin-left: auto;
+
+		background-color: $bg-blue;
+		height: 400px;
 		color: $white;
+		p {
+			color: $white;
+		}
 	}
 }
 
-
-#project__wall {
+#project__wall-wrapper {
 	background-color: $bg-red;
-	height: 400px;
-	color: #FFFFFF;
-	p {
-		color: $white;
+	#project__wall {
+		//if max-width reached, align left
+		margin-left: 0px;
+		margin-right: auto;
+
+		background-color: $bg-red;
+		height: 400px;
+		color: #FFFFFF;
+		p {
+			color: $white;
+		}
 	}
 }
+
