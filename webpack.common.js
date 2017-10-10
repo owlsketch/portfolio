@@ -1,19 +1,13 @@
-let webpack = require('webpack');
-let path = require('path');
-//extract bundled css into separate bundle css file
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
-//remove dist folder if it exists before creating new bundle
-let CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 let extractPlugin = new ExtractTextPlugin({
 	filename: '[name].bundle.css'
 })
 
 module.exports = {
-  watch: true,
-  watchOptions: {
-	ignored: /node_modules/
-  },
   entry: {
 	vendor: ["jquery"],
     main: './public/js/main.js',
@@ -34,6 +28,10 @@ module.exports = {
           }
         ]
       },
+	  {
+		test: /\.css$/,
+		use: extractPlugin.extract({ use: ['css-loader'] })
+	  },
       {
         test: /\.scss$/, //possibly include css as well?
         use: extractPlugin.extract({ use: ['css-loader', 'sass-loader']})

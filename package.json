@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests/",
-    "build": "webpack",
-    "build:prod": "webpack -p"
+    "build": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,7 @@
     "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
-    "jquery": "^3.2.1",
-    "p5": "^0.5.14"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -40,6 +39,8 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.5.6"
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.6",
+    "webpack-merge": "^4.1.0"
   }
 }
