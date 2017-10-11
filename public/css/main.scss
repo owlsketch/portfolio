@@ -7,6 +7,18 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.fixed {
+	position: fixed;
+}
+
+.midnightHeader.default {
+	background: white;
+}
+
+.midnightHeader.black {
+	background: black;
+}
+
 #logo {
   display: inline-block;
   background-color: $default-color;
