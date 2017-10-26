@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 50px;
+    width: 65px;
 }
 
 .menu_holder {
@@ -24,17 +24,16 @@ body {
         display: inline-block;
         transform: rotate(-90deg);
         text-align: center;
-        line-height: 34px;
-        left: -55px;
+        line-height: 35px;
+        left: -56px;
         top: 50%;
         margin-top: -36.25px;
-        border: solid 3px #ffffff;
         width: 145px;
         height: 40px;
         font-family: 'Open Sans';
         font-weight: 800;
         font-size: 20px;
-        letter-spacing: 5px;
+        letter-spacing: 6px;
 
         &:link {
             color: white;
@@ -51,17 +50,51 @@ body {
     }
 }
 
-.midnightHeader.default {
-    color: #ffffff;
+.midnightHeader.black {
+    border-right: 3px solid white;
+    .menu_holder {
+        a {
+            border: solid 3px $white;
+            background-color: $bg-black;
+        }
+    }
 }
 
-.midnightHeader.black {
-    color: #000000;
+.midnightHeader.turquoise {
+    border-right: 3px solid white;
+    .menu_holder {
+        a {
+            border: solid 3px $white;
+        }
+    }
+}
+
+.midnightHeader.white {
+    border-right: 3px solid $bg-black;
+    .menu_holder {
+        a {
+            border: solid 3px $bg-black;
+            background-color: $white;
+            &:link {
+                color: $bg-black;
+            }
+            &:visited {
+                color: $bg-black;
+            }
+            &:hover {
+                color: $bg-black;
+            }
+            &:active {
+                color: $bg-black;
+            }
+        }
+    }
+
 }
 
 #logo {
   display: inline-block;
-  background-color: $default-color;
+  border: 1px solid $white;
   padding: .4em .5em;
   margin: 25px 40px;
   float: right;
