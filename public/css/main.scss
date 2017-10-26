@@ -5,29 +5,71 @@ article {
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden;
 }
 
 .fixed {
 	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 50px;
+}
+
+.menu_holder {
+    height: 100vh;
+    width: 50px;
+    a {
+        position: absolute;
+        display: inline-block;
+        transform: rotate(-90deg);
+        text-align: center;
+        line-height: 34px;
+        left: -55px;
+        top: 50%;
+        margin-top: -36.25px;
+        border: solid 3px #ffffff;
+        width: 145px;
+        height: 40px;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 5px;
+
+        &:link {
+            color: white;
+        }
+        &:visited {
+            color: white;
+        }
+        &:hover {
+            color: white;
+        }
+        &:active {
+            color: white;
+        }
+    }
 }
 
 .midnightHeader.default {
-	background: white;
+    color: #ffffff;
 }
 
 .midnightHeader.black {
-	background: black;
+    color: #000000;
 }
 
 #logo {
   display: inline-block;
   background-color: $default-color;
-  padding: .3em .5em;
-  margin: 20px 25px;
+  padding: .4em .5em;
+  margin: 25px 40px;
+  float: right;
 }
 
 #logo__text {
   font-family: 'Open Sans';
   font-weight: 800;
   color: #ffffff;
+  font-size: 26px;
 }
