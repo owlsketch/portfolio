@@ -3,11 +3,11 @@
 html, body, div, span, p, em, img, b, u, i, center,
 ol, ul, li, article, aside, canvas, details, embed, footer,
 header, menu, nav, section, summary, audio, video {
-  margin: 0px;
-  padding: 0px;
-  font-size: 100%;
-  border: 0px;
-  color: $default-color;
+    margin: 0em;
+    padding: 0em;
+    font-size: 100%; //16px for most browsers
+    border: 0em;
+    color: $default-color;
 }
 
 body {

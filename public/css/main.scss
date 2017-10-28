@@ -1,108 +1,92 @@
 @import "colors";
 
-article {
-}
-
 body {
     font-family: 'Source Sans Pro', sans-serif;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .fixed {
-	position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 65px;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    width: 4em;
 }
 
 .menu_holder {
     height: 100vh;
-    width: 50px;
+    width: 3em;
     a {
+        font-size: 20px;
         position: absolute;
         display: inline-block;
         transform: rotate(-90deg);
         text-align: center;
-        line-height: 35px;
-        left: -56px;
+        line-height: 1.75em;
+        left: -2.75em;
         top: 50%;
-        margin-top: -36.25px;
-        width: 145px;
-        height: 40px;
+        margin-top: -2.75em;
+        width: 7.25em;
+        height: 2em;
         font-family: 'Open Sans';
         font-weight: 800;
-        font-size: 20px;
-        letter-spacing: 6px;
+        letter-spacing: .3em;
 
         &:link {
-            color: white;
+            color: $white;
         }
         &:visited {
-            color: white;
+            color: $white;
         }
         &:hover {
-            color: white;
+            color: $white;
         }
         &:active {
-            color: white;
+            color: $white;
         }
     }
 }
 
-.midnightHeader.black {
-    border-right: 3px solid white;
+.midnightHeader.default {
     .menu_holder {
         a {
-            border: solid 3px $white;
-            background-color: $bg-black;
+            border: solid .15em $white;
         }
     }
 }
-
-.midnightHeader.turquoise {
-    border-right: 3px solid white;
-    .menu_holder {
-        a {
-            border: solid 3px $white;
-        }
-    }
-}
-
 .midnightHeader.white {
-    border-right: 3px solid $bg-black;
     .menu_holder {
         a {
-            border: solid 3px $bg-black;
+            border: solid .15em $black;
             background-color: $white;
             &:link {
-                color: $bg-black;
+                color: $black;
             }
             &:visited {
-                color: $bg-black;
+                color: $black;
             }
             &:hover {
-                color: $bg-black;
+                color: $black;
             }
             &:active {
-                color: $bg-black;
+                color: $black;
             }
         }
     }
 
 }
 
-#logo {
-  display: inline-block;
-  border: 1px solid $white;
-  padding: .4em .5em;
-  margin: 25px 40px;
-  float: right;
+.logo {
+    display: inline-block;
+    float: right;
+    padding: .4em .5em;
+    margin: 1.6em 2.5em;
+    border: 1px solid $white;
 }
 
-#logo__text {
-  font-family: 'Open Sans';
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 26px;
+.logo__text {
+    font-size: 26px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: $white;
 }

@@ -1,101 +1,89 @@
 @import "colors";
 
-#cover-section {
-  //placed under menu component
-  position: relative;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  max-height: 1300px;
-  min-height: 250px;
+.vertical-line {
+    display: inline-block;
+    position: absolute;
+    margin-left: 4em;
+    height: 100vh;
+    width: .125em; 
+    background-color: $white;
 }
 
-#cover__content {
-  position: absolute;
-  left: 50%;
-  width: 100%;
-  max-width: 1776px;
-  min-width: 888px;
-  z-index: 1;
-    #content__center {
-		position: relative;
-		left: -50%;
-	}
+#vl_black {
+    background-color: $black;
 }
 
-#cover__content {
-  #cover__title {
-    color: $white;
-  }
+.cover-section {
+    //placed under menu component
+    position: relative;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
 }
 
-#cover-holder {
-  position: absolute;
-  z-index: 0;
-  background-color: $bg-black;
-  // want canvas to cover entire width of window
-  width: 100%;
-  // however, want to maintain a ratio between width and height
-  height: 100vh; // height:width ratio = 1/1.85
-  // only want to maintain ratio until height reaches this max point
-  max-height: 1300px;
-  // possibly want the same condition for a minimum height?
-  min-height: 250px; // depends on how mobile sizing will go
-}
+    .cover-holder {
+        position: absolute;
+        z-index: 0;
+        background-color: $black;
+        width: 100vw;
+        height: 100vh; 
+    }
+
+    .cover__content {
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        max-width: 111em;
+        min-width: 55.5em;
+        z-index: 1;
+        .content__center {
+            position: relative;
+            left: -50%;
+        }
+    }
 
 //block element
-#main-section {
-	//subsections each fill half of width
+.main-section {
+    //subsections each fill half of width
     height: 100vh;
-	.project {
-		width: 50%;
-		float: left;
-		//sub subsection has max/min width they fill up of subsection
-		article {
-			max-width: 888px;
-			min-width: 462.5px;
-			.project__title {
-				margin-top: 0px;
-			}
-		}
-	}
+    .project {
+        background-image: linear-gradient(0deg, $greengradient0 0%, $greengradient1 100%);
+        width: 50%;
+        float: left;
+        //sub subsection has max/min width they fill up of subsection
+        article {
+            max-width: 55.5em;
+            min-width: 28em;
+            height: 100vh;
+            color: $white;
+            .project__title {
+                margin-top: 0em;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
 }
+    
+    #p_pixel-wrapper {
+        article {
+            //if max-width reached, align right
+            width: 80%;
+            margin-left: auto;
+            margin-right: 0em;
+        }
+    }
 
-#project__pixel-wrapper {
-    background-image: linear-gradient(0deg, #4cd7c9 0%, #67fac8 100%);
-	#project__pixel {
-		//if max-width reached, align right
-        width: 80%;
-		margin-right: 0px;
-		margin-left: auto;
-        background-image: linear-gradient(0deg, #4cd7c9 0%, #67fac8 100%);
-		height: 100vh;
-        max-height: 1300px;
-		color: $white;
-		p {
-			color: $white;
-		}
-	}
-}
+    #p_wall-wrapper {
+        article {
+            //if max-width reached, align left
+            margin-left: 0em;
+            margin-right: auto;
+        }
+    }
 
-#project__wall-wrapper {
-    background-image: linear-gradient(0deg, #4cd7c9 0%, #67fac8 100%);
-	#project__wall {
-		//if max-width reached, align left
-		margin-left: 0px;
-		margin-right: auto;
-
-        background-image: linear-gradient(0deg, #4cd7c9 0%, #67fac8 100%);
-		height: 100vh;
-        max-height: 1300px;
-		color: #FFFFFF;
-		p {
-			color: $white;
-		}
-	}
-}
-
-#white-bg-section {
-    width: 100%;
+.white-bg-section {
+    width: 100vw;
     height: 100vh;
 }
