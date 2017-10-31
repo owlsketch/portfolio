@@ -24,21 +24,23 @@
 <body>
     <% include ../partials/menu %>
 
+    <nav class="fixed">
+        <h2 class="logo">
+            <em class="logo__text">OWL SKETCH</em>
+        </h2>
+    </nav>
     <div class="vertical-line"></div>
     <section class="cover-section">
         <div class="cover-holder" id="p5-wrapper">
         </div>
         <div class="cover__content">
             <div class="content__center">
-                <h2 class="logo">
-                    <em class="logo__text">OWL SKETCH</em>
-                </h2>
             </div>
         </div>
     </section>
 
     <div class="vertical-line"></div>
-    <section class="main-section">
+    <section class="main-section" data-midnight="green-mint">
         <section class="project" id="p_pixel-wrapper">
             <article>
                 <h3 class="project__title"> PXL WALL </h3>
@@ -62,8 +64,10 @@
 
     <div class="vertical-line" id="vl_black"></div>
     <section class="white-bg-section" data-midnight="white"> 
+        <div class="footer-wrapper">
+            <% include ../partials/footer %>
+        </div>
     </section>
-    <% include ../partials/footer %>
     <script src="/index.bundle.js"></script>
 </body>
 </html>

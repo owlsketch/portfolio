@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    overflow-x: hidden;
 }
 
 .fixed {
@@ -10,7 +9,10 @@ body {
     top: 0em;
     left: 0em;
     right: 0em;
-    width: 4em;
+}
+
+#f_menu {
+    width: 3.1em;
 }
 
 .menu_holder {
@@ -23,14 +25,15 @@ body {
         transform: rotate(-90deg);
         text-align: center;
         line-height: 1.75em;
-        left: -2.75em;
+        left: -3.3em;
         top: 50%;
-        margin-top: -2.75em;
-        width: 7.25em;
+        margin-top: -1.7em;
+        width: 8.25em;
         height: 2em;
         font-family: 'Open Sans';
         font-weight: 800;
-        letter-spacing: .3em;
+        letter-spacing: .4em;
+        border: solid .15em $white;
 
         &:link {
             color: $white;
@@ -47,13 +50,27 @@ body {
     }
 }
 
-.midnightHeader.default {
-    .menu_holder {
-        a {
-            border: solid .15em $white;
-        }
+.logo {
+    display: inline-block;
+    float: right;
+    padding: .4em .5em;
+    margin: 1.6em 2.5em;
+    border: 1px solid $white;
+    background-color: $black;
+    .logo__text {
+        font-size: 26px;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        color: $white;
     }
 }
+
+.midnightHeader.green-mint {
+    .logo {
+        background-color: $greengradient1;
+    }
+}
+
 .midnightHeader.white {
     .menu_holder {
         a {
@@ -73,20 +90,11 @@ body {
             }
         }
     }
-
-}
-
-.logo {
-    display: inline-block;
-    float: right;
-    padding: .4em .5em;
-    margin: 1.6em 2.5em;
-    border: 1px solid $white;
-}
-
-.logo__text {
-    font-size: 26px;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    color: $white;
+    .logo {
+        border: 1px solid $black;
+        background-color: $white;
+        .logo__text {
+            color: $black;
+        }
+    }
 }
