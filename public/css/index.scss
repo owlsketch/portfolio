@@ -46,8 +46,9 @@
 .main-section {
     //subsections each fill half of width
     height: 100vh;
+    background-image: linear-gradient(0deg, $greengradient0 0%, $greengradient1 100%);
     .project {
-        background-image: linear-gradient(0deg, $greengradient0 0%, $greengradient1 100%);
+        opacity: 0;
         width: 50%;
         float: left;
         //sub subsection has max/min width they fill up of subsection
