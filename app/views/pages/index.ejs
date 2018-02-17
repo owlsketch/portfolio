@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html>
-<!--
-                 ________  ___       __   ___
-                |\   __  \|\  \     |\  \|\  \
-                \ \  \|\  \ \  \    \ \  \ \  \
-                 \ \  \\\  \ \  \  __\ \  \ \  \
-                  \ \  \\\  \ \  \|\__\_\  \ \  \____
-                   \ \_______\ \____________\ \_______\
-                    \|_______|\|____________|\|_______|
-                        ________  ___  __    _______  _________  ________  ___  ___
-                       |\   ____\|\  \|\  \ |\  ___ \|\___   ___\\   ____\|\  \|\  \
-                       \ \  \___|\ \  \/  /|\ \   __/\|___ \  \_\ \  \___|\ \  \\\  \
-                        \ \_____  \ \   ___  \ \  \_|/__  \ \  \ \ \  \    \ \   __  \
-                         \|____|\  \ \  \\ \  \ \  \_|\ \  \ \  \ \ \  \____\ \  \ \  \
-                               \_\  \ \__\\ \__\ \_______\  \ \__\ \ \_______\ \__\ \__\
-                          |\_________\|__| \|__|\|_______|   \|__|  \|_______|\|__|\|__|
-                          \|_________|
--->
 <head>
-    <% include ../partials/head %>
-    <link rel="stylesheet" type="text/css" href="/index.bundle.css" media="screen"/>
+  <% include ../partials/head %>
+  <link rel="stylesheet" type="text/css" href="/index.bundle.css" media="screen"/>
 </head>
 <body>
-    <% include ../partials/menu %>
-
-    <nav class="fixed">
-        <h2 class="logo">
-            <em class="logo__text">OWL SKETCH</em>
-        </h2>
-    </nav>
-    <div class="vertical-line"></div>
-    <section class="cover-section">
-        <div class="cover-holder" id="p5-wrapper">
-        </div>
-        <div class="cover__content">
-            <div class="content__center">
-            </div>
-        </div>
-    </section>
-
-    <div class="vertical-line"></div>
-    <section class="main-section" data-midnight="green-mint">
-        <section class="project" id="p_pixel-wrapper">
-            <article>
-                <h3 class="project__title"> PXL WALL </h3>
-                <img src="/img/pixelWallLogo.png"></img>
-                <p> August 2017 </p>
-                <p> A pixel wall for the internet</p>
-                <!-- subset of /projects/ solely for this project -->
-                <a href="#">More</a>
-            </article>
-        </section>
-        <section class="project" id="p_wall-wrapper">
-            <article>
-                <h3 class="project__title"> GALLERIE </h3>
-                <img src="/img/theGallery.jpg" width="360"></img>
-                <p> August 2015 </p>
-                <p> Turning classics into web classics</p>
-                <a href="#">More</a>
-            </article>
-        </section>
-    </section>
-
-    <div class="vertical-line" id="vl_black"></div>
-    <section class="white-bg-section" data-midnight="white"> 
-        <div class="footer-wrapper">
-            <% include ../partials/footer %>
-        </div>
-    </section>
-    <script src="/index.bundle.js"></script>
+  <script src="/main.bundle.js"></script>
+  <script src="/index.bundle.js"></script>
 </body>
 </html>

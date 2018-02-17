@@ -4,13 +4,12 @@
   "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/",
     "build": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owlsketch/owlsketch.github.io.git"
+    "url": "git+https://github.com/owlsketch/portfolio.git"
   },
   "keywords": [
     "portfolio",
@@ -19,7 +18,9 @@
     "website",
     "design",
     "programming",
-    "owlsketch"
+    "owlsketch",
+    "gibran",
+    "garcia"
   ],
   "author": "Gibran Garcia <satimidus@gmail.com> (http://owlsketch.com)",
   "license": "Apache-2.0",
@@ -27,9 +28,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
-    "express": "^4.15.4",
-    "jquery": "^3.2.1",
-    "p5": "^0.5.15"
+    "express": "^4.15.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
