@@ -11,7 +11,8 @@ let extractPlugin = new ExtractTextPlugin({
 module.exports = {
   entry: {
     main: './public/js/main.js',
-    index: './public/js/index.js'
+    projects: './public/js/projects.js',
+    about: './public/js/about.js'
   },
   output: {
     filename: '[name].bundle.js',

@@ -1,5 +1,29 @@
 @import "colors";
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "futura-pt", sans-serif;
 }
+
+.nav_layer {
+  position: absolute;
+  z-index: 2;
+}
+
+  .logo {
+    .logo_corner {
+      background: $white;
+      width: 1.5em;
+      height: 1.5em;
+    }
+    .logo_wrapper {
+      display: inline-block;
+      margin-left: 1.5em;
+      border: solid 1px $white;
+      padding: .5em .75em;
+      .logo_text {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $white;
+      }
+    }
+  }

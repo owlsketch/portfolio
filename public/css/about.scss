@@ -1,0 +1,13 @@
+@import "colors";
+
+.logo {
+  .logo_corner {
+    background: $blue;
+  }
+  .logo_wrapper {
+    border: solid 1px $blue;
+    .logo_text {
+      color: $blue;
+    }
+  }
+}
