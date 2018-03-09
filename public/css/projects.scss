@@ -1,9 +1,72 @@
 @import "colors";
 
-body {
-  background: $mango;
-}
-
 .proj_nav_layer {
   z-index: 1;
+  position: absolute;
 }
+
+.projects {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .project_bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .project_title {
+    font-weight: 700;
+    font-size: 4.5em;
+    color: $white;
+  }
+}
+
+.gallery_wrapper {
+  display: none;
+}
+
+  .gallery_bg {
+    background: $mango;
+  }
+
+  .gallery {
+    .gallery_frame {
+      border: solid .125em $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .gallery_frame_bg {
+        width: 47.75em;
+        height: 22.75em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+    .gallery_title {
+      float: right;
+    }
+  }
+
+.pixel_wrapper {
+  display: block;
+}
+
+  .pixel_bg {
+    background: $red;
+  }
+
+  .pixel {
+
+  }

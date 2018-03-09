@@ -5,8 +5,19 @@ body {
 }
 
 .nav_layer {
-  position: absolute;
   z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  grid-template-rows: auto auto;
+  align-content: space-between;
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
 }
 
   .logo {
@@ -25,5 +36,31 @@ body {
         font-weight: 700;
         color: $white;
       }
+    }
+  }
+  .menu {
+    margin-top: 2em;
+    margin-right: 4em;
+    a {
+      color: $white;
+      font-size: 1.3125em;
+    }
+    a:first-child {
+      margin-right: 1.33em;
+    }
+  }
+  .social {
+    margin-left: 2.125em;
+    margin-bottom: 1.75em;
+    .links {
+      width: 1.5em;
+    }
+    svg {
+      display: block;
+      color: $white;
+      font-size: 1.5em;
+    }
+    .fa-github {
+      margin-bottom: .6em;
     }
   }

@@ -12,6 +12,7 @@ module.exports = function() {
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
   app.use(express.static('./dist'));
+  app.use(express.static('./public')); //for images not bundled into webpack
 
   require('../app/routes/index.routes.js')(app);
 
