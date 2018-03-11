@@ -9,13 +9,26 @@
   <div class="content">
 
     <div class="proj_nav_layer">
-      <div class="proj_arrows"></div>
-      <div class="proj_list"></div>
+      <div class="proj_arrows">
+        <img width="52px" class="left_arrow" id="prev" src="/img/arrow.svg"/>
+        <img width="52px" class="right_arrow" id="next" src="/img/arrow.svg"/>
+      </div>
+      <div class="proj_list">
+
+      </div>
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects_container">
 
-      <div class="project gallery_wrapper">
+      <div class="project pixel_wrapper active">
+        <div class="project_bg pixel_bg"></div> 
+        <div class="pixel">
+          <p class="project_title pixel_title">PIXEL</p> 
+          <p class="project_title pixel_title">WALL</p>
+        </div>
+      </div>
+
+      <div class="project gallery_wrapper inactive">
         <div class="project_bg gallery_bg"></div> 
         <div class="gallery">
           <div class="gallery_frame">
@@ -24,14 +37,6 @@
             </div>
           </div>
           <p class="project_title gallery_title">GALLERY</p>
-        </div>
-      </div>
-
-      <div class="project pixel_wrapper">
-        <div class="project_bg pixel_bg"></div> 
-        <div class="pixel">
-          <p class="project_title pixel_title">PIXEL</p> 
-          <p class="project_title pixel_title">WALL</p>
         </div>
       </div>
 

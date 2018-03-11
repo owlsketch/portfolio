@@ -3,6 +3,31 @@
 .proj_nav_layer {
   z-index: 1;
   position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.proj_arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  * {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .left_arrow {
+    margin-left: 2.88em;
+  }
+  .right_arrow {
+    transform: scaleX(-1);
+    margin-right: 3em;
+  }
 }
 
 .projects {
@@ -27,12 +52,20 @@
   }
 }
 
-.gallery_wrapper {
-  display: none;
-}
+  .active { 
+    display: block;
+  }
+
+  .inactive { 
+    display: none;
+  }
 
   .gallery_bg {
     background: $mango;
+  }
+
+  .pixel_bg {
+    background: $red;
   }
 
   .gallery {
@@ -57,14 +90,6 @@
     .gallery_title {
       float: right;
     }
-  }
-
-.pixel_wrapper {
-  display: block;
-}
-
-  .pixel_bg {
-    background: $red;
   }
 
   .pixel {
