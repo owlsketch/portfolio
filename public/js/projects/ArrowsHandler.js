@@ -12,6 +12,8 @@ class ArrowsHandler {
   
     this.prev.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'prev');});
     this.next.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'next');});
+
+    document.addEventListener('keypress', function(e) { state.keypressEvent(e); });
   }
 
   getProjects(container) {
@@ -50,6 +52,15 @@ class ArrowsHandler {
     //display prev project
     this.projects[this.activeIndex].classList.remove('inactive'); 
     this.projects[this.activeIndex].classList.add('active'); 
+  }
+
+  keypressEvent(e) {
+    if(e.key === 'ArrowLeft') {
+      this.clickedEvent(e, 'prev');  
+    }
+    else if(e.key === 'ArrowRight') {
+      this.clickedEvent(e, 'next');
+    }
   }
 
 };
