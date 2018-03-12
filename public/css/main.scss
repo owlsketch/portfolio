@@ -43,7 +43,7 @@ body {
     margin-right: 4em;
     a {
       color: $white;
-      font-size: 1.3125em;
+      font-size: 1.25em;
     }
     a:first-child {
       margin-right: 1.33em;
@@ -62,5 +62,15 @@ body {
     }
     .fa-github {
       margin-bottom: .6em;
+    }
+  }
+  .cheryl {
+    position: relative;
+    p { 
+      font-size: 12px;
+      position: absolute;
+      left: -1.5em;
+      bottom: 2.75em;
+      color: $white; 
     }
   }

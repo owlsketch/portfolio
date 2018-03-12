@@ -61,7 +61,7 @@
   }
 
   .gallery_bg {
-    background: $mango;
+    background: #E0E0E0;
   }
 
   .pixel_bg {
@@ -93,5 +93,7 @@
   }
 
   .pixel {
-
+    .pixel_title {
+      float: right;
+    }
   }
