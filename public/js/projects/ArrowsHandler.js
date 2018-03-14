@@ -13,7 +13,7 @@ class ArrowsHandler {
     this.prev.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'prev');});
     this.next.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'next');});
 
-    document.addEventListener('keypress', function(e) { state.keypressEvent(e); });
+    document.addEventListener('keydown', function(e) { state.keypressEvent(e); });
   }
 
   getProjects(container) {
