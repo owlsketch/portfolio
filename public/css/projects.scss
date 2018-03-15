@@ -89,14 +89,23 @@
   }
 
   .gallery {
-    .gallery_img {
-      img {
-        vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .gallery_imgs {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .gallery_portrait {
+        img {
+        display: block;
+        box-shadow: 0em .4em .4em .125em #D6AF53;
+        }
       }
     }
     .gallery_title {  
       display: inline-block;
-      position: absolute;
     }
   }
 
