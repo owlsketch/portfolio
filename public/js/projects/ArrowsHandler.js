@@ -1,3 +1,5 @@
+// When loaded, only one project loaded/active
+// Whatever project that is depends on the route
 class ArrowsHandler {
   constructor() {
     /***** Set up *****/
@@ -5,35 +7,45 @@ class ArrowsHandler {
     this.prev = document.getElementById("prev");
     this.next = document.getElementById("next");
 
-    this.projects = [];
-    this.activeIndex = null;
-    this.getProjects(document.getElementById("projects_container"));
+    //a list of all our projects names
+    //(names based on their ejs partial)
+    //and reference to element in DOM if
+    //has been loaded async or otherwise
+    this.projects = [
+      {name: 'pixel', elem: null},
+      {name: 'gallery', elem: null}
+    ];
 
+    this.projectsContainer = document.getElementById("projects_container");
+    this.activeIndex = this.getActiveIndex(this.projectsContainer);
   
-    this.prev.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'prev');});
-    this.next.addEventListener('mouseup', function(e) { state.clickedEvent(e, 'next');});
+    this.prev.addEventListener('click', function(e) { state.clickedEvent(e, 'prev');});
+    this.next.addEventListener('click', function(e) { state.clickedEvent(e, 'next');});
 
     document.addEventListener('keydown', function(e) { state.keypressEvent(e); });
   }
 
-  getProjects(container) {
-    let j = 0;
-    for(let i = 0; i < container.children.length; i++) {
-      let elem = container.children[i];
-      if(elem.classList.contains('project')) {
-        this.projects.push(elem);
-        if(elem.classList.contains('active')) {
-          this.activeIndex = j;
+  getActiveIndex(container) {
+    //only one project, but what's its index in our
+    //internal script's list? (this.projects)
+    for(let i = 0; i < this.projects.length; i++) {
+      for(let j = 0; j < container.children.length; j++) {
+        let elem = container.children[j];
+        if(elem.classList.contains(this.projects[i].name)) {
+          this.projects[i].elem = elem;
+          return i; 
         }
-        j = j + 1;
       }
     }
+    //case where project not found.
+    //404 ajax request error is an example
+    return -1;
   }
 
   clickedEvent(e, direction) {
-    //make current project display none
-    this.projects[this.activeIndex].classList.remove('active'); 
-    this.projects[this.activeIndex].classList.add('inactive'); 
+    let projectList = this.projects;
+    let originalElem = this.projects[this.activeIndex].elem;
+    let projectsContainer = this.projectsContainer;
 
     //change index by 1
     if(direction === 'prev') {
@@ -48,10 +60,47 @@ class ArrowsHandler {
         this.activeIndex = 0;
       }
     }
-  
-    //display prev project
-    this.projects[this.activeIndex].classList.remove('inactive'); 
-    this.projects[this.activeIndex].classList.add('active'); 
+
+    let activeIndex = this.activeIndex;
+    
+    if(this.projects[this.activeIndex].elem !== null) {
+      originalElem.style.display = 'none';
+      this.projects[this.activeIndex].elem.style.display = 'block';
+      /*
+      this.projects[this.activeIndex].elem.classList.remove('inactive');
+      this.projects[this.activeIndex].elem.classList.add('active');
+      originalElem.classList.remove('active');
+      originalElem.classList.add('inactive');
+      */
+    }
+    else {
+      let httpRequest = new XMLHttpRequest();
+      //funct to handle response
+      httpRequest.onreadystatechange = alertContents;
+
+      httpRequest.open('GET', '/partial/' + this.projects[this.activeIndex].name);
+      httpRequest.send();
+      
+      function alertContents() {
+        if(httpRequest.readyState === XMLHttpRequest.DONE) {
+          if(httpRequest.status === 200) {
+            console.log('loaded');
+            originalElem.style.display = 'none';
+            /*
+            originalElem.classList.remove('active');
+            originalElem.classList.add('inactive');
+            */
+            projectsContainer.innerHTML += httpRequest.responseText;
+
+            //finally add new elem to our internal list to indicate its been loaded
+            projectList[activeIndex].elem = document.getElementById(projectList[activeIndex].name);
+          }
+            else {
+            alert("there was an error");
+          }
+        }
+      }
+    }
   }
 
   keypressEvent(e) {

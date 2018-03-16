@@ -1,3 +1,5 @@
+let path = require('path');
+
 module.exports = function(app) {
   app.get('/', function(req, res) {
     //pass project var into template. Within 
@@ -15,8 +17,15 @@ module.exports = function(app) {
     });
   })
 
+  app.get('/partial/:project', function(req, res) {
+    //pass just the partial, an ajax request
+    let project = req.params.project;
+    res.sendFile(project + '.ejs', { 
+      root: path.join(__dirname, '../views/partials/projects') 
+    });
+  })
+
   app.get('/about', function(req, res) {
     res.render('pages/about.ejs');
   })
-
 };
