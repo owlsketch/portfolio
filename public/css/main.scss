@@ -7,7 +7,7 @@ body {
 .nav_layer {
   z-index: 2;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: auto auto;
@@ -38,9 +38,10 @@ body {
       }
     }
   }
+
   .menu {
     margin-top: 2em;
-    margin-right: 4em;
+    margin-left: 1.25em;
     a {
       color: $white;
       font-size: 1.25em;
@@ -49,26 +50,26 @@ body {
       margin-right: 1.33em;
     }
   }
+
   .social {
     margin-left: 2.125em;
     margin-bottom: 1.75em;
     .links {
       width: 1.5em;
-    }
-    img {
-      display: block;
-    }
-    .github_icon {
-      margin-bottom: 1em;
+      img {
+        display: block;
+      }
+      .github_icon {
+        margin-bottom: 1em;
+      }
     }
   }
+
   .cheryl {
-    position: relative;
+    margin-top: 2.625em;
+    margin-right: 3.625em;
     p { 
-      font-size: 12px;
-      position: absolute;
-      left: -1.5em;
-      bottom: 2.75em;
+      font-size: .75em;
       color: $white; 
     }
   }

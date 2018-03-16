@@ -10,71 +10,17 @@
 
     <div class="proj_nav_layer">
       <div class="proj_arrows">
-        <img width="52px" class="left_arrow" id="prev" src="/img/arrow.svg"/>
-        <img width="52px" class="right_arrow" id="next" src="/img/arrow.svg"/>
-      </div>
-      <div class="proj_list">
-
+        <img width="46px" class="left_arrow" id="prev" src="/img/arrow.svg"/>
+        <img width="46px" class="right_arrow" id="next" src="/img/arrow.svg"/>
       </div>
     </div>
-
+  
     <div class="projects" id="projects_container">
-
-      <div class="project pixel_wrapper active">
-        <div class="project_bg pixel_bg"></div> 
-        <div class="pixel">
-          <div class="pixel_images">
-            <a href="https://github.com/RutgersUniversityVirtualWorlds/pixelserver/releases/tag/v1.0">
-              <img width="610px" src="/img/pixelwall.png"/>
-            </a>
-            <a href="https://github.com/RutgersUniversityVirtualWorlds/pixelserver/releases/tag/v1.0">
-              <img width="150px" src="/img/pixelPhone.png"/>
-            </a>
-          </div>
-          <a href="https://github.com/RutgersUniversityVirtualWorlds/pixelserver/releases/tag/v1.0">
-            <p class="project_title pixel_title">PIXEL WALL</p> 
-          </a>
-        </div>
-      </div>
-
-      <div class="project gallery_wrapper inactive">
-        <div class="project_bg gallery_bg"></div> 
-        <div class="gallery">
-          <div class="gallery_imgs">
-            <div class="gallery_portrait">
-              <a href="http://owlsketch.com/gallery">
-                <img src="/img/13.jpg" width="288px"/>
-              </a>
-            </div>
-            <div class="gallery_portrait">
-              <a href="http://owlsketch.com/gallery">
-                <img src="/img/16.jpg" width="172px"/>
-              </a>
-            </div>
-            <div class="gallery_modal">
-              <a href="http://owlsketch.com/gallery">
-                <img src="/img/gallery_modal.png" width="272px"/>
-              </a>
-            </div>
-            <div class="gallery_portrait">
-              <a href="http://owlsketch.com/gallery">
-                <img src="/img/18.jpg" width="172px"/>
-              </a>
-            </div>
-            <div class="gallery_portrait">
-              <a href="http://owlsketch.com/gallery">
-                <img src="/img/9.jpg" width="288px"/>
-              </a>
-            </div>
-          </div>
-          <div class="gallery_title">
-            <a href="http://owlsketch.com/gallery">
-              <p class="project_title gallery_title">GALLERY</p>
-            </a>
-          </div>
-        </div>
-      </div>
-
+      <% try { %>
+        <%- include('../partials/projects/' + project) %>
+      <% } catch (e) { %>
+        <% include ../partials/projects/project-404-error %>
+      <% } %>    
     </div>
 
   </div>
