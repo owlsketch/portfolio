@@ -63,14 +63,6 @@
   width: 100%;
 }
 
-  .active { 
-    //display: block;
-  }
-
-  .inactive { 
-    //display: none;
-  }
-
   @mixin linear-gradient($color-1, $color-2) {
     background: nth(nth($color-1, 1), 1);
     background : linear-gradient(0deg, $color-1, $color-2);

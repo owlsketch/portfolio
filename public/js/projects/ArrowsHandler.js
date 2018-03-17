@@ -63,6 +63,7 @@ class ArrowsHandler {
     if(state.projects[state.activeIndex].elem !== null) {
       originalElem.style.display = 'none';
       state.projects[state.activeIndex].elem.style.display = 'block';
+      history.replaceState(null, null, state.projects[state.activeIndex].name);
     }
     else {
       let httpRequest = new XMLHttpRequest();
@@ -76,6 +77,8 @@ class ArrowsHandler {
           if(httpRequest.status === 200) {
             originalElem.style.display = 'none';
             state.projectsContainer.innerHTML += httpRequest.responseText;
+            //update href for site as well
+            history.replaceState(null, null, state.projects[state.activeIndex].name);
 
             //my understanding is, because projectsContainer's innerHTML has
             //changed, our reference to that element(and its children) is no
