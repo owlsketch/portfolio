@@ -36,6 +36,7 @@
   }
 }
 
+//project is centered on the page
 .projects {
   z-index: 0;
   width: 100%;
@@ -56,16 +57,30 @@
     width: 100%;
     height: 100vh;
   }
+  //center content of project as col.
   .project_main {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .project_title p {
-    font-weight: 700;
-    font-size: 4.5em;
-    color: $white;
+  //containing block for absolute title
+  .project_title_container {
+    position: relative;
+  }
+  //remove title from flow of document.
+  //project images thus perfectly centered
+  //and title is added right below
+  .project_title {
+    position: absolute;
+    top: 1.5em;
+    transform: translate(-50%, 0%);
+    white-space: nowrap;
+    p {
+      font-weight: 700;
+      font-size: 4.5em;
+      color: $white;
+    }
   }
 }
 
@@ -87,10 +102,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  .gallery_portrait {
-    img {
+  .gallery_portrait img {
     box-shadow: 0em .4em .4em .125em #D6AF53;
-    }
   }
 }
 
