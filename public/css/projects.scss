@@ -44,6 +44,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.project {
+  width: 100%;
   .project_bg {
     z-index: -1;
     position: absolute;
@@ -52,58 +56,46 @@
     width: 100%;
     height: 100vh;
   }
-  .project_title {
+  .project_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project_title p {
     font-weight: 700;
     font-size: 4.5em;
     color: $white;
   }
 }
 
-.gallery {
-  width: 100%;
+@mixin linear-gradient($color-1, $color-2) {
+  background: nth(nth($color-1, 1), 1);
+  background : linear-gradient(0deg, $color-1, $color-2);
+  background : -moz-linear-gradient(50% 100% 90deg, $color-1, $color-2);
+  background : -webkit-linear-gradient(90deg, $color-1, $color-2);
+  background : -o-linear-gradient(90deg, $color-1, $color-2);
+  background : -ms-linear-gradient(90deg, $color-1, $color-2);
 }
 
-  @mixin linear-gradient($color-1, $color-2) {
-    background: nth(nth($color-1, 1), 1);
-    background : linear-gradient(0deg, $color-1, $color-2);
-    background : -moz-linear-gradient(50% 100% 90deg, $color-1, $color-2);
-    background : -webkit-linear-gradient(90deg, $color-1, $color-2);
-    background : -o-linear-gradient(90deg, $color-1, $color-2);
-    background : -ms-linear-gradient(90deg, $color-1, $color-2);
-  }
+.gallery_bg { @include linear-gradient(rgba(255, 196, 77, 1) 0%, rgba(255, 220, 110, 1) 91.29%); }
+.pixel_bg { @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%); }
 
-  .gallery_bg {
-    @include linear-gradient(rgba(255, 196, 77, 1) 0%, rgba(255, 220, 110, 1) 91.29%);
-  }
-
-  .pixel_bg {
-    @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%);
-  }
-
-  .gallery_main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .gallery_imgs {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      .gallery_portrait {
-        img {
-        display: block;
-        box-shadow: 0em .4em .4em .125em #D6AF53;
-        }
-      }
-    }
-    .gallery_title {  
-      display: inline-block;
+.gallery_imgs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  .gallery_portrait {
+    img {
+    box-shadow: 0em .4em .4em .125em #D6AF53;
     }
   }
+}
 
-  .pixel_main {
-    .pixel_title {
-      float: right;
-    }
-  }
+.pixel_imgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
