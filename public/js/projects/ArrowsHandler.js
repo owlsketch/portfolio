@@ -61,8 +61,10 @@ class ArrowsHandler {
     
     //if elem has been loaded already
     if(state.projects[state.activeIndex].elem !== null) {
-      originalElem.style.display = 'none';
-      state.projects[state.activeIndex].elem.style.display = 'block';
+      originalElem.classList.remove('active');
+      originalElem.classList.add('hide');
+      state.projects[state.activeIndex].elem.classList.remove('hide');
+      state.projects[state.activeIndex].elem.classList.add('active');
       history.replaceState(null, null, state.projects[state.activeIndex].name);
     }
     else {
@@ -75,7 +77,8 @@ class ArrowsHandler {
       function alertContents() {
         if(httpRequest.readyState === XMLHttpRequest.DONE) {
           if(httpRequest.status === 200) {
-            originalElem.style.display = 'none';
+            originalElem.classList.remove('active');
+            originalElem.classList.add('hide');
             state.projectsContainer.innerHTML += httpRequest.responseText;
             //update href for site as well
             history.replaceState(null, null, state.projects[state.activeIndex].name);
