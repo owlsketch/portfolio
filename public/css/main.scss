@@ -2,13 +2,22 @@
 
 body {
   font-family: "futura-pt", sans-serif;
+  background-color: $white;
+}
+
+.landing {
+  position: relative;
+  box-sizing: border-box;
+  border: solid 3vh $white;
+  width: 100%;
+  height: 100vh;
 }
 
 .nav_layer {
   z-index: 3;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
