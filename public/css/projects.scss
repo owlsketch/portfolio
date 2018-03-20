@@ -47,7 +47,7 @@
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: 94vh;
+  height: 94vh; //subtract 6 for white border
   .project_bg {
     z-index: -1;
     position: absolute;
@@ -62,20 +62,21 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    // for images and text. Might replace
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   //containing block for absolute title
-  .project_title_container {
+  .project_title_rel {
     position: relative;
   }
   //remove title from flow of document.
   //project images thus perfectly centered
   //and title is added right below
   .project_title {
+    z-index: 2;
     position: absolute;
-    top: 1.5em;
     transform: translate(-50%, 0%);
     white-space: nowrap;
     p {
@@ -120,18 +121,43 @@
 .pixel_bg { @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%); }
 
 .gallery_imgs {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  .gallery_portrait img {
-    box-shadow: 0em .4em .4em .125em #D6AF53;
+  .gallery_portrait {
+    display: inline-block;
+    img {
+      box-shadow: 0em .4em .4em .125em rgba(124, 124, 124, .5); 
+    }
   }
 }
+
+//take layers out of flow, center them
+.layer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery_layer_bottom { 
+  z-index: 0; 
+  width: calc(100vw - 14vh);
+}
+.gallery_layer_middle { 
+  z-index: 1; 
+  width: 47vw;
+}
+.gallery_layer_top { z-index: 2; }
 
 .pixel_imgs {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.gallery_title {
+  top: 11.5em;
+}
+.pixel_title {
+  top: .75em;
 }
