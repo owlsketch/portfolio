@@ -1,1 +1,36 @@
+@media (max-width: 1024px) {
+  //resize pixel wall  
+  .img_pixel_wall {
+    width: 33.75em;
+  }
+  .img_pixel_phone {
+    width: 8.3em;
+  }
+}
 
+@media (max-width: 900px) {
+  //resize and realign nav elements
+  .left_arrow {
+    margin-left: 1.25em;
+  }
+  .right_arrow {
+    margin-right: 1.25em;
+  }
+}
+
+@media (max-width: 668px) {
+  //remove bottom layer of gallery
+  .gallery_layer_bottom {
+    display: none;
+  }
+  //expand middle layer of gallery
+  .gallery_layer_middle {
+    width: calc(98vw - 14vh);
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
