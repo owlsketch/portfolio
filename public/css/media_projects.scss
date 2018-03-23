@@ -1,13 +1,3 @@
-@media (max-width: 1024px) {
-  //resize pixel wall  
-  .img_pixel_wall {
-    width: 33.75em;
-  }
-  .img_pixel_phone {
-    width: 8.3em;
-  }
-}
-
 @media (max-width: 900px) {
   //resize and realign nav elements
   .left_arrow {
@@ -15,6 +5,16 @@
   }
   .right_arrow {
     margin-right: 1.25em;
+  }
+  //resize pixel wall  
+  .img_pixel_wall {
+    width: 33.75em;
+  }
+}
+
+@media (max-width: 720px) {
+  .img_pixel_wall {
+    width: 26.25em;
   }
 }
 
@@ -25,12 +25,21 @@
   }
   //expand middle layer of gallery
   .gallery_layer_middle {
-    width: calc(98vw - 14vh);
+    width: calc(100vw - 10vh);
   }
 }
 
 @media (max-width: 500px) {
   body {
-    font-size: 14px;
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .img_pixel_wall {
+    width: 20em;
+  }
+  .pixel_title p {
+    white-space: normal;
   }
 }
