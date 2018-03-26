@@ -50,12 +50,9 @@ body {
 
   .menu {
     margin-top: 2em;
-    margin-left: 1.25em;
     a {
       color: $white;
       font-size: 1.25em;
-    }
-    a:first-child {
       margin-right: 1.33em;
     }
   }
@@ -71,14 +68,5 @@ body {
       .github_icon {
         margin-bottom: 1em;
       }
-    }
-  }
-
-  .cheryl {
-    margin-top: 2.625em;
-    margin-right: 2.2em;
-    p { 
-      font-size: .75em;
-      color: $white; 
     }
   }

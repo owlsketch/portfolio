@@ -164,8 +164,17 @@
 .img_gallery_portrait { width: 10.75em; }
 .img_gallery_modal { width: 17em; }
 
+.pixel_layer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.img_pixel_wall_jpg {
+  width: (40em * (1465/1820)); 
+  top: -.4em;
+  left: calc(50% + .39em);
+}
 .img_pixel_wall { width: 40em; }
-.img_pixel_phone { width: 9.375em; }
 
 .gallery_title { top: 11.5em; }
 .pixel_title { top: .75em; }
