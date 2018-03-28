@@ -150,11 +150,11 @@
 
   .gallery_layer_bottom { 
     z-index: 0; 
-    width: calc(100vw - 14vh);
+    width: 53.75em;
   }
   .gallery_layer_middle { 
     z-index: 1; 
-    width: 47vw;
+    width: 28.675em;
   }
   .gallery_layer_top { 
     z-index: 2; 
@@ -164,17 +164,7 @@
 .img_gallery_portrait { width: 10.75em; }
 .img_gallery_modal { width: 17em; }
 
-.pixel_layer {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-
-.img_pixel_wall_jpg {
-  width: (40em * (1465/1820)); 
-  top: -.4em;
-  left: calc(50% + .39em);
-}
-.img_pixel_wall { width: 40em; }
+.img_pixel_wall { width: 37.5em; }
 
 .gallery_title { top: 11.5em; }
 .pixel_title { top: .75em; }

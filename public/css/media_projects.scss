@@ -1,40 +1,48 @@
-@media (max-width: 900px) {
-  //resize and realign nav elements
+//point at which given width of gallery meets given viewport width
+@media (max-width: 960px) {
   .left_arrow {
     margin-left: 1.25em;
   }
   .right_arrow {
     margin-right: 1.25em;
   }
-  //resize pixel wall  
-  .img_pixel_wall_jpg {
-    width: (33.75em * (1465/1820));
-    top: -.35em;
-    left: calc(50% + .3em);
-  }
-  .img_pixel_wall {
-    width: 33.75em;
+
+ .gallery_layer_bottom {
+    width: calc(100vw - 14vh);
+  } 
+ .gallery_layer_middle {
+    width: 47vw;
   }
 }
 
-@media (max-width: 720px) {
+//point at which given width of pixel meets given viewport width
+@media (max-width: 900px) {
   .img_pixel_wall {
-    width: 26.25em;
+    width: 66.6vw;
   }
+
 }
 
-@media (max-width: 668px) {
+//point at which mid layer meets min width
+@media (max-width: 730px) {
   //remove bottom layer of gallery
   .gallery_layer_bottom {
     display: none;
   }
   //expand middle layer of gallery
   .gallery_layer_middle {
-    width: calc(100vw - 10vh);
+    width: 80vw;
   }
 }
 
-@media (max-width: 450px) {
+//point at which pixel wall starts getting too small for title text
+@media (max-width: 640px) {
+  .img_pixel_wall {
+    width: 26.625em;
+  } 
+}
+
+@media (max-width: 500px) {
   .img_pixel_wall {
     width: 20em;
   }
