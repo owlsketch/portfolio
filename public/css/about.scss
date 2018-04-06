@@ -1,15 +1,7 @@
 @import "colors";
 
-.logo {
-  .logo_corner {
-    background: $blue;
-  }
-  .logo_wrapper {
-    border: solid 1px $blue;
-    .logo_text {
-      color: $blue;
-    }
-  }
+.landing {
+  background-color: $lavender;
 }
 
 .content {
@@ -21,8 +13,6 @@
 
 .description {
   box-sizing: border-box;
-  border: solid 1px $blue;
-  background-color: $white;
   width: 25.75em;
   height: 100%;
 
@@ -31,16 +21,17 @@
   align-items: center;
   justify-content: center;
   p {
+    color: $white;
     width: 13.75em;
     margin-top: 1.125em;
   }
   a {
-    color: $blue;
+    color: $white;
+    text-decoration: underline;
   }
 }
 
 .images {
-  background-color: $blue;
   flex: 1;
   height: 100%;
 }
