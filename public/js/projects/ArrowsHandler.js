@@ -1,11 +1,14 @@
-// When loaded, only one project loaded/active
+// When site first loaded, only one project loaded/active
 // Whatever project that is depends on the route
 class ArrowsHandler {
-  constructor() {
+  constructor(elements) {
     /***** Set up *****/
     let state = this;
     this.prev = document.getElementById("prev");
     this.next = document.getElementById("next");
+ 
+    //update this whenever a new project is added to html page 
+    this.elements = elements;
 
     //a list of all our projects names
     //(names based on their ejs partial)
@@ -56,6 +59,7 @@ class ArrowsHandler {
 
   clickedEvent(e, direction, ref) {
     let state = ref;
+    //element being moved from
     let originalElem = state.projects[state.activeIndex].elem;
     this.updateActiveIndex(direction);
     
@@ -65,6 +69,7 @@ class ArrowsHandler {
       originalElem.classList.add('hide');
       state.projects[state.activeIndex].elem.classList.remove('hide');
       state.projects[state.activeIndex].elem.classList.add('active');
+
       history.replaceState(null, null, state.projects[state.activeIndex].name);
     }
     else {
@@ -80,13 +85,10 @@ class ArrowsHandler {
             originalElem.classList.remove('active');
             originalElem.classList.add('hide');
             state.projectsContainer.innerHTML += httpRequest.responseText;
-            //update href for site as well
+
+            state.elements.list = document.getElementsByClassName('project_main');
             history.replaceState(null, null, state.projects[state.activeIndex].name);
 
-            //my understanding is, because projectsContainer's innerHTML has
-            //changed, our reference to that element(and its children) is no
-            //longer valid. Thus we must update our var references if we wish
-            //to manipulate these elements in the future (we do)
             state.updateReferences();
           }
           else {
