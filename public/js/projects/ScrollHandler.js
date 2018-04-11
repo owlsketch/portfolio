@@ -1,3 +1,5 @@
+//need to figure out how border affects the halfpoint values
+
 class ScrollHandler {
   constructor(elements) {
     /***** Set up *****/
@@ -17,12 +19,14 @@ class ScrollHandler {
   } 
 
   scrollEvent(e) {
+    //top nav has been passed
     if(window.pageYOffset - this.navHeight > 0) {
       this.nav.classList.add('nav_fixed');
     }
     else {
       this.nav.classList.remove('nav_fixed');
     }
+    //have scrolled halfway through page
     if(window.pageYOffset - window.innerHeight/2 > 0) {
       for(let i = 0; i < this.elements.list.length; i++) {
         this.elements.list[i].classList.add('project_main_absolute');

@@ -173,3 +173,31 @@
 
 .gallery_title { top: 11.5em; }
 .pixel_title { top: .75em; }
+
+.scroll_content {
+  position: relative;
+  h1, p, a {
+    color: $black;
+  }
+}
+  .proj_article {
+    position: absolute;
+    top: 12.5em;
+    width: 100%;
+  }
+
+  .proj_description {
+    width: 40em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .proj_links {
+    width: 22.75em;
+    margin: 2.25em auto 0;
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-weight: 700;
+    }
+  }
