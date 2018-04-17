@@ -1,9 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-//css should exist in its own bundled file
+// css should exist in its own bundled file
 let extractPlugin = new ExtractTextPlugin({
   filename: '[name].bundle.css'
 })
@@ -16,7 +15,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist') //need absolute path
+    path: path.resolve(__dirname, 'dist') // need absolute path
   },
   module: {
     rules: [
@@ -24,8 +23,8 @@ module.exports = {
         test: /\.js$/,
         use: [
           {
-          loader: 'babel-loader',
-          options: { presets: ['env'] }
+            loader: 'babel-loader',
+            options: { presets: ['env'] }
           }
         ]
       },
@@ -34,8 +33,8 @@ module.exports = {
         use: extractPlugin.extract({ use: ['css-loader'] })
       },
       {
-        test: /\.scss$/, //possibly include css as well?
-        use: extractPlugin.extract({ use: ['css-loader', 'sass-loader']})
+        test: /\.scss$/, // possibly include css as well?
+        use: extractPlugin.extract({ use: ['css-loader', 'sass-loader'] })
       }
     ]
   },
@@ -43,4 +42,4 @@ module.exports = {
     extractPlugin,
     new CleanWebpackPlugin(['dist'])
   ]
-};
+}

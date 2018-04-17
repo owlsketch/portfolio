@@ -1,0 +1,30 @@
+@import "colors";
+
+.proj_article {
+  position: relative;
+  h1, p, a {
+    color: $black;
+  }
+}
+
+.article_content {
+  position: absolute;
+  top: 12.5em;
+  width: 100%;
+}
+
+.proj_description {
+  width: 40em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proj_links {
+  width: 22.75em;
+  margin: 2.25em auto 0;
+  display: flex;
+  justify-content: space-between;
+  a {
+    font-weight: 700;
+  }
+}
