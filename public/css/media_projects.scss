@@ -20,6 +20,9 @@
   .img_pixel_wall {
     width: 66.6vw;
   }
+  .pixel_title {
+    top: 27.5vw;
+  }
 
 }
 
@@ -40,13 +43,19 @@
   .img_pixel_wall {
     width: 26.625em;
   } 
+  .pixel_title {
+    top: 11em;
+  }
 }
 
 @media (max-width: 500px) {
   .img_pixel_wall {
     width: 20em;
   }
-  .pixel_title p {
+  .pixel_title {
+    top: 12em;
+    p {
     white-space: normal;
+    }
   }
 }
