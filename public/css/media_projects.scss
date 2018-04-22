@@ -1,4 +1,4 @@
-//point at which given width of gallery meets given viewport width
+//given width of gallery meets given viewport width
 @media (max-width: 960px) {
   .left_arrow {
     margin-left: 1.25em;
@@ -15,7 +15,7 @@
   }
 }
 
-//point at which given width of pixel meets given viewport width
+//given width of pixel meets given viewport width
 @media (max-width: 900px) {
   .img_pixel_wall {
     width: 66.6vw;
@@ -26,7 +26,7 @@
 
 }
 
-//point at which mid layer meets min width
+//mid layer meets min width
 @media (max-width: 730px) {
   //remove bottom layer of gallery
   .gallery_layer_bottom {
@@ -36,24 +36,20 @@
   .gallery_layer_middle {
     width: 80vw;
   }
-}
-
-//point at which pixel wall starts getting too small for title text
-@media (max-width: 640px) {
   .img_pixel_wall {
-    width: 26.625em;
+    width: 30.45em;
   } 
   .pixel_title {
-    top: 11em;
+    top: 12.5em;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .img_pixel_wall {
     width: 20em;
   }
   .pixel_title {
-    top: 12em;
+    top: 12.5em;
     p {
     white-space: normal;
     }

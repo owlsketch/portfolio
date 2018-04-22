@@ -10,6 +10,7 @@ class ScrollHandler {
 
     this.arrows = document.getElementById('proj_arrows');
     this.flatbg = document.getElementsByClassName('project_flat_bg');
+    this.titles = document.getElementsByClassName('project_scroll_title');
 
     // ensured list is always up to date as reference
     // is updated whenever a new proj is loaded
@@ -21,18 +22,46 @@ class ScrollHandler {
   }
 
   scrollEvent (e) {
+    //TODO: On arrow change, scroll bg and text isnt updated
+    /***** Range Values *****/
+    if(window.pageYOffset - window.innerHeight/3 < 0) {
+      let opacity = 1 - window.pageYOffset/(window.innerHeight/3.1)
+      this.arrows.style.opacity = opacity.toString()
+    }
+    else if(window.pageYOffset - window.innerHeight/2 < 0) {
+      let opacity = 0 +
+        (window.pageYOffset - window.innerHeight/3)/(window.innerHeight/2 - window.innerHeight/3)
+
+      for(let i = 0; i < this.flatbg.length; i++) {
+        this.flatbg[i].style.opacity = opacity.toString();
+      }
+
+      for(let i = 0; i < this.titles.length; i++) {
+        this.titles[i].style.opacity = opacity.toString();
+      }
+    }
+
     /***** Toggled Values *****/
     let currPos = this.getPos()
     if (currPos !== this.pos) { 
       this.pos = currPos
       if(currPos >= 4) {
         for (let i = 0; i < this.elements.list.length; i++) {
-          this.elements.list[i].children[1].classList.add('project_img_absolute')
+          //TODO: use id's instead of index for better flexibility
+          this.elements.list[i].children[2].classList.add('project_img_absolute')
+        }
+
+        for(let i = 0; i < this.flatbg.length; i++) {
+          this.flatbg[i].style.opacity = "1"
+        }
+
+        for(let i = 0; i < this.titles.length; i++) {
+          this.titles[i].style.opacity = "1";
         }
       }
       else {
         for (let i = 0; i < this.elements.list.length; i++) {
-          this.elements.list[i].children[1].classList.remove('project_img_absolute')
+          this.elements.list[i].children[2].classList.remove('project_img_absolute')
         }
       }
       if(currPos >= 3) {
@@ -40,6 +69,14 @@ class ScrollHandler {
       }
       else {
         this.arrows.classList.remove('display_none')
+
+        for(let i = 0; i < this.flatbg.length; i++) {
+          this.flatbg[i].style.opacity = "0"
+        }
+
+        for(let i = 0; i < this.titles.length; i++) {
+          this.titles[i].style.opacity = "0";
+        }
       }
       if(currPos >= 2) {
         for (let i = 0; i < this.elements.list.length; i++) {
@@ -56,20 +93,6 @@ class ScrollHandler {
       }
       else {
         this.nav.classList.remove('nav_fixed')
-      }
-    }
-
-    /***** Range Values *****/
-    if(window.pageYOffset - window.innerHeight/3 < 0) {
-      let opacity = 1 - window.pageYOffset/(window.innerHeight/3.1)
-      this.arrows.style.opacity = opacity.toString()
-    }
-    else if(window.pageYOffset - window.innerHeight/2 < 0) {
-      //place code to display big text here and display flat bg
-      let opacity = 0 +
-        (window.pageYOffset - window.innerHeight/3)/(window.innerHeight/2 - window.innerHeight/3)
-      for(let i = 0; i < this.flatbg.length; i++) {
-        this.flatbg[i].style.opacity = opacity.toString();
       }
     }
   }

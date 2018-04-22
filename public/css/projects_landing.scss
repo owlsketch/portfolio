@@ -72,7 +72,18 @@
     white-space: nowrap;
     p {
       font-weight: 700;
-      font-size: 4.5em;
+      font-size: 5.5em;
+      color: $white;
+    }
+  }
+
+  .project_scroll_title {
+    position: absolute;
+    transform: translate(-50%, 50%);
+    white-space: nowrap;
+    opacity: 0;
+    p {
+      font-weight: 700;
       color: $white;
     }
   }
@@ -147,6 +158,19 @@
 
 .pixel_title { 
   top: 15.5em;
+}
+
+.gallery_scroll_title {
+  top: -.75em;
+  p {
+    font-size: 14.45vw;
+  }
+}
+
+.pixel_scroll_title {
+  p {
+    font-size: 12em;
+  }
 }
 
 ////////// ArrowsHandler CSS //////////
