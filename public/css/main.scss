@@ -16,67 +16,50 @@ body {
 
 .nav_layer {
   z-index: 3;
-
   position: absolute;
   width: 100%;
-  height: 100%;
 
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
-  grid-template-rows: auto auto;
-  align-content: space-between;
   pointer-events: none;
   * {
     pointer-events: auto;
   }
 }
 
+.logo {
+  .logo_corner {
+    background: $white;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .logo_wrapper {
+    display: inline-block;
+    margin-left: 1.5em;
+    border: solid 1px $white;
+    padding: .5em .75em;
+    .logo_text {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+}
+
+.menu {
+  margin-top: 2em;
+  a {
+    color: $white;
+    font-size: 1.25em;
+    margin-right: 1.75em;
+  }
+}
+
+/////////// ScrollHandler CSS ///////////
 .nav_fixed {
   position: fixed;
   width: calc(100% - 6vh);
-  height: 100vh - 6vh;
   top: 0;
 }
 
-  .logo {
-    .logo_corner {
-      background: $white;
-      width: 1.5em;
-      height: 1.5em;
-    }
-    .logo_wrapper {
-      display: inline-block;
-      margin-left: 1.5em;
-      border: solid 1px $white;
-      padding: .5em .75em;
-      .logo_text {
-        font-size: 1.5em;
-        font-weight: 700;
-        color: $white;
-      }
-    }
-  }
-
-  .menu {
-    margin-top: 2em;
-    a {
-      color: $white;
-      font-size: 1.25em;
-      margin-right: 1.75em;
-    }
-  }
-
-  .social {
-    margin-left: 2.125em;
-    margin-bottom: 1.75em;
-    .links {
-      width: 1.5em;
-      img {
-        display: block;
-      }
-      .github_icon {
-        margin-bottom: 1em;
-      }
-    }
-  }
