@@ -48,7 +48,7 @@ class ScrollHandler {
       if(currPos >= 4) {
         for (let i = 0; i < this.elements.list.length; i++) {
           //TODO: use id's instead of index for better flexibility
-          this.elements.list[i].children[2].classList.add('project_img_absolute')
+          this.elements.list[i].children[1].classList.add('project_img_absolute')
         }
 
         for(let i = 0; i < this.flatbg.length; i++) {
@@ -61,7 +61,7 @@ class ScrollHandler {
       }
       else {
         for (let i = 0; i < this.elements.list.length; i++) {
-          this.elements.list[i].children[2].classList.remove('project_img_absolute')
+          this.elements.list[i].children[1].classList.remove('project_img_absolute')
         }
       }
       if(currPos >= 3) {
