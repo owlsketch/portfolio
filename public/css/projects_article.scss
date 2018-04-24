@@ -1,30 +1,39 @@
 @import "colors";
 
-.proj_article {
+.proj_articles {
   position: relative;
   h1, p, a {
     color: $black;
   }
 }
 
-.article_content {
+.articles_container {
   position: absolute;
   top: 12.5em;
   width: 100%;
 }
 
-.proj_description {
-  width: 40em;
-  margin: 0 auto;
-  text-align: center;
-}
+.proj_article {
+  .proj_description {
+    max-width: 41em;
+    padding: 0em 5vh;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.proj_links {
-  width: 22.75em;
-  margin: 2.25em auto 0;
-  display: flex;
-  justify-content: space-between;
-  a {
-    font-weight: 700;
+  .proj_links {
+    max-width: 22.75em;
+    padding: 0em 5vh;
+    margin: 2.25em auto 0;
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-weight: 700;
+    }
+  }
+}
+.proj_article {
+  .pixel_description {
+    margin-top: 1em;
   }
 }

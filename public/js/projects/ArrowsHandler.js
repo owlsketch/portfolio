@@ -7,6 +7,7 @@ class ArrowsHandler {
     this.prev = document.getElementById('prev')
     this.next = document.getElementById('next')
     this.projectsContainer = document.getElementById('projects_container')
+    this.articlesContainer = document.getElementById('articles_container')
 
     // update this whenever a new project is added to html page
     this.elements = elements
@@ -14,11 +15,11 @@ class ArrowsHandler {
     // a list of all our projects names (names based on their ejs partial)
     // and reference to element in DOM if has been loaded
     this.projects = [
-      {name: 'pixel', elem: null},
-      {name: 'gallery', elem: null}
+      {name: 'pixel', pElem: null, aElem: null},
+      {name: 'gallery', pElem: null, aElem: null}
     ]
 
-    this.activeIndex = this.handleInitialIndex(this.projectsContainer)
+    this.activeIndex = this.handleInitialIndex(this.projectsContainer, this.articlesContainer)
 
     this.prev.addEventListener('click', function (e) { state.clickedEvent(e, 'prev', state) })
     this.next.addEventListener('click', function (e) { state.clickedEvent(e, 'next', state) })
@@ -28,12 +29,20 @@ class ArrowsHandler {
 
   // find the active project on page load,
   // assign reference in this.elements and get index
-  handleInitialIndex (container) {
-    for (let i = 0; i < container.children.length; i++) {
-      let elem = container.children[i]
+  handleInitialIndex (pContainer, aContainer) {
+    for (let i = 0; i < pContainer.children.length; i++) {
+      let pElem = pContainer.children[i]
       for (let j = 0; j < this.projects.length; j++) {
-        if (elem.classList.contains(this.projects[j].name)) {
-          this.projects[j].elem = elem
+        if (pElem.classList.contains(this.projects[j].name)) {
+          this.projects[j].pElem = pElem
+        }
+      }
+    }
+    for (let i = 0; i < aContainer.children.length; i++) {
+      let aElem = aContainer.children[i]
+      for (let j = 0; j < this.projects.length; j++) {
+        if (aElem.classList.contains(this.projects[j].name)) {
+          this.projects[j].aElem = aElem
           return j
         }
       }
@@ -52,15 +61,16 @@ class ArrowsHandler {
 
   clickedEvent (e, direction, ref) {
     let state = ref
-    let originalElem = state.projects[state.activeIndex].elem
+    let pOriginalElem = state.projects[state.activeIndex].pElem
+    let aOriginalElem = state.projects[state.activeIndex].aElem
     this.updateActiveIndex(direction)
 
     // if elem has been loaded already
-    if (state.projects[state.activeIndex].elem !== null) {
-      originalElem.classList.remove('active')
-      originalElem.classList.add('hide')
-      state.projects[state.activeIndex].elem.classList.remove('hide')
-      state.projects[state.activeIndex].elem.classList.add('active')
+    if (state.projects[state.activeIndex].pElem !== null) {
+      pOriginalElem.classList.remove('active')
+      pOriginalElem.classList.add('hide')
+      state.projects[state.activeIndex].pElem.classList.remove('hide')
+      state.projects[state.activeIndex].pElem.classList.add('active')
 
       window.history.replaceState(null, null, state.projects[state.activeIndex].name)
     } else {
@@ -74,11 +84,38 @@ class ArrowsHandler {
       function handleContents () {
         if (httpRequest.readyState === window.XMLHttpRequest.DONE) {
           if (httpRequest.status === 200) {
-            originalElem.classList.remove('active')
-            originalElem.classList.add('hide')
+            pOriginalElem.classList.remove('active')
+            pOriginalElem.classList.add('hide')
             state.projectsContainer.innerHTML += httpRequest.responseText
 
             window.history.replaceState(null, null, state.projects[state.activeIndex].name)
+
+            state.updateReferences()
+          } else {
+            window.alert('there was an error')
+          }
+        }
+      }
+    }
+
+    /// ///again but for articles
+    // if elem has been loaded already
+    if (state.projects[state.activeIndex].aElem !== null) {
+      aOriginalElem.classList.add('display_none')
+      state.projects[state.activeIndex].aElem.classList.remove('display_none')
+    } else {
+      let httpRequest = new window.XMLHttpRequest()
+      httpRequest.onreadystatechange = handleContents
+
+      httpRequest.open('GET', '/article/' + state.projects[state.activeIndex].name)
+      httpRequest.send()
+
+      // TODO: Fix inner declaration
+      function handleContents () {
+        if (httpRequest.readyState === window.XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            aOriginalElem.classList.add('display_none')
+            state.articlesContainer.innerHTML += httpRequest.responseText
 
             state.updateReferences()
           } else {
@@ -110,14 +147,24 @@ class ArrowsHandler {
 
     // assign a proj element to an obj in projects list
     for (let i = 0; i < this.projectsContainer.children.length; i++) {
-      let elem = this.projectsContainer.children[i]
+      let pElem = this.projectsContainer.children[i]
       for (let j = 0; j < this.projects.length; j++) {
-        if (elem.classList.contains(this.projects[j].name)) {
-          this.projects[j].elem = elem
+        if (pElem.classList.contains(this.projects[j].name)) {
+          this.projects[j].pElem = pElem
           break
         }
       }
     }
+    for (let i = 0; i < this.articlesContainer.children.length; i++) {
+      let aElem = this.articlesContainer.children[i]
+      for (let j = 0; j < this.projects.length; j++) {
+        if (aElem.classList.contains(this.projects[j].name)) {
+          this.projects[j].aElem = aElem
+          break
+        }
+      }
+    }
+    console.log(this.projects)
   }
 }
 

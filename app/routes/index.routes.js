@@ -21,6 +21,14 @@ module.exports = function (app) {
     })
   })
 
+  app.get('/article/:project', function (req, res) {
+    // pass just the partial, an ajax request
+    let project = req.params.project
+    res.sendFile(project + '.ejs', {
+      root: path.join(__dirname, '../views/partials/articles')
+    })
+  })
+
   app.get('/about', function (req, res) {
     res.render('pages/about.ejs')
   })

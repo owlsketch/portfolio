@@ -26,22 +26,14 @@
 
     </div>
   </section>
-  <section class="proj_article">
-    <article class="article_content">
-
-      <div class="proj_description">
-        <p>
-          Gallery is an interactive 3D art gallery on the web. 
-          Its goal is to allow visitors to experience art on the internet in an 
-          immersive and approachable manner without the need of expensive VR equipment.
-        </p>
-      </div>
-      <div class="proj_links">
-        <a href="http://owlsketch.com/gallery">Visit Gallery</a>
-        <a href="https://github.com/owlsketch/gallery">View Code</a>
-      </div>
-
-    </article>
+  <section class="proj_articles">
+    <div class="articles_container" id="articles_container">
+      <% try { %>
+        <%- include('../partials/articles/' + project) %>
+      <% } catch (e) { %>
+        <% include ../partials/articles/project-404-error %>
+      <% } %>    
+    </div>
   </section>
   <script src="/main.bundle.js"></script>
   <script src="/projects.bundle.js"></script>
