@@ -1,4 +1,3 @@
-//given width of gallery meets given viewport width
 @media (max-width: 960px) {
   .left_arrow {
     margin-left: 1.25em;
@@ -6,12 +5,31 @@
   .right_arrow {
     margin-right: 1.25em;
   }
+}
 
- .gallery_layer_bottom {
-    width: calc(100vw - 14vh);
+@media (max-height: 700px) {
+  .img_gallery_landscape { width: 14em; } 
+  .img_gallery_portrait { width: 8.36em; } 
+  .img_gallery_modal { width: 13.22em; } 
+  .gallery_layer_bottom { width: 41.8em; } 
+  .gallery_layer_middle { width: 22.3em; }
+  .gallery_title { top: 10.88em; }
+  .project {
+    .project_title {
+      p { 
+        font-size: 4.28em; 
+      }
+    }
+  }
+}
+
+//given width of gallery meets given viewport width
+@media (max-width: 960px) and (min-height: 700px) {
+  .gallery_layer_bottom {
+    width: 89.5vw;
   } 
- .gallery_layer_middle {
-    width: 47vw;
+  .gallery_layer_middle {
+    width: 47.75vw;
   }
 }
 
@@ -52,6 +70,11 @@
     top: 12.5em;
     p {
     white-space: normal;
+    }
+  }
+  .pixel_scroll_title {
+    p {
+      white-space: normal;
     }
   }
 }

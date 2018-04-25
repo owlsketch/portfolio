@@ -1,6 +1,7 @@
 @import "colors";
 
 /////////// General Set up ////////////////
+//arrows
 .proj_nav_layer {
   z-index: 2;
   position: absolute;
@@ -39,6 +40,7 @@
     }
   }
 
+//project center content
 .project {
   //project is centered on the page, spans entire frame within white border
   //absolute removes hidden projects from affecting height of page
@@ -111,13 +113,9 @@
 .gallery_bg { @include linear-gradient(rgba(255, 196, 77, 1) 0%, rgba(255, 220, 110, 1) 91.29%); }
 .pixel_bg { @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%); }
 
-.gallery_flat_bg { 
-  background: rgba(255, 220, 110, 1); 
-}
+.gallery_flat_bg { background: rgba(255, 220, 110, 1); }
 
-.pixel_flat_bg {
-  background: rgba(241, 114, 127, 1);
-}
+.pixel_flat_bg { background: rgba(241, 114, 127, 1); }
 
 .gallery_imgs {
   .gallery_portrait {
@@ -131,7 +129,6 @@
 .pixel_imgs {
   transform: translate(-50%, -50%);
 }
-
 
 //take layers out of flow, center them
 .layer {
@@ -217,3 +214,4 @@
 .display_none {
   display: none;
 }
+
