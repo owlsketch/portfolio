@@ -1,4 +1,5 @@
-@media (max-width: 960px) {
+// GLOBAL CHANGES
+@media (max-width: 1050px) {
   .left_arrow {
     margin-left: 1.25em;
   }
@@ -7,53 +8,64 @@
   }
 }
 
+// GALLERY CHANGES
 @media (max-height: 700px) {
-  .img_gallery_landscape { width: 14em; } 
-  .img_gallery_portrait { width: 8.36em; } 
-  .img_gallery_modal { width: 13.22em; } 
-  .gallery_layer_bottom { width: 41.8em; } 
-  .gallery_layer_middle { width: 22.3em; }
-  .gallery_title { top: 10.88em; }
-  .project {
-    .project_title {
-      p { 
-        font-size: 4.28em; 
-      }
-    }
+  .gallery_main {
+    font-size: .875em;
   }
 }
 
-//given width of gallery meets given viewport width
-@media (max-width: 960px) and (min-height: 700px) {
+@media (max-height: 550px) {
+  .gallery_main {
+    font-size: .625em;
+  }
+}
+
+@media (min-height: 700px) and (max-width: 1050px),
+       (min-height: 550px) and (max-width: 915px),
+       (max-height: 550px) and (max-width: 656px) {
+
   .gallery_layer_bottom {
-    width: 89.5vw;
+    width: 82vw;
   } 
   .gallery_layer_middle {
-    width: 47.75vw;
+    width: 43.75vw;
   }
 }
 
-//given width of pixel meets given viewport width
-@media (max-width: 900px) {
-  .img_pixel_wall {
-    width: 66.6vw;
-  }
-  .pixel_title {
-    top: 27.5vw;
-  }
-
-}
-
-//mid layer meets min width
-@media (max-width: 730px) {
+@media (min-height: 700px) and (max-width: 785px),
+       (min-height: 550px) and (max-width: 680px),
+       (max-height: 550px) and (max-width: 430px) {
   //remove bottom layer of gallery
   .gallery_layer_bottom {
     display: none;
   }
   //expand middle layer of gallery
   .gallery_layer_middle {
-    width: 80vw;
+    width: 74vw;
   }
+  .gallery_title p {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-height: 700px) and (max-width: 440px) {
+  .gallery_main {
+    font-size: 12px;
+  }
+}
+
+// PIXEL CHANGES
+@media (max-width: 900px) and (min-height: 700px) {
+  .img_pixel_wall {
+    width: 66.6vw;
+  }
+  .pixel_title {
+    top: 27.5vw;
+  }
+}
+
+@media (max-width: 730px) and (min-height: 700px) {
   .img_pixel_wall {
     width: 30.45em;
   } 
@@ -62,7 +74,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (min-height: 700px) {
   .img_pixel_wall {
     width: 20em;
   }
@@ -78,3 +90,4 @@
     }
   }
 }
+
