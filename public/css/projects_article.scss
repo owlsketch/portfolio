@@ -9,14 +9,15 @@
 
 .articles_container {
   position: absolute;
-  top: 12.5em;
+  top: 11.5em;
   width: 100%;
 }
 
 .proj_article {
   margin-bottom: 8em;
   .proj_description {
-    max-width: 41em;
+    width: 75vw;
+    max-width: 40.5em;
     padding: 0em 5vh;
     margin: 0 auto;
     text-align: center;
@@ -24,6 +25,7 @@
 
   .proj_links {
     max-width: 22.75em;
+    width: 60vw;
     padding: 0em 5vh;
     margin: 2.25em auto 0;
     display: flex;
@@ -33,8 +35,7 @@
     }
   }
 }
-.proj_article {
-  .pixel_description {
-    margin-top: 1em;
-  }
+
+.pixel_article {
+  margin-top: 2em;
 }
