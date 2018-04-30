@@ -8,8 +8,6 @@
 }
 
 .articles_container {
-  position: absolute;
-  top: 11.5em;
   width: 100%;
 }
 
@@ -36,6 +34,10 @@
   }
 }
 
+.gallery_article {
+  margin-top: 11.5em;
+}
+
 .pixel_article {
-  margin-top: 2em;
+  margin-top: 11.5em;
 }
