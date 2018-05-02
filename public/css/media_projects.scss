@@ -17,7 +17,7 @@
   }
 
   .project_scroll_title {
-    font-size: 12.6vw;
+    font-size: 11.3em;
   }
 
   .gallery_article {
@@ -37,7 +37,7 @@
   }
 
   .project_scroll_title {
-    font-size: 9vw;
+    font-size: 8em;
   }
 
   .gallery_article {
@@ -57,11 +57,11 @@
   }
 
   .project_scroll_title {
-    font-size: 7.25vw;
+    font-size: 6.4em;
   }
 
   .gallery_article {
-    margin-top: 6.5em; 
+    margin-top: 5.75em; 
   }
   .pixel_article {
     margin-top: 6.5em;
@@ -79,6 +79,9 @@
   } 
   .gallery_layer_middle {
     width: 43.75vw;
+  }
+  .gallery_scroll_title {
+    font-size: 19.75vw;
   }
 }
 
@@ -109,6 +112,14 @@
 }
 
 // PIXEL CHANGES
+@media (min-height: 700px) and (max-width: 1350px),
+       (min-height: 550px) and (max-width: 1175px),
+       (min-height: 400px) and (max-width: 835px) { 
+  .pixel_scroll_title {
+    font-size: 15.425vw;
+  }
+}
+
 @media (min-height: 700px) and (max-width: 650px),
        (min-height: 550px) and (max-width: 611px) {
 
@@ -122,7 +133,9 @@
     }
   }
   .pixel_scroll_title {
+    margin-top: .25em;
     p {
+      font-size: 24vw;
       white-space: normal;
     }
   }
