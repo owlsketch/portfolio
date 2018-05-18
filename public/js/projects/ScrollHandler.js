@@ -22,7 +22,6 @@ class ScrollHandler {
   }
 
   scrollEvent (e) {
-    // TODO: On arrow change, scroll bg and text isnt updated
     /** *** Range Values *****/
     if (window.pageYOffset - window.innerHeight / 3 < 0) {
       let opacity = 1 - window.pageYOffset / (window.innerHeight / 3.1)

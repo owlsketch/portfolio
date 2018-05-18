@@ -65,7 +65,7 @@ class ArrowsHandler {
     let aOriginalElem = state.projects[state.activeIndex].aElem
     this.updateActiveIndex(direction)
 
-    // if elem has been loaded already
+    // loading next landing project content
     if (state.projects[state.activeIndex].pElem !== null) {
       pOriginalElem.classList.remove('active')
       pOriginalElem.classList.add('hide')
@@ -74,55 +74,31 @@ class ArrowsHandler {
 
       window.history.replaceState(null, null, state.projects[state.activeIndex].name)
     } else {
-      let httpRequest = new window.XMLHttpRequest()
-      httpRequest.onreadystatechange = handleContents
+      window.fetch('/partial/' + state.projects[state.activeIndex].name).then(function (response) {
+        response.text().then(function (text) {
+          pOriginalElem.classList.remove('active')
+          pOriginalElem.classList.add('hide')
+          state.projectsContainer.innerHTML += text
 
-      httpRequest.open('GET', '/partial/' + state.projects[state.activeIndex].name)
-      httpRequest.send()
-
-      // TODO: Fix inner declaration
-      function handleContents () {
-        if (httpRequest.readyState === window.XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            pOriginalElem.classList.remove('active')
-            pOriginalElem.classList.add('hide')
-            state.projectsContainer.innerHTML += httpRequest.responseText
-
-            window.history.replaceState(null, null, state.projects[state.activeIndex].name)
-
-            state.updateReferences()
-          } else {
-            window.alert('there was an error')
-          }
-        }
-      }
+          window.history.replaceState(null, null, state.projects[state.activeIndex].name)
+          state.updateReferences()
+        })
+      })
     }
 
-    /// ///again but for articles
-    // if elem has been loaded already
+    // loading next project description content
     if (state.projects[state.activeIndex].aElem !== null) {
       aOriginalElem.classList.add('display_none')
       state.projects[state.activeIndex].aElem.classList.remove('display_none')
     } else {
-      let httpRequest = new window.XMLHttpRequest()
-      httpRequest.onreadystatechange = handleContents
+      window.fetch('/article/' + state.projects[state.activeIndex].name).then(function (response) {
+        response.text().then(function (text) {
+          aOriginalElem.classList.add('display_none')
+          state.articlesContainer.innerHTML += text
 
-      httpRequest.open('GET', '/article/' + state.projects[state.activeIndex].name)
-      httpRequest.send()
-
-      // TODO: Fix inner declaration
-      function handleContents () {
-        if (httpRequest.readyState === window.XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            aOriginalElem.classList.add('display_none')
-            state.articlesContainer.innerHTML += httpRequest.responseText
-
-            state.updateReferences()
-          } else {
-            window.alert('there was an error')
-          }
-        }
-      }
+          state.updateReferences()
+        })
+      })
     }
   }
 
