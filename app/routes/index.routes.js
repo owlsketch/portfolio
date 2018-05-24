@@ -2,7 +2,7 @@ let path = require('path')
 
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    res.redirect('projects/pixel')
+    res.redirect('projects/gallery')
   })
 
   app.get('/projects/:project', function (req, res) {

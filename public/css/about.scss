@@ -1,6 +1,20 @@
 @import "colors";
 
-.landing {
+.nav_layer {
+  width: calc(100% - 6vh);
+}
+
+.about_landing_wrapper {
+  padding: 3vh;
+  box-sizing: border-box;
+  background-color: $white;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.about_landing {
+  width:100%;
+  min-height: calc(100vh - 6vh);
   background-color: $lavender;
 }
 
@@ -12,6 +26,7 @@
 }
 
   .description {
+    padding: 8em 0em;
     box-sizing: border-box;
     width: 25.75em;
     height: 100%;

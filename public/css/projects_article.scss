@@ -41,8 +41,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: .5em;
-  grid-row-gap: .5em;
+  grid-column-gap: 2em;
+  grid-row-gap: 1.5em;
   img {
     width: 100%;
     justify-self: center;
@@ -71,19 +71,19 @@
 
 .gallery_article_image {
   max-width: 62.5em;
-  margin: 4em auto 0em;
+  margin: 0em auto;
   img {
     border: solid 1px $darkWhite;
   }
 }
 
   .gallery_img_claude_angle {
-    display: block;
-    margin: auto;
+    margin: 4em auto 0em;
     width: 100%;
   }
 
   .gallery_img_flex {
+    margin: 2em auto 0em;
     display: flex;
     justify-content: space-between;
     align-items: center;
