@@ -1,0 +1,38 @@
+@import "colors";
+
+.footer_sections {
+  margin-top: 6em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  div {
+    height: .25em;
+  }
+}
+
+.pink_section { background-color: $pink; }
+.mango_section { background-color: $mango; }
+
+.footer_wrapper {
+  background-color: $darkBlue;
+  height: 4em;
+  * {
+    color: $white;
+  }
+}
+
+.footer_content {
+  padding: 1.65em 0em 0em;
+  width: 75vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon_list {
+  margin-top: -.2em;
+  width: 9em;
+  display: flex;
+  justify-content: space-evenly;
+}
