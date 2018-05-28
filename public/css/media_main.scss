@@ -1,6 +1,9 @@
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .footer_sections {
     margin-top: 4em;
+  }
+  .footer_content {
+    width: 90vw;
   }
 }
 
@@ -9,9 +12,8 @@
     font-size: 14px;
   }
   .menu {
-    a {
-      margin-right: 1.25em;
-    }
+    margin-right: 1.5em;
+    width: 8.5em;
   }
 }
 

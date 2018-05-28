@@ -18,8 +18,7 @@ body {
   position: absolute;
   width: 100%;
 
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   justify-content: space-between;
   pointer-events: none;
   * {
@@ -28,31 +27,42 @@ body {
 }
 
 .logo {
-  .logo_corner {
-    background: $white;
-    width: 1.5em;
-    height: 1.5em;
+  margin-top: 1.5em;
+}
+
+.logo_wrapper {
+  display: inline-block;
+  margin-left: 1.5em;
+  border: solid 1px $white;
+  padding: .5em .75em;
+  .logo_text {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $white;
   }
-  .logo_wrapper {
-    display: inline-block;
-    margin-left: 1.5em;
-    border: solid 1px $white;
-    padding: .5em .75em;
-    .logo_text {
-      font-size: 1.5em;
-      font-weight: 700;
-      color: $white;
-    }
-  }
+}
+
+.logo_wrapper_black {
+  border: solid 1px $darkBlue;
+  background-color: $darkBlue;
+  margin-left: 0em;
 }
 
 .menu {
   margin-top: 2em;
-  a {
-    color: $white;
-    font-size: 1.25em;
-    margin-right: 1.75em;
-  }
+  margin-right: 2.125em;
+  width: 9em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_link {
+  color: $white;
+  font-size: 1.25em;
+}
+
+.menu_link_black {
+  color: $darkBlue;
 }
 
 /////////// ScrollHandler CSS ///////////

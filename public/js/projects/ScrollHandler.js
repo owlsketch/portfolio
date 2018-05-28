@@ -12,6 +12,9 @@ class ScrollHandler {
     this.flatbg = document.getElementsByClassName('project_flat_bg')
     this.titles = document.getElementsByClassName('project_scroll_title')
 
+    this.logo = document.getElementById('logo_wrapper')
+    this.links = document.getElementsByClassName('menu_link')
+
     // ensured list is always up to date as reference
     // is updated whenever a new proj is loaded
     this.elements = elements
@@ -43,6 +46,17 @@ class ScrollHandler {
     let currPos = this.getPos()
     if (currPos !== this.pos) {
       this.pos = currPos
+      if (currPos >= 5) {
+        this.logo.classList.add('logo_wrapper_black')
+        for(let i = 0; i < this.links.length; i++) {
+          this.links[i].classList.add('menu_link_black')
+        }
+      } else {
+        this.logo.classList.remove('logo_wrapper_black')
+        for(let i = 0; i < this.links.length; i++) {
+          this.links[i].classList.remove('menu_link_black')
+        }
+      }
       if (currPos >= 4) {
         for (let i = 0; i < this.elements.list.length; i++) {
           // TODO: use id's instead of index for better flexibility
@@ -98,6 +112,7 @@ class ScrollHandler {
     if (window.pageYOffset - window.innerHeight / 3.6 > 0) pos = 2
     if (window.pageYOffset - window.innerHeight / 3 > 0) pos = 3
     if (window.pageYOffset - window.innerHeight / 2 > 0) pos = 4
+    if (window.pageYOffset - window.innerHeight + 90 > 0) pos = 5
 
     return pos
   }
