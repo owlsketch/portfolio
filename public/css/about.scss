@@ -49,4 +49,14 @@
   .images {
     flex: 1;
     height: 100%;
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    grid-template-rows: 200px 400px auto;
+  }
+
+  .profile {
+    width: 400px;
+    margin: auto;
+    grid-column: 2/3;
+    grid-row: 2/3;
   }

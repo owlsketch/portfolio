@@ -19,7 +19,7 @@ class ArrowsHandler {
       {name: 'gallery', pElem: null, aElem: null}
     ]
 
-    this.activeIndex = this.handleInitialIndex(this.projectsContainer, this.articlesContainer)
+    this.activeIndex = this.handleInitialIndex(this.projectsContainer, this.articlesContainer, state)
 
     this.prev.addEventListener('click', function (e) { state.clickedEvent(e, 'prev', state) })
     this.next.addEventListener('click', function (e) { state.clickedEvent(e, 'next', state) })
@@ -29,12 +29,14 @@ class ArrowsHandler {
 
   // find the active project on page load,
   // assign reference in this.elements and get index
-  handleInitialIndex (pContainer, aContainer) {
+  handleInitialIndex (pContainer, aContainer, state) {
     for (let i = 0; i < pContainer.children.length; i++) {
       let pElem = pContainer.children[i]
       for (let j = 0; j < this.projects.length; j++) {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
+          let moreButton = pElem.getElementsByClassName('scroll_link')
+          moreButton[0].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
         }
       }
     }
@@ -49,6 +51,30 @@ class ArrowsHandler {
     }
     // case where project not found.
     return -1
+  }
+
+  moreClickEvent(e, state) {
+    if ('requestAnimationFrame' in window === false) {
+      window.scroll(0, window.innerHeight / 2)
+      return;
+    }
+
+    let start = window.pageYOffset
+    let startTime = 'now' in window.performance ? performance.now() : new Date().getTime()
+    let duration = 600;
+    function scroll() {
+      let now = 'now' in window.performance ? performance.now() : new Date().getTime()
+      let time = Math.min(1, ((now - startTime) / duration))
+
+      window.scroll(0, Math.ceil(((time * (2 - time)) * ((window.innerHeight / 2) - start)) + start))
+      
+      if(window.pageYOffset >= window.innerHeight / 2) {
+        return
+      }
+      requestAnimationFrame(scroll)
+    }
+
+    scroll()
   }
 
   keypressEvent (e, state) {
@@ -81,7 +107,7 @@ class ArrowsHandler {
           state.projectsContainer.innerHTML += text
 
           window.history.replaceState(null, null, state.projects[state.activeIndex].name)
-          state.updateReferences()
+          state.updateReferences(state)
         })
       })
     }
@@ -96,7 +122,7 @@ class ArrowsHandler {
           aOriginalElem.classList.add('display_none')
           state.articlesContainer.innerHTML += text
 
-          state.updateReferences()
+          state.updateReferences(state)
         })
       })
     }
@@ -117,7 +143,7 @@ class ArrowsHandler {
   }
 
   // called after every async call since html nodes change
-  updateReferences () {
+  updateReferences (state) {
     this.elements.list = document.getElementsByClassName('project_main')
     this.projectsContainer = document.getElementById('projects_container')
 
@@ -127,6 +153,8 @@ class ArrowsHandler {
       for (let j = 0; j < this.projects.length; j++) {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
+          let moreButton = pElem.getElementsByClassName('scroll_link')
+          moreButton[0].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
           break
         }
       }
@@ -140,7 +168,6 @@ class ArrowsHandler {
         }
       }
     }
-    console.log(this.projects)
   }
 }
 

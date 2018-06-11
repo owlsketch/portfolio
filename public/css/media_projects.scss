@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-height: 550px) {
+@media (max-height: 600px) {
   .gallery_main {
     font-size: .625em;
   }
@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 440px) {
   .gallery_main {
     font-size: .5em;
   }
@@ -92,7 +92,7 @@
 }
 
 @media (min-height: 700px) and (max-width: 1050px),
-       (min-height: 550px) and (max-width: 915px),
+       (min-height: 600px) and (max-width: 915px),
        (min-height: 400px) and (max-width: 656px),
        (max-height: 400px) and (max-width: 500px) {
 
@@ -108,7 +108,7 @@
 }
 
 @media (min-height: 700px) and (max-width: 785px),
-       (min-height: 550px) and (max-width: 680px),
+       (min-height: 600px) and (max-width: 680px),
        (min-height: 400px) and (max-width: 430px) {
 
   //remove bottom layer of gallery
@@ -154,7 +154,7 @@
 }
 
 @media (min-height: 700px) and (max-width: 1350px),
-       (min-height: 550px) and (max-width: 1175px),
+       (min-height: 600px) and (max-width: 1175px),
        (min-height: 400px) and (max-width: 835px) { 
 
   .pixel_scroll_title {
@@ -163,7 +163,7 @@
 }
 
 @media (min-height: 700px) and (max-width: 650px),
-       (min-height: 550px) and (max-width: 611px) {
+       (min-height: 600px) and (max-width: 611px) {
 
   .img_pixel_wall {
     width: 20em;
@@ -183,7 +183,7 @@
   }
 }
 
-@media (min-height: 550px) and (max-width: 611px) {
+@media (min-height: 600px) and (max-width: 611px) {
   .pixel_article {
     margin-top: 6.9em;
   }
