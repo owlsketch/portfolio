@@ -58,14 +58,13 @@ class ScrollHandler {
         }
       }
       if (currPos >= 4) {
-        //define searching element in its own function
         for (let i = 0; i < this.elements.list.length; i++) {
           let activeEl = this.elements.list[i]
           for(let j = 0; j < activeEl.children.length; j++) {
             let activeChild = activeEl.children[j]
             if(activeChild.classList.contains('project_img')) {
               activeChild.classList.add('project_img_absolute')
-              break;
+              break
             }
           }
         }
@@ -84,7 +83,7 @@ class ScrollHandler {
             let activeChild = activeEl.children[j]
             if(activeChild.classList.contains('project_img')) {
               activeChild.classList.remove('project_img_absolute')
-              break;
+              break
             }
           }
         }

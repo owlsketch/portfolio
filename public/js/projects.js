@@ -11,4 +11,3 @@ let proj = {}
 proj.elements = { list: document.getElementsByClassName('project_main') }
 proj.arrows = new ArrowsHandler(proj.elements)
 proj.scroll = new ScrollHandler(proj.elements)
-

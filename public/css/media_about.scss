@@ -1,1 +1,24 @@
 @import "colors";
+
+@media(max-width: 836px) {
+  .about_content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 17.5em;
+    height: 100%;
+  }
+
+  .description {
+    margin-top: 5.25em;
+    .last_p {
+      margin-bottom: 0em;
+    }
+  }
+
+  .profile {
+    width: 55vw;
+  }
+}
+
+
