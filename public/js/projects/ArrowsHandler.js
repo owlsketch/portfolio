@@ -36,7 +36,9 @@ class ArrowsHandler {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
           let moreButton = pElem.getElementsByClassName('scroll_link')
-          moreButton[0].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
+          for(let k = 0; k < moreButton.length; k++) {
+            moreButton[k].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
+          }
         }
       }
     }
@@ -154,7 +156,9 @@ class ArrowsHandler {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
           let moreButton = pElem.getElementsByClassName('scroll_link')
-          moreButton[0].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
+          for(let k = 0; k < moreButton.length; k++) {
+            moreButton[k].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
+          }
           break
         }
       }
