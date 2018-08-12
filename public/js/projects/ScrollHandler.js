@@ -48,21 +48,21 @@ class ScrollHandler {
       this.pos = currPos
       if (currPos >= 5) {
         this.logo.classList.add('logo_wrapper_black')
-        for(let i = 0; i < this.links.length; i++) {
+        for (let i = 0; i < this.links.length; i++) {
           this.links[i].classList.add('menu_link_black')
         }
       } else {
         this.logo.classList.remove('logo_wrapper_black')
-        for(let i = 0; i < this.links.length; i++) {
+        for (let i = 0; i < this.links.length; i++) {
           this.links[i].classList.remove('menu_link_black')
         }
       }
       if (currPos >= 4) {
         for (let i = 0; i < this.elements.list.length; i++) {
           let activeEl = this.elements.list[i]
-          for(let j = 0; j < activeEl.children.length; j++) {
+          for (let j = 0; j < activeEl.children.length; j++) {
             let activeChild = activeEl.children[j]
-            if(activeChild.classList.contains('project_img')) {
+            if (activeChild.classList.contains('project_img')) {
               activeChild.classList.add('project_img_absolute')
               break
             }
@@ -79,9 +79,9 @@ class ScrollHandler {
       } else {
         for (let i = 0; i < this.elements.list.length; i++) {
           let activeEl = this.elements.list[i]
-          for(let j = 0; j < activeEl.children.length; j++) {
+          for (let j = 0; j < activeEl.children.length; j++) {
             let activeChild = activeEl.children[j]
-            if(activeChild.classList.contains('project_img')) {
+            if (activeChild.classList.contains('project_img')) {
               activeChild.classList.remove('project_img_absolute')
               break
             }
@@ -104,12 +104,12 @@ class ScrollHandler {
       if (currPos >= 2) {
         for (let i = 0; i < this.elements.list.length; i++) {
           let activeEl = this.elements.list[i]
-          for(let j = 0; j < activeEl.children.length; j++) {
+          for (let j = 0; j < activeEl.children.length; j++) {
             let activeChild = activeEl.children[j]
-            if(activeChild.classList.contains('project_title')) {
+            if (activeChild.classList.contains('project_title')) {
               activeChild.classList.add('display_none')
             }
-            if(activeChild.classList.contains('project_scroll_link')) {
+            if (activeChild.classList.contains('project_scroll_link')) {
               activeChild.classList.add('display_none')
             }
           }
@@ -117,12 +117,12 @@ class ScrollHandler {
       } else {
         for (let i = 0; i < this.elements.list.length; i++) {
           let activeEl = this.elements.list[i]
-          for(let j = 0; j < activeEl.children.length; j++) {
+          for (let j = 0; j < activeEl.children.length; j++) {
             let activeChild = activeEl.children[j]
-            if(activeChild.classList.contains('project_title')) {
+            if (activeChild.classList.contains('project_title')) {
               activeChild.classList.remove('display_none')
             }
-            if(activeChild.classList.contains('project_scroll_link')) {
+            if (activeChild.classList.contains('project_scroll_link')) {
               activeChild.classList.remove('display_none')
             }
           }
@@ -147,7 +147,6 @@ class ScrollHandler {
 
     return pos
   }
-
 };
 
 export default ScrollHandler

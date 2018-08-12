@@ -36,7 +36,7 @@ class ArrowsHandler {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
           let moreButton = pElem.getElementsByClassName('scroll_link')
-          for(let k = 0; k < moreButton.length; k++) {
+          for (let k = 0; k < moreButton.length; k++) {
             moreButton[k].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
           }
         }
@@ -55,25 +55,25 @@ class ArrowsHandler {
     return -1
   }
 
-  moreClickEvent(e, state) {
+  moreClickEvent (e, state) {
     if ('requestAnimationFrame' in window === false) {
       window.scroll(0, window.innerHeight / 2)
-      return;
+      return
     }
 
     let start = window.pageYOffset
-    let startTime = 'now' in window.performance ? performance.now() : new Date().getTime()
-    let duration = 600;
-    function scroll() {
-      let now = 'now' in window.performance ? performance.now() : new Date().getTime()
+    let startTime = 'now' in window.performance ? window.performance.now() : new Date().getTime()
+    let duration = 600
+    function scroll () {
+      let now = 'now' in window.performance ? window.performance.now() : new Date().getTime()
       let time = Math.min(1, ((now - startTime) / duration))
 
       window.scroll(0, Math.ceil(((time * (2 - time)) * ((window.innerHeight / 2) - start)) + start))
-      
-      if(window.pageYOffset >= window.innerHeight / 2) {
+
+      if (window.pageYOffset >= window.innerHeight / 2) {
         return
       }
-      requestAnimationFrame(scroll)
+      window.requestAnimationFrame(scroll)
     }
 
     scroll()
@@ -156,7 +156,7 @@ class ArrowsHandler {
         if (pElem.classList.contains(this.projects[j].name)) {
           this.projects[j].pElem = pElem
           let moreButton = pElem.getElementsByClassName('scroll_link')
-          for(let k = 0; k < moreButton.length; k++) {
+          for (let k = 0; k < moreButton.length; k++) {
             moreButton[k].addEventListener('click', function (e) { state.moreClickEvent(e, state) })
           }
           break
