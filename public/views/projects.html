@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"></meta>
+
+  <title>Gibran Garcia - Portfolio</title>
+
+  <link rel="stylesheet" href="https://use.typekit.net/cjs2zzs.css">
+  <link rel="stylesheet" type="text/css" href="/main.bundle.css" media="screen"/>
+
+  <link rel="stylesheet" type="text/css" href="/projects.bundle.css" media="screen"/>
+</head>
+<body>
+
+  <section class="landing">
+    <div class="nav_layer" id="nav_layer">
+      <div class="logo">
+        <a href="/"> 
+          <div class="logo_wrapper" id="logo_wrapper">
+            <p class="logo_text">OWLSKETCH</p>
+          </div>
+        </a>
+      </div>
+      <div class="menu"> 
+        <a class="menu_link" href="/">projects</a>
+        <a class="menu_link" href="/about">about</a>
+      </div>
+    </div>
+
+    <div class="landing_content">
+
+      <div class="proj_nav_layer">
+        <div class="proj_arrows" id="proj_arrows">
+          <img width="46px" class="arrow left_arrow" id="prev" src="/img/landing/arrow.svg" alt="left arrow"/>
+          <img width="46px" class="arrow right_arrow" id="next" src="/img/landing/arrow.svg" alt="right arrow"/>
+        </div>
+      </div>
+
+      <div class="projects" id="projects_container">
+        <!--
+        <% try { %>
+          <%- include('../partials/projects/' + project) %>
+        <% } catch (e) { %>
+          <% include ../partials/projects/project-404-error %>
+        <% } %>    
+        -->
+      </div>
+
+    </div>
+  </section>
+  <section class="proj_articles">
+    <div class="articles_container" id="articles_container">
+      <!--
+      <% try { %>
+        <%- include('../partials/articles/' + project) %>
+      <% } catch (e) { %>
+        <% include ../partials/articles/project-404-error %>
+      <% } %>    
+      -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_sections">
+      <div class="pink_section"></div>
+      <div class="mango_section"></div>
+    </div> 
+    <div class="footer_wrapper">
+      <div class="footer_content">
+        <p>2018, Gibran Garcia.</p>
+        <span class="icon_list">
+          <a href="https://github.com/owlsketch">
+           <img width="20px" src="/img/github_icon.svg" alt="github"/>
+          </a>
+          <a href="https://twitter.com/owlsketch">
+            <img width="20px" src="/img/twitter_icon.svg" alt="twitter"/>
+          </a>
+          <a href="https://www.instagram.com/airbag_racing/">
+            <img width="20px" src="/img/instagram_icon.svg" alt="instagram"/>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.bundle.js"></script>
+  <script src="/projects.bundle.js"></script>
+</body>
+</html>
