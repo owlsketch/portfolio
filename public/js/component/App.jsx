@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectNav from './ProjectNav'
 import ProjectDisplay from './ProjectDisplay'
+import ProjectArticle from './ProjectArticle'
 
 import './App.scss'
 
@@ -11,7 +12,8 @@ function App () {
         <ProjectNav />
         <ProjectDisplay />
       </section>
-      <section className="proj_articles">
+      <section className="proj_article">
+        <ProjectArticle />
       </section>
     </React.Fragment>
   )

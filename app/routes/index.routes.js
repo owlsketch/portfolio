@@ -12,7 +12,7 @@ module.exports = function (app) {
     res.sendFile(path.join(viewPath, 'projects.html'))
   })
 
-  /* 
+  /*
   app.get('/partial/:project', function (req, res) {
     // pass just the partial, an ajax request
     let project = req.params.project
@@ -30,7 +30,6 @@ module.exports = function (app) {
   })
   // [ END UPDATE ]
   */
-
 
   app.get('/about', function (req, res) {
     res.sendFile(path.join(viewPath, 'about.html'))

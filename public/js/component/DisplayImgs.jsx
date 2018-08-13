@@ -14,7 +14,7 @@ function DisplayImgs () {
 function DisplayImgs () {
   return (
     <div className="project_img gallery_imgs">
-      
+
       <div className="layer gallery_layer_bottom">
         <div className="gallery_portrait">
           <img className="img_gallery_landscape scroll_link" src="/img/landing/gallery/landscape_left.jpg" width="288px" alt="Claude Monet landscape painting"/>
