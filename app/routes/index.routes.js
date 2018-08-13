@@ -7,29 +7,13 @@ module.exports = function (app) {
     res.redirect('projects/gallery')
   })
 
-  // [ UPDATE TO REACT ]
   app.get('/projects/:project', function (req, res) {
+    // the react app looks at the URL and determines which project
+    // component to load as a result. NOTE: that all routes created
+    // by react-router should point to this file, where the ReactDOM
+    // loads and handles the routing from there on.
     res.sendFile(path.join(viewPath, 'projects.html'))
   })
-
-  /*
-  app.get('/partial/:project', function (req, res) {
-    // pass just the partial, an ajax request
-    let project = req.params.project
-    res.sendFile(project + '.ejs', {
-      root: path.join(__dirname, '../views/partials/projects')
-    })
-  })
-
-  app.get('/article/:project', function (req, res) {
-    // pass just the partial, an ajax request
-    let project = req.params.project
-    res.sendFile(project + '.ejs', {
-      root: path.join(__dirname, '../views/partials/articles')
-    })
-  })
-  // [ END UPDATE ]
-  */
 
   app.get('/about', function (req, res) {
     res.sendFile(path.join(viewPath, 'about.html'))

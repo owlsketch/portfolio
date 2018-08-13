@@ -1,22 +1,20 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+
 import ProjectNav from './ProjectNav'
-import ProjectDisplay from './ProjectDisplay'
-import ProjectArticle from './ProjectArticle'
+import Gallery from './Gallery'
+import Pixel from './Pixel'
 
-import './App.scss'
-
-function App () {
-  return (
-    <React.Fragment>
-      <section className="landing">
+class App extends React.Component {
+  render () {
+    return (
+      <React.Fragment>
         <ProjectNav />
-        <ProjectDisplay />
-      </section>
-      <section className="proj_article">
-        <ProjectArticle />
-      </section>
-    </React.Fragment>
-  )
+        <Route path="/projects/gallery" component={Gallery} />
+        <Route path="/projects/pixel" component={Pixel} />
+      </React.Fragment>
+    )
+  }
 }
 
 export default App

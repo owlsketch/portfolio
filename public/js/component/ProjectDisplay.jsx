@@ -1,30 +1,42 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ScrollLink from './ScrollLink'
 import DisplayImgs from './DisplayImgs'
 
 import './ProjectDisplay.scss'
 
-function ProjectDisplay () {
-  return (
-    <div className="project">
+class ProjectDisplay extends React.Component {
+  render () {
+    const bgClasses = `project_bg ${this.props.projectName}_bg`
+    const flatBgClasses = `project_flat_bg ${this.props.projectName}_flat_bg`
+    const projectMainClasses = `project_main ${this.props.projectName}_main`
+    const titleClasses = `project_title ${this.props.projectName}_title scroll_link`
 
-      <div className="project_bg gallery_bg">
-        <div className="project_flat_bg gallery_flat_bg"></div>
-      </div>
+    return (
+      <div className="project">
 
-      <div className="project_main gallery_main">
-
-        <div className="project_title gallery_title scroll_link">
-          <p>GALLERY</p>
+        <div className={bgClasses}>
+          <div className={flatBgClasses}></div>
         </div>
 
-        <ScrollLink />
-        <DisplayImgs />
+        <div className={projectMainClasses}>
+
+          <div className={titleClasses}>
+            <p>{this.props.projectName.toUpperCase()}</p>
+          </div>
+
+          <ScrollLink />
+          <DisplayImgs />
+
+        </div>
 
       </div>
+    )
+  }
+}
 
-    </div>
-  )
+ProjectDisplay.propTypes = {
+  projectName: PropTypes.string
 }
 
 export default ProjectDisplay

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import './Arrow.scss'
@@ -9,7 +10,9 @@ class Arrow extends React.Component {
     const altText = `${this.props.direction} arrow`
 
     return (
-      <img width="46px" className={classes} src="/img/landing/arrow.svg" alt={altText} />
+      <Link to="/projects/pixel">
+        <img width="46px" className={classes} src="/img/landing/arrow.svg" alt={altText} />
+      </Link>
     )
   }
 }
