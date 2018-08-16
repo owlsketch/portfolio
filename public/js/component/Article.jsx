@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './ProjectArticle.scss'
+import './Article.scss'
 
 /*
 function ProjectArticle () {
@@ -30,7 +30,7 @@ function ProjectArticle () {
   )
 }
 */
-function ProjectArticle () {
+function Article () {
   return (
     <div className="proj_article">
 
@@ -59,4 +59,4 @@ function ProjectArticle () {
   )
 }
 
-export default ProjectArticle
+export default Article

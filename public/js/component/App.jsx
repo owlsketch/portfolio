@@ -1,17 +1,27 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import ProjectNav from './ProjectNav'
-import Gallery from './Gallery'
-import Pixel from './Pixel'
+import Navigation from './navigation/Navigation'
+import Project from './Project'
 
 class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.projects = ['gallery', 'pixel']
+  }
+
   render () {
+    const projects = this.projects
+
     return (
       <React.Fragment>
-        <ProjectNav />
-        <Route path="/projects/gallery" component={Gallery} />
-        <Route path="/projects/pixel" component={Pixel} />
+        <Navigation projects={projects} />
+        <Route path="/projects/gallery"
+          render={ (projects) => <Project project="gallery" /> }
+        />
+        <Route path="/projects/pixel"
+          render={ (projects) => <Project project="pixel" /> }
+        />
       </React.Fragment>
     )
   }
