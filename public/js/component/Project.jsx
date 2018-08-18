@@ -6,7 +6,7 @@ import Article from './Article'
 
 import './Project.scss'
 
-const Project = (props) => {
+function Project (props) {
   const project = props.project.toLowerCase()
 
   return (
@@ -15,7 +15,7 @@ const Project = (props) => {
         <Landing project={project}/>
       </section>
       <section className="proj_article">
-        <Article />
+        <Article project={project}/>
       </section>
     </React.Fragment>
   )
