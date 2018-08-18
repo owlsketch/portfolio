@@ -1,17 +1,48 @@
+import React from 'react'
+
 import { galleryImage } from './Gallery'
 import { pixelImage } from './Pixel'
 
+import EventHandler from '../EventHandler'
+
 import './LandingImages.scss'
 
-function LandingImages (props) {
-  const project = props.project.toLowerCase()
+class LandingImages extends React.Component {
+  constructor (props) {
+    super(props)
 
-  let imgs = {
-    gallery: galleryImage,
-    pixel: pixelImage
+    this.state = {
+      fixed: true
+    }
+
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
-  return (imgs[project]())
+  handleScroll (e) {
+    const passedThreshold = window.pageYOffset - window.innerHeight / 2 > 0
+
+    if(passedThreshold && this.state.fixed === true) {
+      this.setState({ fixed: false })
+    }
+    else if (!passedThreshold && this.state.fixed === false) {
+      this.setState({ fixed: true })
+    }
+  }
+
+  render () {
+    const project = this.props.project.toLowerCase()
+
+    let imgs = {
+      gallery: galleryImage,
+      pixel: pixelImage
+    }
+
+    return (
+      <EventHandler onScroll={this.handleScroll}>
+        {imgs[project](this.state.fixed)}
+      </EventHandler>
+    )
+  }
 }
 
 export default LandingImages

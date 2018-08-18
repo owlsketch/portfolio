@@ -1,8 +1,11 @@
 import React from 'react'
 
-function galleryImage () {
+function galleryImage (fixed) {
+  let imgClasses =  `project_img `
+  if (!fixed) imgClasses += ` project_img_absolute`
+  
   return (
-    <div className="project_img gallery_imgs">
+    <div className={imgClasses}>
 
       <div className="layer gallery_layer_bottom">
         <div className="gallery_portrait">

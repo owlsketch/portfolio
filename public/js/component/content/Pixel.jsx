@@ -1,8 +1,11 @@
 import React from 'react'
 
-function pixelImage () {
+function pixelImage (fixed) {
+  let imgClasses =  `project_img pixel_imgs`
+  if (!fixed) imgClasses += ` project_img_absolute`
+
   return (
-    <div className="project_img pixel_imgs">
+    <div className={imgClasses}>
       <img className="img_pixel_wall" width="525px" src="/img/landing/pixel/pixelwall.png" alt="10x10 pixel wall device" />
     </div>
   )

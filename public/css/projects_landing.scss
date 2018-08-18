@@ -38,30 +38,3 @@
 .project_scroll_title {
   font-size: 13em;
 }
-
-////////// ArrowsHandler CSS //////////
-.hide {
-  z-index: 1;
-  animation: fadeOut .5s ease-in 1 forwards;
-}
-
-@keyframes fadeOut {
-  99% {
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-///////// ScrollHandler CSS //////////
-.project_img_absolute {
-  position: absolute;
-  top: 50vh;
-}
-
-.display_none {
-  display: none;
-}
-

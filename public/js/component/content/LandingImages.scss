@@ -2,11 +2,14 @@
   position: fixed;
 }
 
+.project_img_absolute {
+  position: absolute;
+  top: 50vh;
+}
+
   .pixel_imgs {
     transform: translate(-50%, -50%);
   }
-
-  .gallery_imgs { }
 
 .img_pixel_wall { width: 32.8125em; }
 
