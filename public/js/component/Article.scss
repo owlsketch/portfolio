@@ -1,15 +1,4 @@
-@import "colors";
-
-.proj_articles {
-  position: relative;
-  h1, p, a {
-    color: $black;
-  }
-}
-
-.articles_container {
-  width: 100%;
-}
+@import "../../css/colors";
 
 .proj_article {
   margin: 11.5em auto 0em;

@@ -1,0 +1,20 @@
+.arrow {
+  pointer-events: auto;
+  cursor: pointer;
+  width: 2.875em;
+}
+
+.left_arrow {
+  margin-left: 2.88em;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+.right_arrow {
+  transform: scaleX(-1);
+  margin-right: 2.88em;
+  &:hover {
+    transform: scale(-1.1, 1.1);
+  }
+}
+

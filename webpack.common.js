@@ -12,6 +12,9 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
@@ -29,7 +32,7 @@ module.exports = {
           { loader: MiniCSSExtractPlugin.loader },
           { loader: 'css-loader' },
           { loader: 'sass-loader' }
-        ] 
+        ]
       }
     ]
   },

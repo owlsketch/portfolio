@@ -1,0 +1,21 @@
+@import "../../../css/colors";
+
+.project_scroll_link {
+  position: absolute; 
+  top: calc(100vh/2 - 8vh);
+  transform: translate(-50%, -50%);
+  .scroll_link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h3 {
+    color: $white;
+    margin: 0 0 .2em;
+  }
+  img {
+    width: 3em;
+  }
+}
+

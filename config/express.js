@@ -1,16 +1,15 @@
-let express = require('express')
-let bodyParser = require('body-parser')
+const express = require('express')
+const bodyParser = require('body-parser')
+const path = require('path')
 
 module.exports = function () {
   let app = express()
 
-  app.use(bodyParser.urlencoded({
-    extended: true
-  }))
+  app.use(bodyParser.urlencoded({ extended: true }))
   app.use(bodyParser.json())
 
-  app.set('views', './app/views')
-  app.set('view engine', 'ejs')
+  app.set('viewPath', path.join(__dirname, '../public/views'))
+
   app.use(express.static('./dist'))
   app.use(express.static('./public')) // for images not bundled into webpack
 

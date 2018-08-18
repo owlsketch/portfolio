@@ -1,35 +1,21 @@
-let path = require('path')
+const path = require('path')
 
 module.exports = function (app) {
+  const viewPath = app.get('viewPath')
+
   app.get('/', function (req, res) {
     res.redirect('projects/gallery')
   })
 
   app.get('/projects/:project', function (req, res) {
-    // pass project var into template. Within
-    // template use var to load :project partial
-    res.render('pages/projects.ejs', {
-      project: req.params.project
-    })
-  })
-
-  app.get('/partial/:project', function (req, res) {
-    // pass just the partial, an ajax request
-    let project = req.params.project
-    res.sendFile(project + '.ejs', {
-      root: path.join(__dirname, '../views/partials/projects')
-    })
-  })
-
-  app.get('/article/:project', function (req, res) {
-    // pass just the partial, an ajax request
-    let project = req.params.project
-    res.sendFile(project + '.ejs', {
-      root: path.join(__dirname, '../views/partials/articles')
-    })
+    // the react app looks at the URL and determines which project
+    // component to load as a result. NOTE: that all routes created
+    // by react-router should point to this file, where the ReactDOM
+    // loads and handles the routing from there on.
+    res.sendFile(path.join(viewPath, 'projects.html'))
   })
 
   app.get('/about', function (req, res) {
-    res.render('pages/about.ejs')
+    res.sendFile(path.join(viewPath, 'about.html'))
   })
 }

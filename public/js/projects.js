@@ -1,13 +1,17 @@
 import '../css/projects_landing.scss'
-import '../css/projects_article.scss'
 
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './component/App'
+
+// want media queries to implement on React components and normal
+// elements AFTER all of their own unique stylings have been applied
 import '../css/media_projects.scss'
 
-import ArrowsHandler from './projects/ArrowsHandler.js'
-import ScrollHandler from './projects/ScrollHandler.js'
-
-let proj = {}
-
-proj.elements = { list: document.getElementsByClassName('project_main') }
-proj.arrows = new ArrowsHandler(proj.elements)
-proj.scroll = new ScrollHandler(proj.elements)
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('react_root')
+)
