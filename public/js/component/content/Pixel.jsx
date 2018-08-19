@@ -13,7 +13,7 @@ function pixelImage (fixed) {
 
 function pixelArticle () {
   return (
-    <div className="proj_article">
+    <div className="proj_article pixel_article">
 
       <div className="proj_description">
         <p>

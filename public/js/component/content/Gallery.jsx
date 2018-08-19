@@ -37,7 +37,7 @@ function galleryImage (fixed) {
 
 function galleryArticle () {
   return (
-    <div className="proj_article">
+    <div className="proj_article gallery_article">
 
       <div className="proj_description">
         <p>
