@@ -12,29 +12,3 @@
   top: 0;
 }
 
-.project_scroll {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-
-.project_scroll_title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  opacity: 0;
-  p {
-    font-weight: 700;
-    color: $white;
-  }
-}
-
-////////// Specific Project CSS /////////
-.gallery_scroll { top: 71vh; }
-.pixel_scroll { top: 67vh; }
-
-.project_scroll_title {
-  font-size: 13em;
-}

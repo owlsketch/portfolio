@@ -4,40 +4,77 @@ import PropTypes from 'prop-types'
 import ScrollLink from './navigation/ScrollLink'
 import LandingImages from './content/LandingImages'
 
+import EventHandler from './EventHandler'
+
 import './Landing.scss'
 
-function Landing (props) {
-  const project = props.project.toLowerCase()
+class Landing extends React.Component {
+  constructor (props) {
+    super(props)  
 
-  const bgClasses = `project_bg ${project}_bg`
-  const flatBgClasses = `project_flat_bg ${project}_flat_bg`
-  const projectMainClasses = `project_main ${project}_main`
-  const titleClasses = `project_title ${project}_title scroll_link`
-
-  const title = {
-    gallery: 'Gallery',
-    pixel: 'Pixel Wall'
+    this.state = {
+      titleStyle: {
+        opacity: 1
+      } 
+    }   
+ 
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
-  return (
-    <div className="project">
-      <div className={bgClasses}>
-        <div className={flatBgClasses}></div>
-      </div>
+  handleScroll (e) {
+    let opacityVal = 1
 
-      <div className={projectMainClasses}>
+    let quarterPos = window.innerHeight / 4
+    let initialRange = window.pageYOffset / quarterPos 
+    let secondRange = (window.pageYOffset - quarterPos) / (window.innerHeight / 2 - quarterPos)
 
-        <div className={titleClasses}>
-          <p>{title[project].toUpperCase()}</p>
+    if (initialRange < 1) 
+      opacityVal = 1 - initialRange
+    else if (initialRange >= 1 && secondRange < 1)
+      opacityVal = 0 + secondRange
+
+    this.setState({ 
+      titleStyle: {
+        opacity: opacityVal
+      }
+    })
+  }
+
+  render () {
+    const project = this.props.project.toLowerCase()
+
+    const bgClasses = `project_bg ${project}_bg`
+    const flatBgClasses = `project_flat_bg ${project}_flat_bg`
+    const projectMainClasses = `project_main ${project}_main`
+    const titleClasses = `project_title ${project}_title scroll_link`
+
+    const title = {
+      gallery: 'Gallery',
+      pixel: 'Pixel Wall'
+    }
+
+    return (
+      <EventHandler onScroll={this.handleScroll}>
+        <div className="project">
+          <div className={bgClasses}>
+            <div className={flatBgClasses}></div>
+          </div>
+
+          <div className={projectMainClasses}>
+
+            <div className={titleClasses} style={this.state.titleStyle}>
+              <p>{title[project].toUpperCase()}</p>
+            </div>
+
+            <ScrollLink />
+
+            <LandingImages project={project} />
+
+          </div>
         </div>
-
-        <ScrollLink />
-
-        <LandingImages project={project} />
-
-      </div>
-    </div>
-  )
+      </EventHandler>
+    )
+  }
 }
 
 Landing.propTypes = {

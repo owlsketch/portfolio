@@ -26,15 +26,11 @@
     font-size: .875em;
   }
 
-  .project_scroll_title {
-    font-size: 11.3em;
-  }
-
   .gallery_article {
-    margin-top: 10.25em;
+    top: -1em;
   }
   .pixel_article {
-    margin-top: 10.25em;
+    top: -1em;
   }
 }
 
@@ -46,15 +42,11 @@
     font-size: .625em;
   }
 
-  .project_scroll_title {
-    font-size: 8em;
-  }
-
   .gallery_article {
-    margin-top: 7.75em; 
+    top: -3em;
   }
   .pixel_article {
-    margin-top: 7.75em;
+    top: -3.25em;
   }
 }
 
@@ -66,20 +58,17 @@
     font-size: .5em;
   }
 
-  .project_scroll_title {
-    font-size: 6.4em;
-  }
-
   .gallery_article {
-    margin-top: 5.75em; 
+    top: -4.5em;
   }
   .pixel_article {
-    margin-top: 6.5em;
+    top: -4.25em;
   }
 }
 
 // GALLERY CHANGES
 @media (max-width: 700px) {
+  //article content
   .gallery_img_flex {
     margin-top: 3em;
     flex-direction: column;
@@ -103,14 +92,11 @@
   .gallery_layer_middle {
     width: 43.75vw;
   }
-  .gallery_scroll_title {
-    font-size: 19.75vw;
-  }
 }
 
 @media (min-height: 700px) and (max-width: 785px),
-       (min-height: 600px) and (max-width: 680px),
-       (min-height: 400px) and (max-width: 430px) {
+       (min-height: 601px) and (max-width: 680px),
+       (min-height: 400px) and (max-width: 390px) {
 
   //remove bottom layer of gallery
   .gallery_layer_bottom {
@@ -130,7 +116,7 @@
     font-size: 12px;
   }
   .gallery_article {
-    margin-top: 9.75em;
+    top: -.75em;
   }
 }
 
@@ -157,10 +143,6 @@
 @media (min-height: 700px) and (max-width: 1350px),
        (min-height: 600px) and (max-width: 1175px),
        (min-height: 400px) and (max-width: 835px) { 
-
-  .pixel_scroll_title {
-    font-size: 15.425vw;
-  }
 }
 
 @media (min-height: 700px) and (max-width: 650px),
@@ -175,24 +157,16 @@
     white-space: normal;
     }
   }
-  .pixel_scroll_title {
-    margin-top: .25em;
-    p {
-      font-size: 24vw;
-      white-space: normal;
-    }
-  }
 }
 
 @media (min-height: 600px) and (max-width: 611px) {
   .pixel_article {
-    margin-top: 6.9em;
+    top: -4.75em;
   }
 }
 
 @media (min-height: 700px) and (max-width: 650px) {
   .pixel_article {
-    margin-top: 7.4em;
+    top: -4em;
   }
 }
-
