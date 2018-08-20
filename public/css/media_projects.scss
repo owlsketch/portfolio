@@ -26,6 +26,10 @@
     font-size: .875em;
   }
 
+  .project_title_scrolled {
+    font-size: 2.3em;
+  }
+
   .gallery_article {
     top: -1em;
   }
@@ -92,6 +96,10 @@
   .gallery_layer_middle {
     width: 43.75vw;
   }
+
+  .gallery_title_scrolled {
+    font-size: 3.75vw;
+  }
 }
 
 @media (min-height: 700px) and (max-width: 785px),
@@ -143,6 +151,9 @@
 @media (min-height: 700px) and (max-width: 1350px),
        (min-height: 600px) and (max-width: 1175px),
        (min-height: 400px) and (max-width: 835px) { 
+  .pixel_title_scrolled {
+    font-size: 2.75vw;    
+  }
 }
 
 @media (min-height: 700px) and (max-width: 650px),
@@ -152,10 +163,12 @@
     width: 20em;
   }
   .pixel_title {
-    top: 12.5em;
-    p {
+    font-size: 2.25vw;
+  }
+
+  .pixel_title_scrolled {
     white-space: normal;
-    }
+    font-size: 4.25vw;
   }
 }
 
