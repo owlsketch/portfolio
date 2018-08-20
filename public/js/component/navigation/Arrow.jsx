@@ -19,15 +19,16 @@ class Arrow extends React.Component {
 
     this.handleScroll = this.handleScroll.bind(this)
   }
-  
+
   handleScroll (e) {
     let opacityVal = 1
     let initialRange = window.pageYOffset / (window.innerHeight / 2.25)
-    
-    if (initialRange < 1)
+
+    if (initialRange < 1) {
       opacityVal = 1 - initialRange
-    else
+    } else {
       opacityVal = 0
+    }
 
     this.setState({
       arrowStyle: {
@@ -49,10 +50,9 @@ class Arrow extends React.Component {
     return (
       <EventHandler onScroll={this.handleScroll}>
         <Link to={nextProject}>
-          <img 
-            width="46px" className={classes} 
-            src="/img/landing/arrow.svg" alt={altText} 
-            style={this.state.arrowStyle}
+          <img
+            width="46px" className={classes} style={this.state.arrowStyle}
+            src="/img/landing/arrow.svg" alt={altText}
           />
         </Link>
       </EventHandler>

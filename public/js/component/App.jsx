@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter, Route } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import EventHandler from './EventHandler'
 import Navigation from './navigation/Navigation'
@@ -16,14 +17,14 @@ class App extends React.Component {
   }
 
   handleKey (e) {
-    if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
-    
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+
     const direction = (e.key === 'ArrowRight') ? 'right' : 'left'
     const path = this.props.location.pathname
-    
-    const nextProject = getNextProject(path, this.projects, direction) 
-   
-    this.props.history.push(nextProject) 
+
+    const nextProject = getNextProject(path, this.projects, direction)
+
+    this.props.history.push(nextProject)
   }
 
   render () {
@@ -41,6 +42,11 @@ class App extends React.Component {
       </EventHandler>
     )
   }
+}
+
+App.propTypes = {
+  history: PropTypes.object,
+  location: PropTypes.object
 }
 
 export default withRouter(App)

@@ -10,15 +10,15 @@ import './Landing.scss'
 
 class Landing extends React.Component {
   constructor (props) {
-    super(props)  
+    super(props)
 
     this.state = {
       titleStyle: {
         opacity: 1
       },
       scrolled: false
-    }   
- 
+    }
+
     this.handleScroll = this.handleScroll.bind(this)
   }
 
@@ -26,24 +26,26 @@ class Landing extends React.Component {
     let opacityVal = 1
 
     let quarterPos = window.innerHeight / 4
-    let initialRange = window.pageYOffset / quarterPos 
+    let initialRange = window.pageYOffset / quarterPos
     let secondRange = (window.pageYOffset - quarterPos) / (window.innerHeight / 2 - quarterPos)
 
-    if (initialRange < 1) 
+    if (initialRange < 1) {
       opacityVal = 1 - initialRange
-    else if (initialRange >= 1 && secondRange < 1)
+    } else if (initialRange >= 1 && secondRange < 1) {
       opacityVal = 0 + secondRange
+    }
 
-    this.setState({ 
+    this.setState({
       titleStyle: {
         opacity: opacityVal
       }
     })
-  
-    if(initialRange >= 1 && this.state.scrolled === false) 
+
+    if (initialRange >= 1 && this.state.scrolled === false) {
       this.setState({ scrolled: true })
-    else if (initialRange < 1 && this.state.scrolled === true)
+    } else if (initialRange < 1 && this.state.scrolled === true) {
       this.setState({ scrolled: false })
+    }
   }
 
   render () {
@@ -53,9 +55,10 @@ class Landing extends React.Component {
     const flatBgClasses = `project_flat_bg ${project}_flat_bg`
     const projectMainClasses = `project_main ${project}_main`
     let titleClasses = `project_title ${project}_title scroll_link`
-    
-    if(this.state.scrolled) 
+
+    if (this.state.scrolled) {
       titleClasses += ` project_title_scrolled ${project}_title_scrolled`
+    }
 
     const title = {
       gallery: 'Gallery',

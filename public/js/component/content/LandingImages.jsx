@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { galleryImage } from './Gallery'
 import { pixelImage } from './Pixel'
@@ -21,10 +22,9 @@ class LandingImages extends React.Component {
   handleScroll (e) {
     const passedThreshold = window.pageYOffset - window.innerHeight / 2 > 0
 
-    if(passedThreshold && this.state.fixed === true) {
+    if (passedThreshold && this.state.fixed === true) {
       this.setState({ fixed: false })
-    }
-    else if (!passedThreshold && this.state.fixed === false) {
+    } else if (!passedThreshold && this.state.fixed === false) {
       this.setState({ fixed: true })
     }
   }
@@ -43,6 +43,10 @@ class LandingImages extends React.Component {
       </EventHandler>
     )
   }
+}
+
+LandingImages.propTypes = {
+  project: PropTypes.string
 }
 
 export default LandingImages

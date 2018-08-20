@@ -1,7 +1,7 @@
 import React from 'react'
 
 function pixelImage (fixed) {
-  let imgClasses =  `project_img pixel_imgs`
+  let imgClasses = `project_img pixel_imgs`
   if (!fixed) imgClasses += ` project_img_absolute`
 
   return (

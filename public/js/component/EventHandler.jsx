@@ -2,7 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-//via composition handle listener for children props
+// via composition handle listener for children props
 class EventHandler extends React.Component {
   constructor (props) {
     super(props)
@@ -27,10 +27,14 @@ class EventHandler extends React.Component {
 
   render () {
     return this.props.children
-  } 
+  }
 }
 
 EventHandler.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
   onKeyPress: PropTypes.func,
   onScroll: PropTypes.func
 }
