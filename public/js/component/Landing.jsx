@@ -15,7 +15,8 @@ class Landing extends React.Component {
     this.state = {
       titleStyle: {
         opacity: 1
-      } 
+      },
+      scrolled: false
     }   
  
     this.handleScroll = this.handleScroll.bind(this)
@@ -38,6 +39,11 @@ class Landing extends React.Component {
         opacity: opacityVal
       }
     })
+  
+    if(initialRange >= 1 && this.state.scrolled === false) 
+      this.setState({ scrolled: true })
+    else if (initialRange < 1 && this.state.scrolled === true)
+      this.setState({ scrolled: false })
   }
 
   render () {
@@ -46,7 +52,10 @@ class Landing extends React.Component {
     const bgClasses = `project_bg ${project}_bg`
     const flatBgClasses = `project_flat_bg ${project}_flat_bg`
     const projectMainClasses = `project_main ${project}_main`
-    const titleClasses = `project_title ${project}_title scroll_link`
+    let titleClasses = `project_title ${project}_title scroll_link`
+    
+    if(this.state.scrolled) 
+      titleClasses += ` project_title_scrolled ${project}_title_scrolled`
 
     const title = {
       gallery: 'Gallery',
