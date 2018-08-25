@@ -16,6 +16,9 @@ class Landing extends React.Component {
       titleStyle: {
         opacity: 1
       },
+      bgStyle: {
+        opacity: 0
+      },
       scrolled: false
     }
 
@@ -23,24 +26,41 @@ class Landing extends React.Component {
   }
 
   handleScroll (e) {
-    let opacityVal = 1
+    let titleOpacity = 1
+    let bgOpacity = 0
 
     let quarterPos = window.innerHeight / 4
+    let halfPos = window.innerHeight / 2
+
+    // from beginning of page to 1/4 of the page scroll
     let initialRange = window.pageYOffset / quarterPos
+    // from a 1/4 of the page scroll to 1/2
     let secondRange = (window.pageYOffset - quarterPos) / (window.innerHeight / 2 - quarterPos)
+    // from beginning of page to 1/2 of the page
+    let finalRange = window.pageYOffset / halfPos
 
     if (initialRange < 1) {
-      opacityVal = 1 - initialRange
+      titleOpacity = 1 - initialRange
     } else if (initialRange >= 1 && secondRange < 1) {
-      opacityVal = 0 + secondRange
+      titleOpacity = 0 + secondRange
+    }
+
+    if (finalRange < 1) {
+      bgOpacity = 0 + finalRange
+    } else {
+      bgOpacity = 1
     }
 
     this.setState({
       titleStyle: {
-        opacity: opacityVal
+        opacity: titleOpacity
+      },
+      bgStyle: {
+        opacity: bgOpacity
       }
     })
 
+    // trigger scrolled text styling if passed 1/4 range
     if (initialRange >= 1 && this.state.scrolled === false) {
       this.setState({ scrolled: true })
     } else if (initialRange < 1 && this.state.scrolled === true) {
@@ -69,7 +89,7 @@ class Landing extends React.Component {
       <EventHandler onScroll={this.handleScroll}>
         <div className="project">
           <div className={bgClasses}>
-            <div className={flatBgClasses}></div>
+            <div className={flatBgClasses} style={this.state.bgStyle}></div>
           </div>
 
           <div className={projectMainClasses}>
