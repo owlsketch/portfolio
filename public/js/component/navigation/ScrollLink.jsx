@@ -26,7 +26,8 @@ class ScrollLink extends React.Component {
           Math.ceil(((time * (2 - time)) * ((window.innerHeight / 2) - startPos)) + startPos)
         )
 
-        if (window.pageYOffset >= window.innerHeight / 2) { return }
+        // - 1 serves as threshhold bound for chrome
+        if (window.pageYOffset >= (window.innerHeight / 2) - 1) { return }
         window.requestAnimationFrame(scroll)
       }
 
