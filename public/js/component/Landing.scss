@@ -46,6 +46,7 @@
 }
 
 .scroll_link {
+  font-family: "futura-pt", sans-serif;
   cursor: pointer;
 }
 
@@ -54,6 +55,7 @@
   transform: translate(-50%, -50%);
   white-space: nowrap;
   p {
+    font-family: "futura-pt", sans-serif;
     font-weight: 700;
     font-size: 5.5em;
     color: $white;

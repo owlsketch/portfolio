@@ -1,7 +1,6 @@
 @import "colors";
 
 .footer_sections {
-  margin-top: 6em;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -28,6 +27,9 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
+  p {
+    font-size: .9375em;
+  }
 }
 
 .icon_list {

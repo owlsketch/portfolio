@@ -1,82 +1,63 @@
 @import "../../css/colors";
 
 .proj_article {
-  margin: 11.5em auto 0em;
+  margin: 12.5em auto 0em;
+  max-width: 52em;
   width: 75vw;
+}
 
-  .proj_description {
-    max-width: 40.5em;
-    padding: 0em 5vh;
-    margin: 0 auto;
+.proj_links {
+  max-width: 18.75em;
+  padding: 0em 5vh;
+  margin: 2.25em auto 0;
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: $black;
+    padding: 0em .25em .125em;
+    border-bottom: .0625em solid $black;
+  }
+}
+
+.article_title {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.article_content {
+  max-width: 46em;
+  margin: 2.5em auto 0em;
+  p {
+    color: $black;
+    font-size: 1.125em;
+    margin-bottom: 1em;
+    line-height: 1.2em;
+  }
+  .article_quote {
+    font-size: 1.625em;
+    font-weight: 700;
     text-align: center;
-  }
-
-  .proj_links {
-    max-width: 22.75em;
-    width: 60vw;
-    padding: 0em 5vh;
-    margin: 2.25em auto 0;
-    display: flex;
-    justify-content: space-between;
-    a {
-      font-weight: 700;
-    }
+    line-height: 1.125em;
+    margin: 1.5em 2em;
   }
 }
 
-.pixel_mobile_imgs {
-  max-width: 66em;
-  margin: 4em auto 0em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 2em;
-  grid-row-gap: 1.5em;
+.article_img {
+  max-width: 36em;
+  margin: 2em auto;
   img {
     width: 100%;
-    justify-self: center;
-    align-self: center;
-    border: solid 1px $darkWhite;
-    display: inline-block;
+    box-shadow: 0em 0.125em 0.25em 0.0625em rgba(124, 124, 124, 0.5);
+  }
+  p {
+    font-size: 0.875em;
+    color: $subtext;
+    margin-top: .5em;
   }
 }
 
-  .pixel_portrait1 {
-    grid-column: 1/2;
-    grid-row: 1/5;
-  }
-  .pixel_portrait2 {
-    grid-column: 2/3;
-    grid-row: 1/5;
-  }
-  .pixel_landscape1 {
-    grid-column: 3/5;
-    grid-row: 1/3;
-  }
-  .pixel_landscape2 {
-    grid-column: 3/5;
-    grid-row: 3/5;
-  }
-
-.gallery_article_image {
-  max-width: 62.5em;
-  margin: 0em auto;
-  img {
-    border: solid 1px $darkWhite;
-  }
+.endmark {
+  width: 3em;
+  margin: 4em auto 5em;
 }
-
-  .gallery_img_claude_angle {
-    margin: 4em auto 0em;
-    width: 100%;
-  }
-
-  .gallery_img_flex {
-    margin: 2em auto 0em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img {
-      width: 48%;
-    }
-  }
