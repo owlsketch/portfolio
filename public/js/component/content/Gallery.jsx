@@ -50,7 +50,7 @@ function galleryArticle () {
           Laika Gallery, as the name hints at, is an effort to bring the experience of art galleries to the web. Fundamentally, at its core also lies the concept of accessibility.
         </p>
         <p>
-          The project began after I read about the Metropolitan Museum's Open Access Initiative, an effort to publish the museum's collection of public-domain artworks online. The Met's efforts succeeded in making information available to the public. However, they failed to make it as consumable as an actual visit to a museum. 
+          The project began after I read about the Metropolitan Museum's <a href="https://metmuseum.org/blogs/digital-underground/2017/open-access-at-the-met">Open Access Initiative</a>, an effort to publish the museum's collection of public-domain artworks online. The Met's efforts succeeded in making information available to the public. However, they failed to make it as consumable as an actual visit to a museum. 
         </p>
 
         <div className="article_img">
@@ -69,7 +69,7 @@ function galleryArticle () {
         </p>
   
         <p>
-          As a response to these problems, I created the first working version of Laika Gallery in 2014. The goal was to bring all that lost information back, or at least as much as I could get away with. The first version was also for my grandmother; I wanted to be able to bring the museum to her since it proved difficult to do the contrary. With this having been accomplished, I shared the code on Github and went back to focusing on my studies.
+          As a response to these problems, I created the first working version of Laika Gallery in 2014. The goal was to bring all that lost information back, or at least as much as I could get away with. The first version was also for my grandmother; I wanted to be able to bring the museum to her since it proved difficult to do the contrary. With this having been accomplished, <a href="https://github.com/owlsketch/gallery/tree/gh-pages">I shared the code on Github</a> and went back to focusing on my studies.
         </p>
   
         <div className="article_img">
@@ -87,7 +87,7 @@ function galleryArticle () {
         </p>
 
         <p>
-          The other event that further inspired me was a demo I saw for a VR museum experience by the Smithsonian. It was beautifully rendered, and definitely something I couldn't compete with. Yet, with accessibility in mind, what I saw had no real audience. The cost of running the application involved a VR headset and a computer strong enough to render the view. It was developed with a unique rig by Intel running the latest specs and in the process it was forgotten that the average user doesn't have anything near comparable to that. Related projects that already exist on the web run into similar problems by relying on Unity and thus reducing their accessibility. In these scenarios, the technical cost of the application becomes a burden on the user that results in turning many away.
+          The other event that further inspired me was a demo I saw for <a href="https://www.engadget.com/2017/08/02/smithsonian-art-museum-intel-vr/">a VR museum experience by the Smithsonian</a>. It was beautifully rendered, and definitely something I couldn't compete with. Yet, with accessibility in mind, what I saw had no real audience. The cost of running the application involved a VR headset and a computer strong enough to render the view. It was developed with a unique rig by Intel running the latest specs and in the process it was forgotten that the average user doesn't have anything near comparable to that. Related projects that already exist on the web run into similar problems by relying on Unity and thus reducing their accessibility. In these scenarios, the technical cost of the application becomes a burden on the user that results in turning many away.
         </p>
         
         <div className="article_img">
@@ -98,7 +98,7 @@ function galleryArticle () {
         </div>
 
         <p>
-          So I decided to work on Laika Gallery once again, this time as a collaborative effort, with accessibility still in mind. We're aiming to create a tool that makes gallery creation accessible to artists while minimizing the technical cost to visitors. To make this a reality means consciously working well within the bounds of obsolete hardware just like the Nintendo Switch managed to accomplish. Laika Gallery can't promise hyper-realistic content, but by decoupling the product from bleeding-edge technology, what can be promised is access for a wider audience. By not defaulting towards Unity, as many of our competitors have done, and working with Three.js instead, the technical cost for users is greatly reduced, thus increasing accessibility. This does come at the cost of prolonged development time, however I don't see this as a setback, but as a necessity to getting it done right. 
+          So I decided to work on Laika Gallery once again, this time as a collaborative effort, with accessibility still in mind. We're aiming to create a tool that makes gallery creation accessible to artists while minimizing the technical cost to visitors. To make this a reality means consciously working well within the bounds of <a href="https://www.forbes.com/sites/davidthier/2018/02/05/the-nintendo-switchs-secret-is-that-its-already-obsolete/#e5e745539136">obsolete hardware just like the Nintendo Switch managed to accomplish</a>. Laika Gallery can't promise hyper-realistic content, but by decoupling the product from bleeding-edge technology, what can be promised is access for a wider audience. By not defaulting towards Unity, as many of our competitors have done, and working with Three.js instead, the technical cost for users is greatly reduced, thus increasing accessibility. This does come at the cost of prolonged development time, however I don't see this as a setback, but as a necessity to getting it done right. 
         </p>
         
         <p>

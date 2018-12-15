@@ -26,8 +26,31 @@ function pixelArticle () {
           The Pixel Wall project consists of an interactive LED grid device along with software to control the device through the web. It was designed for GRID so that visitors may feel welcome to a space that both promotes participation with technology, and provides resources for others to learn and create.
         </p>
 
+        <div className="pixel_img_flex">
+          <div className="pixel_img_container">
+            <img width="256px" src="/img/article/pixel/article_img_1.JPG"/>
+            <p className="subtext">
+              Rika with the pixel wall.
+            </p>
+          </div>
+
+          <div className="pixel_img_container">
+            <img width="256px" src="/img/article/pixel/article_img_2.jpg"/>
+            <p className="subtext">
+              A student playing with the pixel wall.
+            </p>
+          </div>
+
+          <div className="pixel_img_container">
+            <img width="256px" src="/img/article/pixel/article_img_3.jpg"/>
+            <p className="subtext">
+              Mozilla's IoT team at MakerFaire 2018.
+            </p>
+          </div>
+        </div>
+
         <p>
-          The device consists of a grid of LEDs, a microcontroller, and a host computer. The grid of LEDs are controlled by the microcontroller that in turn receives commands from the computer it is connected to. In order to allow the computer to communicate with the microcontroller that controls the LEDs while it is running, we loaded the Firmata protocol onto the microcontroller. With this in place, a basic set of commands were defined that would allow the microcontroller to control the LEDs when these commands are sent by the host computer. 
+          The device consists of a grid of LEDs, a microcontroller, and a host computer. The grid of LEDs are controlled by the microcontroller that in turn receives commands from the computer it is connected to. In order to allow the computer to communicate with the microcontroller that controls the LEDs while it is running, we loaded the <a href="https://github.com/firmata/protocol/blob/master/README.md">Firmata protocol</a> onto the microcontroller. With this in place, a basic set of commands were defined that would allow the microcontroller to control the LEDs when these commands are sent by the host computer. 
         </p>
 
         <p className="article_quote">
@@ -42,8 +65,22 @@ function pixelArticle () {
           The interface of the site was designed with a mobile-first approach. The experience we wanted visitors to have was one where they can instantly control an element in their environment from their phones.
         </p>
 
+        <div className="pixel_interface_container">
+          <div className="pixel_interface_flex">
+            <div className="pixel_interface_img">
+              <img width="128px" src="/img/article/pixel/mob_portrait1.PNG"/>
+            </div>
+            <div className="pixel_interface_img">
+              <img width="128px" src="/img/article/pixel/mob_portrait2.png"/>
+            </div>
+          </div>
+          <p className="subtext">
+            Drawings made on the mobile site.
+          </p>
+        </div>
+
         <p>
-          By the end of my contract with GRID we managed to create a handful of prototypes, one of which was featured by Mozilla's Internet Of Things team at MakerFaire in California. Before leaving, we also managed to constuct a pixel wall with a total of 2,700 LEDs, with help from a Make article I found online.
+          By the end of my contract with GRID we managed to create a handful of prototypes, one of which was <a href="https://twitter.com/frashed/status/997991289764298752">featured by Mozilla's Internet Of Things team at MakerFaire in California</a>. Before leaving, we also managed to constuct a pixel wall with a total of 2,700 LEDs, with help from a Make article I found online.
         </p>
 
         <p>

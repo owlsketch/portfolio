@@ -42,7 +42,7 @@
     height: 100%;
   }
   .description {
-    margin-top: 5.75em;
+    margin-top: 7em;
     .desc_par4 {
       margin-bottom: 0em;
     }
@@ -52,3 +52,8 @@
   }
 }
 
+@media(max-width: 500px) {
+  .description_wrapper p {
+    font-size: 1.125em;
+  }
+}
