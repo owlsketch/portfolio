@@ -1,0 +1,141 @@
+@import "../../../assets/colors";
+
+.landing {
+  position: relative;
+  box-sizing: border-box;
+  border: solid 3vh $white;
+  width: 100%;
+  height: 100vh;
+  background-color: $mango; 
+}
+
+.project {
+  //project is centered on the page, spans entire frame within white border
+  //absolute removes hidden projects from affecting height of page
+  position: absolute;
+  width: 100%;
+  height: 94vh; //subtract 6 for white border
+}
+
+//background covers entire project landing section
+.project_bg {
+  width: 100%;
+  height: 94vh;
+}
+
+  
+  @mixin linear-gradient($color-1, $color-2) {
+    background: nth(nth($color-1, 1), 1);
+    background : linear-gradient(0deg, $color-1, $color-2);
+    background : -moz-linear-gradient(50% 100% 90deg, $color-1, $color-2);
+    background : -webkit-linear-gradient(90deg, $color-1, $color-2);
+    background : -o-linear-gradient(90deg, $color-1, $color-2);
+    background : -ms-linear-gradient(90deg, $color-1, $color-2);
+  }
+
+  .gallery_bg { @include linear-gradient(rgba(255, 196, 77, 1) 0%, rgba(255, 220, 110, 1) 91.29%); }
+  .pixel_bg { @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%); }
+
+
+.project_flat_bg {
+  width: 100%;
+  height: 94vh;
+  opacity: 0;
+}
+
+  .gallery_flat_bg { background: rgba(255, 220, 110, 1); }
+  .pixel_flat_bg { background: rgba(255, 89, 141, 1); }
+
+//top-left corner of project content is centered
+//content itself is then later translated to be in correct pos
+.project_main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.project_title {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  p {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 5.5em;
+    color: $white;
+  }
+}
+
+  .gallery_title { top: 14em; }
+  .pixel_title { top: 14em; }
+
+  .scroll_link {
+    font-family: "futura-pt", sans-serif;
+    cursor: pointer;
+  }
+
+.gallery_title_scrolled {
+  font-size: 2.5em;
+  top: 23vh;
+}
+
+.pixel_title_scrolled {
+  font-size: 2em;
+  top: 22vh;
+}
+
+@media (max-height: 700px) {
+  .gallery_main { font-size: .875em; }
+  .pixel_main { font-size: .875em; }
+  .project_title_scrolled { font-size: 2.3em; }
+}
+
+@media (max-height: 600px) {
+  .gallery_main { font-size: .625em; }
+  .pixel_main { font-size: .625em; }
+}
+
+@media (max-height: 440px) {
+  .gallery_main { font-size: .5em; }
+  .pixel_main { font-size: .5em; }
+}
+
+@media (min-height: 700px) and (max-width: 440px) {
+  .gallery_main { font-size: 12px; }
+}
+
+
+@media (min-height: 700px) and (max-width: 1050px),
+       (min-height: 600px) and (max-width: 915px),
+       (min-height: 400px) and (max-width: 656px),
+       (max-height: 400px) and (max-width: 500px) {
+
+  .gallery_title_scrolled { font-size: 3.75vw; }
+}
+
+@media (min-height: 700px) and (max-width: 785px),
+       (min-height: 601px) and (max-width: 680px),
+       (min-height: 400px) and (max-width: 390px) {
+
+  .gallery_title p { font-size: 4.5em; }
+}
+
+@media (min-height: 700px) and (max-width: 1350px),
+       (min-height: 600px) and (max-width: 1175px),
+       (min-height: 400px) and (max-width: 835px) { 
+  .pixel_title_scrolled { font-size: 2.75vw; }
+}
+
+@media (min-height: 700px) and (max-width: 650px),
+       (min-height: 600px) and (max-width: 611px) {
+
+  .pixel_title {
+    font-size: .9em;
+    white-space: normal;
+  }
+
+  .pixel_title_scrolled {
+    white-space: normal;
+    font-size: 4.25vw;
+  }
+}

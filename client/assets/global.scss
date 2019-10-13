@@ -1,0 +1,10 @@
+@import "./colors";
+
+body {
+  font-family: "proxima-nova", "futura-pt", sans-serif;
+  background-color: $white;
+}
+
+@media (max-width: 500px) {
+  body { font-size: 14px; }
+}

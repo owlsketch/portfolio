@@ -4,9 +4,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './public/js/main.js',
-    projects: './public/js/projects.js',
-    about: './public/js/about.js'
+    global: './client/assets/global.js',
+    projects: './client/scenes/projects/index.jsx',
+    about: './client/scenes/about/index.jsx'
   },
   output: {
     filename: '[name].bundle.js',

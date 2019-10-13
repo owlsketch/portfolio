@@ -1,0 +1,19 @@
+@import "./colors";
+
+html, body, div, span, p, em, img, b, u, i, center,
+ol, ul, li, article, aside, canvas, details, embed, footer,
+header, menu, nav, section, summary, audio, video {
+  margin: 0em;
+  padding: 0em;
+  font-size: 100%; //16px for most browsers
+  border: 0em;
+  color: $black;
+}
+
+body { line-height: 1; }
+
+a { text-decoration: none; }
+
+ol, ul { list-style: none; }
+
+img { display: block; }
