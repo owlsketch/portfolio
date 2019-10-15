@@ -17,16 +17,10 @@ function pixelImage (fixed) {
 function pixelArticle () {
   return (
     <div className="pixel_article">
-
-      <div className="proj_links">
-        <a href="https://owlsketch.com/pixel">Visit Pixel Wall</a>
-        <a href="https://github.com/RutgersGRID/pixelwall">View Code</a>
-      </div>
-
       <h2 className="article_title">Interactive ‘Internet Of Things’ LEDs</h2>
       <article className="article_content">
         <p>
-          The Pixel Wall project consists of an interactive LED grid device along with software to control the device through the web. It was designed for GRID so that visitors may feel welcome to a space that both promotes participation with technology, and provides resources for others to learn and create.
+          <a href="https://www.owlsketch.com/pixel">The Pixel Wall project</a> consists of an interactive LED grid device along with software to control the device through the web. It was designed for GRID so that visitors may feel welcome to a space that both promotes participation with technology, and provides resources for others to learn and create.
         </p>
 
         <div className="pixel_img_flex">

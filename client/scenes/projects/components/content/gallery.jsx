@@ -15,22 +15,22 @@ function galleryImage (fixed) {
           <img className="img_gallery_landscape scroll_link" src="/assets/img/landing/gallery/landscapeLeft.jpg" width="288px"/>
         </div>
         <div className="gallery_portrait">
-          <img className="img_gallery_landscape scroll_link" src="/assets/img/landing/gallery/portraitLeft.jpg" width="288px"/>
+          <img className="img_gallery_landscape scroll_link" src="/assets/img/landing/gallery/landscapeRight.jpg" width="288px"/>
         </div>
       </div>
 
       <div className="layer gallery_layer_middle">
         <div className="gallery_portrait">
-          <img className="img_gallery_portrait scroll_link" src="/assets/img/landing/gallery/portraitRight.jpg" width="172px"/>
+          <img className="img_gallery_portrait scroll_link" src="/assets/img/landing/gallery/portraitLeft.jpg" width="172px"/>
         </div>
         <div className="gallery_portrait">
-          <img className="img_gallery_portrait scroll_link" src="/assets/img/landing/gallery/landscapeRight.jpg" width="172px"/>
+          <img className="img_gallery_portrait scroll_link" src="/assets/img/landing/gallery/portraitRight.jpg" width="172px"/>
         </div>
       </div>
 
       <div className="layer gallery_layer_top">
         <div className="gallery_modal">
-          <img className="img_gallery_modal scroll_link" src="/assets/img/landing/gallery/galleryModal.png" width="272px"/>
+          <img className="img_gallery_modal scroll_link" src="/assets/img/landing/gallery/galleryModal.png" width="240px"/>
         </div>
       </div>
 
@@ -41,16 +41,10 @@ function galleryImage (fixed) {
 function galleryArticle () {
   return (
     <div className="gallery_article">
-
-      <div className="proj_links">
-        <a href="https://owlsketch.com/gallery">Visit Gallery</a>
-        <a href="https://github.com/owlsketch/gallery">View Code</a>
-      </div>
-
       <h2 className="article_title">Immersive Art Galleries for the Web</h2>
       <article className="article_content">
         <p>
-          Laika Gallery, as the name hints at, is an effort to bring the experience of art galleries to the web. Fundamentally, at its core also lies the concept of accessibility.
+          <a href="https://www.laika.gallery">Laika Gallery</a>, as the name hints at, is an effort to bring the experience of art galleries to the web. Fundamentally, at its core also lies the concept of accessibility.
         </p>
         <p>
           The project began after I read about the Metropolitan Museum&#39;s <a href="https://metmuseum.org/blogs/digital-underground/2017/open-access-at-the-met">Open Access Initiative</a>, an effort to publish the museum&#39;s collection of public-domain artworks online. The Met&#39;s efforts succeeded in making information available to the public. However, they failed to make it as consumable as an actual visit to a museum.
@@ -72,7 +66,7 @@ function galleryArticle () {
         </p>
 
         <p>
-          As a response to these problems, I created the first working version of Laika Gallery in 2014. The goal was to bring all that lost information back, or at least as much as I could get away with. The first version was also for my grandmother; I wanted to be able to bring the museum to her since it proved difficult to do the contrary. With this having been accomplished, <a href="https://github.com/owlsketch/gallery/tree/gh-pages">I shared the code on Github</a> and went back to focusing on my studies.
+          As a response to these problems, I created the first working version of Laika Gallery in 2014. The goal was to bring all that lost information back, or at least as much as I could get away with. The first version was also for my grandmother; I wanted to be able to bring the museum to her since it proved difficult to do the contrary. With this having been accomplished, I shared the code on Github and went back to focusing on my studies.
         </p>
 
         <div className="article_img">

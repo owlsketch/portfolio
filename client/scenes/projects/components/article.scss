@@ -7,19 +7,6 @@
   width: 75vw;
 }
 
-.proj_links {
-  max-width: 18.75em;
-  padding: 0em 5vh;
-  margin: 2.25em auto 0;
-  display: flex;
-  justify-content: space-between;
-  a {
-    color: $black;
-    padding: 0em .25em .125em;
-    border-bottom: .0625em solid $black;
-  }
-}
-
 .article_title {
   font-size: 3em;
   text-align: center;
