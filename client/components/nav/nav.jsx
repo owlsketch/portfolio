@@ -9,14 +9,12 @@ class Nav extends React.Component {
       <div className={this.props.separate ? 'nav_layer separate' : 'nav_layer'} id="nav_layer">
         <div className="logo">
           <a href="/">
-            <div className="logo_wrapper" id="logo_wrapper">
-              <p className="logo_text">OWLSKETCH</p>
-            </div>
+            <img src='/assets/img/logo.png' width="150"/>
           </a>
         </div>
         <div className="menu">
-          <a className="menu_link" href="/">projects</a>
-          <a className="menu_link" href="/about">about</a>
+          <a href="/">projects</a>
+          <a href="/about">about</a>
         </div>
       </div>
     )

@@ -9,9 +9,13 @@ function Footer (props) {
         <div className="pink_section"></div>
         <div className="mango_section"></div>
       </section>
+
       <section className="footer_wrapper">
         <div className="footer_content">
-          <p>2018-{new Date().getFullYear()}, Gibran Garcia.</p>
+          <div>
+            <img src="/assets/img/logo.png" width="150" />
+            <p className="footer_subHeader">2018-{new Date().getFullYear()}, Gibran Garcia.</p>
+          </div>
           <span className="icon_list">
             <a href="https://github.com/owlsketch">
               <img width="20px" src="/assets/img/githubIcon.svg" alt="github"/>

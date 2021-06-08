@@ -2,34 +2,37 @@
 
 .footer_sections {
   width: 100%;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  div {
-    height: .25em;
-  }
+
+  div { height: .25em; }
 }
 
 .pink_section { background-color: $pink; }
 .mango_section { background-color: $mango; }
 
 .footer_wrapper {
-  background-color: $darkBlue;
-  height: 4em;
-  * {
-    color: $white;
-  }
+  background-color: $darkBlack;
+  height: 8em;
+
+  * { color: $white; }
 }
 
 .footer_content {
-  padding: 1.65em 0em 0em;
   width: 75vw;
+  height: 8em;
   margin: auto;
+
   display: flex;
   justify-content: space-between;
-  p {
-    font-size: .9375em;
-  }
+  align-items: center;
+}
+
+.footer_subHeader {
+  margin-top: .3125em;
+  font-size: .84em;
 }
 
 .icon_list {
