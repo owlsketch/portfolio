@@ -12,12 +12,8 @@ class Landing extends React.Component {
     super(props)
 
     this.state = {
-      titleStyle: {
-        opacity: 1
-      },
-      bgStyle: {
-        opacity: 0
-      },
+      titleStyle: { opacity: 1 },
+      bgStyle: { opacity: 0 },
       scrolled: false
     }
 
@@ -73,14 +69,16 @@ class Landing extends React.Component {
     const bgClasses = `project_bg ${project}_bg`
     const flatBgClasses = `project_flat_bg ${project}_flat_bg`
     const projectMainClasses = `project_main ${project}_main`
-    let titleClasses = `project_title ${project}_title scroll_link`
+    let titleClasses = `project_title`
 
-    if (this.state.scrolled) {
-      titleClasses += ` project_title_scrolled ${project}_title_scrolled`
+    if (!this.state.scrolled) {
+      titleClasses += ` ${project}_title`
+    } else {
+      titleClasses += ` ${project}_title_scrolled`
     }
 
     const title = {
-      gallery: 'Gallery',
+      gallery: 'Laika Gallery',
       pixel: 'Pixel Wall'
     }
 

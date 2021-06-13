@@ -57,85 +57,295 @@
 .project_title {
   position: absolute;
   transform: translate(-50%, -50%);
-  white-space: nowrap;
-  p {
-    font-family: "futura-pt", sans-serif;
-    font-weight: 700;
-    font-size: 5.5em;
-    color: $white;
+  overflow: hidden;
+}
+
+.project_title p {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: $white;
+}
+
+  .gallery_title { top: -1em; }
+  .pixel_title { top: -1em; }
+
+  .gallery_title p { 
+    font-size: 16.5em;
+    line-height: 1.35em;
+  }
+
+  .pixel_title p {
+    font-size: 16.5em;
+    line-height: 1.35em;
+  }
+
+  .gallery_title_scrolled { top: 23vh; }
+  .pixel_title_scrolled { top: 23.5vh; }
+
+  .gallery_title_scrolled p {
+    font-size: 12.5em;
+    white-space: nowrap;
+  }
+
+  .pixel_title_scrolled p {
+    font-size: 16.5em;
+    white-space: nowrap;
+  }
+
+.scroll_link {
+  font-family: "futura-pt", sans-serif;
+  cursor: pointer;
+}
+
+/* 4 divisions on height. [0]: Above 728, [1]: above 640, [2]: above 480, [3]: above 0
+/* 1 dimmensional array: [0]: default as defined above */
+/* [1]: */
+@media (max-height: 728px) {
+  .project_main { font-size: .875em; }
+}
+/* [2]: */
+@media (max-height: 640px) {
+  .project_main { font-size: .675em; }
+}
+/* [3]: */
+@media (max-height: 480px) {
+  .project_main { font-size: .5em; }
+}
+
+/* 2 dimmensional array: 4 height divisions, second inner array detailing width divisions for each */
+@media (min-height: 728px) and (max-width: 1275px), /* [0][0] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 1060px), /* [1][0] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 810px), /* [2][0] */
+(max-height: 480px) and (max-width: 740px) { /* [3][0] */
+  .gallery_title p { 
+    font-size: 14.5em; 
+    line-height: 1.5em;
+  }
+  .pixel_title p { 
+    font-size: 14.5em; 
+    line-height: 1.55em;
   }
 }
 
-  .gallery_title { top: 14em; }
-  .pixel_title { top: 14em; }
-
-  .scroll_link {
-    font-family: "futura-pt", sans-serif;
-    cursor: pointer;
+@media (min-height: 728px) and (max-width: 1100px), /* [0][1] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 940px), /* [1][1] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 700px), /* [2][1] */
+(max-height: 480px) and (max-width: 620px) { /* [3][1] */
+  .gallery_title p { 
+    font-size: 12.5em; 
+    line-height: 1.875em;
   }
-
-.gallery_title_scrolled {
-  font-size: 2.5em;
-  top: 23vh;
+  .pixel_title p { 
+    font-size: 12.5em; 
+    line-height: 1.95em;
+  }
 }
 
-.pixel_title_scrolled {
-  font-size: 2em;
-  top: 22vh;
+@media (min-height: 728px) and (max-width: 900px), /* [0][2] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 800px), /* [1][2] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 600px), /* [2][2] */
+(max-height: 480px) and (max-width: 400px) { /* [3][2] */
+  .gallery_title { top: 0em; }
+  .gallery_title  p { 
+    font-size: 10.5em; 
+    line-height: 2.35em;
+  }
+  .pixel_title { top: 0em; }
+  .pixel_title  p { 
+    font-size: 10.5em; 
+    line-height: 2.25em;
+  }
 }
 
-@media (max-height: 700px) {
-  .gallery_main { font-size: .875em; }
-  .pixel_main { font-size: .875em; }
-  .project_title_scrolled { font-size: 2.3em; }
-}
-
-@media (max-height: 600px) {
-  .gallery_main { font-size: .625em; }
-  .pixel_main { font-size: .625em; }
-}
-
-@media (max-height: 440px) {
-  .gallery_main { font-size: .5em; }
-  .pixel_main { font-size: .5em; }
-}
-
-@media (min-height: 700px) and (max-width: 440px) {
-  .gallery_main { font-size: 12px; }
+@media (min-height: 728px) and (max-width: 700px), /* [0][3] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 680px), /* [1][3] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 420px) { /* [2][3] */
+  .gallery_title p { 
+    font-size: 9em; 
+    line-height: 2.65em;
+  }
+  .pixel_title p { 
+    font-size: 9em; 
+    line-height: 2.45em;
+  }
 }
 
 
-@media (min-height: 700px) and (max-width: 1050px),
-       (min-height: 600px) and (max-width: 915px),
-       (min-height: 400px) and (max-width: 656px),
-       (max-height: 400px) and (max-width: 500px) {
-
-  .gallery_title_scrolled { font-size: 3.75vw; }
+@media (min-height: 728px) and (max-width: 620px), /* [0][4] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 560px) { /* [1][4] */
+  .gallery_title p { 
+    font-size: 8em; 
+    line-height: 2.9em;
+  }
+  .pixel_title p { 
+    font-size: 8em; 
+    line-height: 2.35em;
+  }
 }
 
-@media (min-height: 700px) and (max-width: 785px),
-       (min-height: 601px) and (max-width: 680px),
-       (min-height: 400px) and (max-width: 390px) {
-
-  .gallery_title p { font-size: 4.5em; }
+@media (min-height: 728px) and (max-width: 520px), /* [0][5] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 460px), /* [1][5] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 370px) { /* [2][4] */
+  .gallery_title p { 
+    font-size: 7.5em; 
+    line-height: 3.125em;
+  }
+  .pixel_title p { 
+    font-size: 7.5em; 
+    line-height: 3em;
+  }
 }
 
-@media (min-height: 700px) and (max-width: 1350px),
-       (min-height: 600px) and (max-width: 1175px),
-       (min-height: 400px) and (max-width: 835px) { 
-  .pixel_title_scrolled { font-size: 2.75vw; }
+@media (min-height: 728px) and (max-width: 440px), /* [0][6] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 420px) { /* [1][6] */
+  .gallery_main { font-size: .75em; }
+  .pixel_main { font-size: .75em; }
+
+  .gallery_title p { line-height: 3.8em; }
+  .pixel_title p { line-height: 3.75em; }
 }
 
-@media (min-height: 700px) and (max-width: 650px),
-       (min-height: 600px) and (max-width: 611px) {
+/* Remember go from highest first to shortest, covering from widest to thinnest in each */
+@media (min-height: 728px) and (max-width: 1550px),
+(max-height: 728px) and (min-height: 640px) and (max-width: 1350px),
+(max-height: 640px) and (min-height: 480px) and (max-width: 1050px),
+(max-height: 480px) and (max-width: 760px) {
+  .gallery_title_scrolled p { font-size: 13vw; }
+}
 
-  .pixel_title {
-    font-size: .9em;
+@media (min-height: 850px) and (max-width: 900px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 9em; 
     white-space: normal;
   }
+}
 
-  .pixel_title_scrolled {
+@media (min-height: 800px) and (max-width: 660px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 21.75vw; 
     white-space: normal;
-    font-size: 4.25vw;
+  }
+}
+
+@media (min-height: 728px) and (max-width: 500px) {
+  .gallery_title_scrolled { top: 20vh; }
+  .gallery_title_scrolled p { 
+    font-size: 20.75vw; 
+    white-space: normal;
+    line-height: 1.15em;
+  }
+}
+
+// covers gaps in three above media queries for min-height 728
+@media (max-height: 850px) and (min-height: 728px) and (max-width: 800px) and (min-width: 500px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 7.3em; 
+    white-space: normal;
+  }
+}
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 740px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 7em; 
+    white-space: normal;
+  }
+}
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 420px) {
+  .gallery_title_scrolled { top: 19vh; }
+  .gallery_title_scrolled p { 
+    line-height: 1.25em;
+  }
+}
+
+@media (max-height: 640px) and (min-height: 480px) and (max-width: 700px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 9em; 
+    white-space: normal;
+  }
+}
+
+@media (max-height: 640px) and (min-height: 480px) and (max-width: 410px) {
+  .gallery_title_scrolled p { 
+    font-size: 21vw; 
+  }
+}
+
+@media (max-height: 480px) and (max-width: 525px) {
+  .gallery_title_scrolled { top: 17vh; }
+  .gallery_title_scrolled p { 
+    font-size: 9em; 
+    white-space: normal;
+  }
+}
+
+@media (min-height: 728px) and (max-width: 1525px),
+(max-height: 728px) and (min-height: 640px) and (max-width: 1325px), 
+(max-height: 640px) and (min-height: 480px) and (max-width: 1025px), 
+(max-height: 480px) and (max-width: 760px) {
+  .pixel_title_scrolled p { font-size: 17.3125vw; }
+}
+
+@media (min-height: 850px) and (max-width: 900px) {
+  .pixel_title_scrolled { top: 18vh; }
+  .pixel_title_scrolled p { 
+    font-size: 9em; 
+    white-space: normal;
+  }
+}
+
+@media (min-height: 800px) and (max-width: 700px) {
+  .pixel_title_scrolled { top: 18vh; }
+  .pixel_title_scrolled p { 
+    font-size: 20.75vw; 
+    white-space: normal;
+  }
+}
+
+@media (min-height: 728px) and (max-width: 525px) {
+  .pixel_title_scrolled { top: 20vh; }
+  .pixel_title_scrolled p { 
+    font-size: 7em;
+    white-space: normal;
+    line-height: 1.15em;
+  }
+}
+
+@media (min-height: 728px) and (max-width: 440px) {
+  .pixel_title_scrolled p { 
+    font-size: 9em;
+    white-space: normal;
+    line-height: 1.15em;
+  }
+}
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 600px) {
+  .pixel_title_scrolled { top: 17vh; }
+  .pixel_title_scrolled p { 
+    font-size: 7em; 
+    white-space: normal;
+  }
+}
+
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 420px) {
+  .pixel_title_scrolled { top: 19vh; }
+  .pixel_title_scrolled p { 
+    line-height: 1.25em;
+  }
+}
+
+@media (max-height: 640px) and (min-height: 480px) and (max-width: 500px),
+(max-height: 480px) and (max-width: 525px) {
+  .pixel_title_scrolled { top: 17vh; }
+  .pixel_title_scrolled p { 
+    font-size: 9em; 
+    white-space: normal;
   }
 }

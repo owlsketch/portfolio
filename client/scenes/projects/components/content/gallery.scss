@@ -7,9 +7,12 @@
 
 .gallery_portrait {
   display: inline-block;
-  img {
-    /*box-shadow: 0em .4em .4em .125em rgba(124, 124, 124, .5); */
-  }
+  img { box-shadow: 0em .125em .25em .0625em rgba(124, 124, 124, .5); }
+}
+
+.gallery_modal img {
+  border-radius: .1825em;
+  box-shadow: 0em .125em .25em .0625em rgba(124, 124, 124, .5); 
 }
 
 //take layers out of flow, center them
@@ -35,14 +38,13 @@
 
 .img_gallery_landscape { width: 18em; }
 .img_gallery_portrait { width: 10.75em; }
-.img_gallery_modal { 
-  width: 15em; 
-  border: solid 1px #161616;
-  border-radius: .25em;
-  padding: .5em;
+.img_gallery_modal { width: 15em; }
+
+@media (min-height: 728px) and (max-width: 440px) {
+  .gallery_article { margin-top: -.75em; }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 728px) {
   .gallery_article { margin-top: -1em; }
 }
 
@@ -54,7 +56,7 @@
   .gallery_article { margin-top: -4.75em; }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 728px) {
   //article content
   .gallery_img_flex {
     margin-top: 3em;
@@ -64,26 +66,19 @@
   }
 }
 
-@media (min-height: 700px) and (max-width: 1050px),
-       (min-height: 600px) and (max-width: 915px),
-       (min-height: 400px) and (max-width: 656px),
-       (max-height: 400px) and (max-width: 500px) {
-
+/* 2 dimmensional array: 4 height divisions, second inner array detailing width divisions for each */
+@media (min-height: 728px) and (max-width: 1050px), /* [0][0] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 915px), /* [1][0] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 700px), /* [2][0] */
+(max-height: 480px) and (max-width: 500px) { /* [3][0] */
   .gallery_layer_bottom { width: 82vw; } 
   .gallery_layer_middle { width: 43.75vw; }
 }
 
-@media (min-height: 700px) and (max-width: 785px),
-       (min-height: 601px) and (max-width: 680px),
-       (min-height: 400px) and (max-width: 390px) {
-
-  //remove bottom layer of gallery
+@media (min-height: 728px) and (max-width: 785px), /* [0][1] */
+(max-height: 728px) and (min-height: 640px) and (max-width: 680px), /* [1][1] */
+(max-height: 640px) and (min-height: 480px) and (max-width: 460px), /* [2][1] */
+(max-height: 480px) and (max-width: 340px) { /* [3][1] */
   .gallery_layer_bottom { display: none; }
-  //expand middle layer of gallery
   .gallery_layer_middle { width: 74vw; }
 }
-
-@media (min-height: 700px) and (max-width: 440px) {
-  .gallery_article { margin-top: -.75em; }
-}
-

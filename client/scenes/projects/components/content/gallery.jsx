@@ -30,7 +30,7 @@ function galleryImage (fixed) {
 
       <div className="layer gallery_layer_top">
         <div className="gallery_modal">
-          <img className="img_gallery_modal scroll_link" src="/assets/img/landing/gallery/galleryModal.png" width="240px"/>
+          <img className="img_gallery_modal scroll_link" src="/assets/img/landing/gallery/galleryModal.jpg" width="240px"/>
         </div>
       </div>
 
