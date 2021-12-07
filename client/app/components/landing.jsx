@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ScrollLink from './navigation/scrollLink.jsx'
 import LandingImages from './content/landingImages.jsx'
-import EventHandler from '../../../components/eventHandler/eventHandler.jsx'
+import EventHandler from '../../components/eventHandler/eventHandler.jsx'
 
 import './landing.scss'
 
@@ -83,9 +83,9 @@ class Landing extends React.Component {
     }
 
     return (
-      <section className="landing">
+      <section className='landing'>
         <EventHandler onScroll={this.handleScroll}>
-          <div className="project">
+          <div className='project'>
             <div className={bgClasses}>
               <div className={flatBgClasses} style={this.state.bgStyle}></div>
             </div>

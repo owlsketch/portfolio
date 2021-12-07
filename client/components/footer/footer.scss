@@ -1,4 +1,4 @@
-@import "../../assets/colors";
+@import '../../assets/colors';
 
 .footer_sections {
   width: 100%;
@@ -30,6 +30,8 @@
   align-items: center;
 }
 
+.footer_logo { cursor: pointer; }
+
 .footer_subHeader {
   margin-top: .3125em;
   font-size: .84em;
@@ -43,11 +45,7 @@
 }
 
 @media (max-width: 650px) {
-  .footer_sections {
-    margin-top: 4em;
-  }
-  .footer_content {
-    width: 90vw;
-  }
+  .footer_sections { margin-top: 4em; }
+  .footer_content { width: 90vw; }
 }
 

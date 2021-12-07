@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { galleryImage } from './gallery.jsx'
 import { pixelImage } from './pixel.jsx'
-import EventHandler from '../../../../components/eventHandler/eventHandler.jsx'
+import EventHandler from '../../../components/eventHandler/eventHandler.jsx'
 
 class LandingImages extends React.Component {
   constructor (props) {

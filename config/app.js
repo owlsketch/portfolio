@@ -8,7 +8,8 @@ module.exports = function () {
   app.use(bodyParser.urlencoded({ extended: true }))
   app.use(bodyParser.json())
 
-  app.set('viewPath', path.join(__dirname, '../client/views'))
+  // since only one exists (app.html) might as well just direct to client folder
+  app.set('viewPath', path.join(__dirname, '../client'))
 
   app.use(express.static('./dist'))
   app.use(express.static('./client')) // for images not bundled into webpack

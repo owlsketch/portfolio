@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import EventHandler from '../../../../components/eventHandler/eventHandler.jsx'
+import EventHandler from '../../../components/eventHandler/eventHandler.jsx'
 import { getNextProject } from '../../navHelper.js'
 
 import './arrow.scss'
@@ -39,8 +39,8 @@ class Arrow extends React.Component {
       <EventHandler onScroll={this.handleScroll}>
         <Link to={nextProject}>
           <img
-            width="46px" className={classes} style={this.state.arrowStyle}
-            src="/assets/img/landing/arrow.svg" alt={altText}
+            width='46px' className={classes} style={this.state.arrowStyle}
+            src='/assets/img/landing/arrow.svg' alt={altText}
           />
         </Link>
       </EventHandler>

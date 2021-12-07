@@ -1,4 +1,4 @@
-@import "../../../assets/colors";
+@import '../../assets/colors';
 
 .landing {
   position: relative;
@@ -61,7 +61,7 @@
 }
 
 .project_title p {
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   font-weight: 700;
   text-align: center;
   color: $white;
@@ -94,7 +94,7 @@
   }
 
 .scroll_link {
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   cursor: pointer;
 }
 

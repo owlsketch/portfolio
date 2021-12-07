@@ -12,7 +12,7 @@ class Article extends React.Component {
     let articles = { gallery: galleryArticle, pixel: pixelArticle }
 
     return (
-      <section className="proj_article">
+      <section className='proj_article'>
         {articles[project]()}
       </section>
     )

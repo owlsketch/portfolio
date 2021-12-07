@@ -37,10 +37,10 @@ class ScrollLink extends React.Component {
 
   render () {
     return (
-      <div className="project_scroll_link" onClick={this.handleClick}>
-        <div className="scroll_link">
+      <div className='project_scroll_link' onClick={this.handleClick}>
+        <div className='scroll_link'>
           <h3>Más!</h3>
-          <img width="48px" src="/assets/img/landing/moreArrow.svg" alt="Read more" />
+          <img width='48px' src='/assets/img/landing/moreArrow.svg' alt='Read more' />
         </div>
       </div>
     )

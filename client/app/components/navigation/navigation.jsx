@@ -9,10 +9,10 @@ function Navigation (props) {
   const projects = props.projects
 
   return (
-    <div className="proj_nav_layer">
-      <div className="proj_arrows">
-        <Arrow direction="left" projects={projects} />
-        <Arrow direction="right" projects={projects} />
+    <div className='proj_nav_layer'>
+      <div className='proj_arrows'>
+        <Arrow direction='left' projects={projects} />
+        <Arrow direction='right' projects={projects} />
       </div>
     </div>
   )
