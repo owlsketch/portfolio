@@ -6,10 +6,6 @@ import About from './about.jsx'
 import Projects from './projects.jsx'
 
 class IndexContainer extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <Router>

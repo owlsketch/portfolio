@@ -4,14 +4,15 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
 
   div { height: .25em; }
 }
 
-.pink_section { background-color: $pink; }
 .mango_section { background-color: $mango; }
+.lavender_section { background-color: rgba(84, 84, 160, 1); }
+.pink_section { background-color: $pink; }
 
 .footer_wrapper {
   background-color: $darkBlack;

@@ -1,5 +1,9 @@
 @import '../../assets/colors';
 
+@import './gallery.landing.scss';
+@import './across.landing.scss';
+@import './pixel.landing.scss';
+
 .landing {
   position: relative;
   box-sizing: border-box;
@@ -34,6 +38,7 @@
   }
 
   .gallery_bg { @include linear-gradient(rgba(255, 196, 77, 1) 0%, rgba(255, 220, 110, 1) 91.29%); }
+  .across_bg { @include linear-gradient(rgba(79, 79, 150, 1) 0%, rgba(84, 84, 160, 1) 100%); }
   .pixel_bg { @include linear-gradient(rgba(255, 89, 141, 1) 0%, rgba(241, 114, 127, 1) 100%); }
 
 
@@ -44,6 +49,7 @@
 }
 
   .gallery_flat_bg { background: rgba(255, 220, 110, 1); }
+  .across_flat_bg { background: rgba(84, 84, 160, 1); }
   .pixel_flat_bg { background: rgba(255, 89, 141, 1); }
 
 //top-left corner of project content is centered
@@ -66,32 +72,6 @@
   text-align: center;
   color: $white;
 }
-
-  .gallery_title { top: -1em; }
-  .pixel_title { top: -1em; }
-
-  .gallery_title p { 
-    font-size: 16.5em;
-    line-height: 1.35em;
-  }
-
-  .pixel_title p {
-    font-size: 16.5em;
-    line-height: 1.35em;
-  }
-
-  .gallery_title_scrolled { top: 23vh; }
-  .pixel_title_scrolled { top: 23.5vh; }
-
-  .gallery_title_scrolled p {
-    font-size: 12.5em;
-    white-space: nowrap;
-  }
-
-  .pixel_title_scrolled p {
-    font-size: 16.5em;
-    white-space: nowrap;
-  }
 
 .scroll_link {
   font-family: 'futura-pt', sans-serif;
@@ -122,6 +102,10 @@
     font-size: 14.5em; 
     line-height: 1.5em;
   }
+  .across_title p { 
+    font-size: 14.5em; 
+    line-height: 1.5em;
+  }
   .pixel_title p { 
     font-size: 14.5em; 
     line-height: 1.55em;
@@ -133,6 +117,10 @@
 (max-height: 640px) and (min-height: 480px) and (max-width: 700px), /* [2][1] */
 (max-height: 480px) and (max-width: 620px) { /* [3][1] */
   .gallery_title p { 
+    font-size: 12.5em; 
+    line-height: 1.875em;
+  }
+  .across_title p { 
     font-size: 12.5em; 
     line-height: 1.875em;
   }
@@ -151,6 +139,11 @@
     font-size: 10.5em; 
     line-height: 2.35em;
   }
+  .across_title { top: 0em; }
+  .across_title  p { 
+    font-size: 10.5em; 
+    line-height: 2.35em;
+  }
   .pixel_title { top: 0em; }
   .pixel_title  p { 
     font-size: 10.5em; 
@@ -162,6 +155,10 @@
 (max-height: 728px) and (min-height: 640px) and (max-width: 680px), /* [1][3] */
 (max-height: 640px) and (min-height: 480px) and (max-width: 420px) { /* [2][3] */
   .gallery_title p { 
+    font-size: 9em; 
+    line-height: 2.65em;
+  }
+  .across_title p { 
     font-size: 9em; 
     line-height: 2.65em;
   }
@@ -178,6 +175,10 @@
     font-size: 8em; 
     line-height: 2.9em;
   }
+  .across_title p { 
+    font-size: 8em; 
+    line-height: 2.9em;
+  }
   .pixel_title p { 
     font-size: 8em; 
     line-height: 2.35em;
@@ -191,6 +192,10 @@
     font-size: 7.5em; 
     line-height: 3.125em;
   }
+  .across_title p { 
+    font-size: 7.5em; 
+    line-height: 3.125em;
+  }
   .pixel_title p { 
     font-size: 7.5em; 
     line-height: 3em;
@@ -200,152 +205,11 @@
 @media (min-height: 728px) and (max-width: 440px), /* [0][6] */
 (max-height: 728px) and (min-height: 640px) and (max-width: 420px) { /* [1][6] */
   .gallery_main { font-size: .75em; }
+  .across_main { font-size: .75em; }
   .pixel_main { font-size: .75em; }
 
   .gallery_title p { line-height: 3.8em; }
+  .across_title p { line-height: 3.8em; }
   .pixel_title p { line-height: 3.75em; }
 }
 
-/* Remember go from highest first to shortest, covering from widest to thinnest in each */
-@media (min-height: 728px) and (max-width: 1550px),
-(max-height: 728px) and (min-height: 640px) and (max-width: 1350px),
-(max-height: 640px) and (min-height: 480px) and (max-width: 1050px),
-(max-height: 480px) and (max-width: 760px) {
-  .gallery_title_scrolled p { font-size: 13vw; }
-}
-
-@media (min-height: 850px) and (max-width: 900px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 9em; 
-    white-space: normal;
-  }
-}
-
-@media (min-height: 800px) and (max-width: 660px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 21.75vw; 
-    white-space: normal;
-  }
-}
-
-@media (min-height: 728px) and (max-width: 500px) {
-  .gallery_title_scrolled { top: 20vh; }
-  .gallery_title_scrolled p { 
-    font-size: 20.75vw; 
-    white-space: normal;
-    line-height: 1.15em;
-  }
-}
-
-// covers gaps in three above media queries for min-height 728
-@media (max-height: 850px) and (min-height: 728px) and (max-width: 800px) and (min-width: 500px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 7.3em; 
-    white-space: normal;
-  }
-}
-
-@media (max-height: 728px) and (min-height: 640px) and (max-width: 740px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 7em; 
-    white-space: normal;
-  }
-}
-
-@media (max-height: 728px) and (min-height: 640px) and (max-width: 420px) {
-  .gallery_title_scrolled { top: 19vh; }
-  .gallery_title_scrolled p { 
-    line-height: 1.25em;
-  }
-}
-
-@media (max-height: 640px) and (min-height: 480px) and (max-width: 700px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 9em; 
-    white-space: normal;
-  }
-}
-
-@media (max-height: 640px) and (min-height: 480px) and (max-width: 410px) {
-  .gallery_title_scrolled p { 
-    font-size: 21vw; 
-  }
-}
-
-@media (max-height: 480px) and (max-width: 525px) {
-  .gallery_title_scrolled { top: 17vh; }
-  .gallery_title_scrolled p { 
-    font-size: 9em; 
-    white-space: normal;
-  }
-}
-
-@media (min-height: 728px) and (max-width: 1525px),
-(max-height: 728px) and (min-height: 640px) and (max-width: 1325px), 
-(max-height: 640px) and (min-height: 480px) and (max-width: 1025px), 
-(max-height: 480px) and (max-width: 760px) {
-  .pixel_title_scrolled p { font-size: 17.3125vw; }
-}
-
-@media (min-height: 850px) and (max-width: 900px) {
-  .pixel_title_scrolled { top: 18vh; }
-  .pixel_title_scrolled p { 
-    font-size: 9em; 
-    white-space: normal;
-  }
-}
-
-@media (min-height: 800px) and (max-width: 700px) {
-  .pixel_title_scrolled { top: 18vh; }
-  .pixel_title_scrolled p { 
-    font-size: 20.75vw; 
-    white-space: normal;
-  }
-}
-
-@media (min-height: 728px) and (max-width: 525px) {
-  .pixel_title_scrolled { top: 20vh; }
-  .pixel_title_scrolled p { 
-    font-size: 7em;
-    white-space: normal;
-    line-height: 1.15em;
-  }
-}
-
-@media (min-height: 728px) and (max-width: 440px) {
-  .pixel_title_scrolled p { 
-    font-size: 9em;
-    white-space: normal;
-    line-height: 1.15em;
-  }
-}
-
-@media (max-height: 728px) and (min-height: 640px) and (max-width: 600px) {
-  .pixel_title_scrolled { top: 17vh; }
-  .pixel_title_scrolled p { 
-    font-size: 7em; 
-    white-space: normal;
-  }
-}
-
-
-@media (max-height: 728px) and (min-height: 640px) and (max-width: 420px) {
-  .pixel_title_scrolled { top: 19vh; }
-  .pixel_title_scrolled p { 
-    line-height: 1.25em;
-  }
-}
-
-@media (max-height: 640px) and (min-height: 480px) and (max-width: 500px),
-(max-height: 480px) and (max-width: 525px) {
-  .pixel_title_scrolled { top: 17vh; }
-  .pixel_title_scrolled p { 
-    font-size: 9em; 
-    white-space: normal;
-  }
-}

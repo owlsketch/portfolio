@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { galleryImage } from './gallery.jsx'
+import { acrossImage } from './across.jsx'
 import { pixelImage } from './pixel.jsx'
 import EventHandler from '../../../components/eventHandler/eventHandler.jsx'
 
@@ -27,18 +28,21 @@ class LandingImages extends React.Component {
   render () {
     const project = this.props.project.toLowerCase()
 
-    let imgs = { gallery: galleryImage, pixel: pixelImage }
+    let imgs = { gallery: galleryImage, across: acrossImage, pixel: pixelImage }
 
     return (
       <EventHandler onScroll={this.handleScroll}>
-        {imgs[project](this.state.fixed)}
+        <div onClick={this.props.handleScrollClick}>
+          {imgs[project](this.state.fixed)}
+        </div>
       </EventHandler>
     )
   }
 }
 
 LandingImages.propTypes = {
-  project: PropTypes.string
+  project: PropTypes.string,
+  handleScrollClick: PropTypes.func
 }
 
 export default LandingImages

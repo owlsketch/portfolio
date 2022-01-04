@@ -9,7 +9,7 @@ function pixelImage (fixed) {
 
   return (
     <div className={imgClasses}>
-      <img className='img_pixel_wall' width='525px' src='/assets/img/landing/pixel/pixelwall.png'/>
+      <img className='img_pixel_wall scroll_link' width='525px' src='/assets/img/landing/pixel/pixelwall.png'/>
     </div>
   )
 }
@@ -69,20 +69,13 @@ function pixelArticle () {
         </div>
 
         <p>
-          By the end of my contract with GRID we managed to create a handful of prototypes, one of which was <a href='https://twitter.com/frashed/status/997991289764298752'>featured by Mozilla&#39;s Internet Of Things team at MakerFaire in California</a>. Before leaving, we also managed to constuct a pixel wall with a total of 2,700 LEDs, with help from a <a href='https://makezine.com/projects/construct-giant-led-video-screen/'>Make article</a>.
+          Working alongside GRID, we managed to create a handful of prototypes, one of which was <a href='https://twitter.com/frashed/status/997991289764298752'>featured by Mozilla&#39;s Internet Of Things team at MakerFaire in California</a>. By the end, we also managed to build a pixel wall with a total of 2,700 LEDs, with help from a <a href='https://makezine.com/projects/construct-giant-led-video-screen/'>Make article</a>.
         </p>
 
         <p>
-          After having graduated from University, this was my first &#39;real&#39; project. It was my first opportunity to prove that I really had the skills to create with what I had been learning over the years. Nevertheless, I couldn’t have managed to pursue this project without the help from my friends at GRID. This project also helped show me the direction I need to be heading towards in my career.
+          By using <a href='https://socket.io/'>socket.io</a>, the pixel wall is able to receive input from multiple users at the same time! This meant more than one person could draw on the pixel wall and allowed for a collaborative effort. To further promote collaboration, this project was made <a href='https://github.com/owlsketch/pixelwall'>publicly available</a> in order to allow anyone to access the code and create their own pixel walls!
         </p>
 
-        <p>
-          I hope to one day be able to visit this project again. I accomplished many of the technical goals that were set out for me, however I believe there were other shortcomings. A greater effort could have been made to entice people into making their own pixel walls. Another shortcoming was the lack of a formal set of instructions for creating a pixel wall. In particular, the assembly of the container, which I had very little knowledge on how to approach myself.
-        </p>
-
-        <p>
-          Hopefully one day I can build upon what is already in place and create a truly open source device that also succeeds in allowing makers to create their own devices and to learn along the journey. Regardless, I&#39;m proud of having built a device that entertained lots of people and had them interested in how I made it happen.
-        </p>
         <img className='endmark' width='48px' src='/assets/img/article/owlsketchBlack.png'/>
       </article>
     </div>

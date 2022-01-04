@@ -6,8 +6,9 @@ function Footer (props) {
   return (
     <React.Fragment>
       <section className='footer_sections'>
-        <div className='pink_section'></div>
         <div className='mango_section'></div>
+        <div className='lavender_section'></div>
+        <div className='pink_section'></div>
       </section>
 
       <section className='footer_wrapper'>

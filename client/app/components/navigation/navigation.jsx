@@ -6,7 +6,7 @@ import Arrow from './arrow.jsx'
 import './navigation.scss'
 
 function Navigation (props) {
-  const projects = props.projects
+  let projects = props.projects
 
   return (
     <div className='proj_nav_layer'>
@@ -18,8 +18,6 @@ function Navigation (props) {
   )
 }
 
-Navigation.propTypes = {
-  projects: PropTypes.array
-}
+Navigation.propTypes = { projects: PropTypes.array }
 
 export default Navigation

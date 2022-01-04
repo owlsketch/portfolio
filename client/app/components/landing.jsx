@@ -14,13 +14,18 @@ class Landing extends React.Component {
     this.state = {
       titleStyle: { opacity: 1 },
       bgStyle: { opacity: 0 },
-      scrolled: false
+      scrolled: false,
+      startPos: undefined,
+      startTime: undefined,
+      duration: 600
     }
 
-    this.handleScroll = this.handleScroll.bind(this)
+    this.handleManualScroll = this.handleManualScroll.bind(this)
+    this.scroll = this.scroll.bind(this)
+    this.handleScrollClick = this.handleScrollClick.bind(this)
   }
 
-  handleScroll (e) {
+  handleManualScroll (e) {
     let titleOpacity = 1
     let bgOpacity = 0
 
@@ -40,19 +45,11 @@ class Landing extends React.Component {
       titleOpacity = 0 + secondRange
     }
 
-    if (finalRange < 1) {
-      bgOpacity = 0 + finalRange
-    } else {
-      bgOpacity = 1
-    }
+    finalRange < 1 ? bgOpacity = 0 + finalRange : bgOpacity = 1
 
     this.setState({
-      titleStyle: {
-        opacity: titleOpacity
-      },
-      bgStyle: {
-        opacity: bgOpacity
-      }
+      titleStyle: { opacity: titleOpacity },
+      bgStyle: { opacity: bgOpacity }
     })
 
     // trigger scrolled text styling if passed 1/4 range
@@ -63,6 +60,29 @@ class Landing extends React.Component {
     }
   }
 
+  scroll () {
+    let now = 'now' in window.performance ? window.performance.now() : new Date().getTime()
+    let time = Math.min(1, ((now - this.state.startTime) / this.state.duration))
+
+    window.scroll(0, Math.ceil(((time * (2 - time)) * ((window.innerHeight / 2) - this.state.startPos)) + this.state.startPos))
+
+    if (window.pageYOffset >= (window.innerHeight / 2) - 1) {
+      this.setState({ startPos: undefined, startTime: undefined })
+      return
+    }
+
+    window.requestAnimationFrame(this.scroll)
+  }
+
+  handleScrollClick (e) {
+    if ('requestAnimationFrame' in window === false) {
+      return window.scroll(0, window.innerHeight / 2)
+    }
+
+    let now = 'now' in window.performance ? window.performance.now() : new Date().getTime()
+    this.setState({ startPos: window.pageYOffset, startTime: now }, function () { this.scroll() })
+  }
+
   render () {
     const project = this.props.project.toLowerCase()
 
@@ -71,20 +91,15 @@ class Landing extends React.Component {
     const projectMainClasses = `project_main ${project}_main`
     let titleClasses = `project_title`
 
-    if (!this.state.scrolled) {
-      titleClasses += ` ${project}_title`
-    } else {
-      titleClasses += ` ${project}_title_scrolled`
-    }
+    !this.state.scrolled
+      ? titleClasses += ` ${project}_title`
+      : titleClasses += ` ${project}_title_scrolled`
 
-    const title = {
-      gallery: 'Laika Gallery',
-      pixel: 'Pixel Wall'
-    }
+    const title = { gallery: 'Laika Gallery', across: 'Across La Tierra', pixel: 'Pixel Wall' }
 
     return (
       <section className='landing'>
-        <EventHandler onScroll={this.handleScroll}>
+        <EventHandler onScroll={this.handleManualScroll}>
           <div className='project'>
             <div className={bgClasses}>
               <div className={flatBgClasses} style={this.state.bgStyle}></div>
@@ -96,9 +111,9 @@ class Landing extends React.Component {
                 <p>{title[project].toUpperCase()}</p>
               </div>
 
-              <ScrollLink />
+              <ScrollLink handleScrollClick={this.handleScrollClick}/>
 
-              <LandingImages project={project} />
+              <LandingImages handleScrollClick={this.handleScrollClick} project={project} />
 
             </div>
           </div>

@@ -14,7 +14,7 @@ import { getNextProject } from './navHelper.js'
 class Projects extends React.Component {
   constructor (props) {
     super(props)
-    this.projects = ['gallery', 'pixel']
+    this.projects = ['gallery', 'across', 'pixel']
 
     this.handleKey = this.handleKey.bind(this)
   }
@@ -40,6 +40,9 @@ class Projects extends React.Component {
           <Navigation projects={projects} />
           <Route path='/projects/gallery'
             render={ (projects) => <Project project='gallery' /> }
+          />
+          <Route path='/projects/across'
+            render={ (projects) => <Project project='across' /> }
           />
           <Route path='/projects/pixel'
             render={ (projects) => <Project project='pixel' /> }

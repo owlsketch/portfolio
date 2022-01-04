@@ -31,10 +31,7 @@ class EventHandler extends React.Component {
 }
 
 EventHandler.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]),
+  children: PropTypes.oneOfType([ PropTypes.object, PropTypes.array ]),
   onKeyPress: PropTypes.func,
   onScroll: PropTypes.func
 }
