@@ -12,3 +12,91 @@
   font-size: 10.25em;
   white-space: nowrap;
 }
+
+/* Remember go from highest first to shortest, covering from widest to thinnest in each */
+@media (min-height: 728px) and (max-width: 1550px),
+(max-height: 728px) and (min-height: 640px) and (max-width: 1350px),
+(max-height: 640px) and (min-height: 480px) and (max-width: 1050px),
+(max-height: 480px) and (max-width: 760px) {
+  .across_title_scrolled p { font-size: 10.6125vw; }
+}
+
+@media (min-height: 850px) and (max-width: 900px) {
+  .across_title_scrolled { top: 20vh; }
+  .across_title_scrolled p { 
+    font-size: 7.75em; 
+    white-space: normal;
+    width: 5em;
+  }
+}
+
+@media (min-height: 800px) and (max-width: 660px) {
+  .across_title_scrolled { top: 20vh; }
+  .across_title_scrolled p { 
+    font-size: 18.75vw; 
+    white-space: normal;
+  }
+}
+
+@media (min-height: 728px) and (max-width: 500px) {
+  .across_title_scrolled { top: 22vh; }
+  .across_title_scrolled p { 
+    width: 5em;
+    font-size: 18.5vw; 
+    white-space: normal;
+    line-height: 1.15em;
+  }
+}
+
+// covers gaps in three above media queries for min-height 728
+@media (max-height: 850px) and (min-height: 728px) and (max-width: 800px) and (min-width: 500px) {
+  .across_title_scrolled { top: 20vh; }
+  .across_title_scrolled p { 
+    font-size: 6.3em; 
+    white-space: normal;
+    width: 5em;
+  }
+}
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 740px) {
+  .across_title_scrolled { top: 20vh; }
+  .across_title_scrolled p { 
+    font-size: 7em; 
+    white-space: normal;
+    width: 5em;
+  }
+}
+
+@media (max-height: 728px) and (min-height: 640px) and (max-width: 420px) {
+  .across_title_scrolled { top: 20vh; }
+  .across_title_scrolled p { 
+    font-size: 6.5em;
+    line-height: 1.25em;
+  }
+}
+
+@media (max-height: 640px) and (min-height: 480px) and (max-width: 550px) {
+  .across_title_scrolled { top: 24vh; }
+  .across_title_scrolled p { 
+    font-size: 7em; 
+    white-space: normal;
+    width: 5em;
+  }
+}
+
+@media (max-height: 640px) and (min-height: 480px) and (max-width: 410px) {
+  .across_title_scrolled { top: 24vh; }
+  .across_title_scrolled p { 
+    font-size: 18vw; 
+    width: 5em;
+  }
+}
+
+@media (max-height: 480px) and (max-width: 525px) {
+  .across_title_scrolled { top: 18vh; }
+  .across_title_scrolled p { 
+    font-size: 9em; 
+    white-space: normal;
+    width: 5em
+  }
+}
