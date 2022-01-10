@@ -8,6 +8,31 @@
 
 .img_across { width: 54.5em; }
 
+.across_video { width: 100%; }
+
+.across_float {
+  width: 20em;
+  float: left;
+  margin: 0em 1.5em 0em 1em;
+}
+
+.across_flyer { max-width: 28em; }
+
+@media (max-width: 46.5625em) {
+  .across_videoContainer { 
+    margin: 0em auto;  
+  }
+}
+
+@media (max-width: 42.5em) {
+  .across_float { 
+    max-width: 20em;
+    width: auto;
+    float: none; 
+    margin: 1.25em auto;
+  }
+}
+
 @media (min-height: 728px) and (max-width: 800px) {
   .across_article { margin-top: -4.25em; }
 }
