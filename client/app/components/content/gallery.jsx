@@ -67,7 +67,7 @@ function galleryArticle () {
         </p>
 
         <div className='article_img'>
-          <img src='/assets/img/article/gallery/articleImg1.jpg'/>
+          <img src='/assets/img/article/gallery/articleImg1.png'/>
           <p className='subtext'>
             Easy management of all your works through the user page.
           </p>
